@@ -1,0 +1,43 @@
+15 medewerkers
+koffieapparaten
+veel verschillende afdelingen
+Niet alles in een systeem (probleem)
+onderhoud, sales, inkopen
+soms klopt het adres niet
+communicatie nu: mailen naar elkaar
+een afdeling werkt met excel en de andere met xs
+
+af en toe melding nodig om gegevens te updaten
+klanten zijn bedrijven
+naam, aanspreekpunt, adres, probleem, eisen, kvk_nummer (database)
+accounts hebben aparte rechten nodig
+iedereen moet alle informatie kunnen zien, maar sommige afdelingen moeten alleen bepaalde dingen aan kunnen passen van hun eigen afdeling
+alle afdelingen in hetzelfde systeem, maar wel hun eigen dingen kunnen doen
+sales moeten naar een klant kunnen gaan en contract aan kunnen maken voor ze
+als er een storing is moet die in het systeem gezet kunnen worden zodat het onderhoudsteam het kan zien en eraan kan werken
+klantenservice valt onder sales
+Melding nodig als er voorraad aangevuld moet worden
+Betaal status van bestellingen bij houden
+Als er al lang niet betaald is, melding krijgen zodat er een herinnering gestuurd kan worden
+meldingen die verstuurd worden moeten alleen naar de des betreffende afdeling verstuurd worden
+onderhoud kunnen plannen in het systeem
+lijst met dingen die verbeterd moeten worden aan onderhoud
+contracten moeten terug te vinden zijn in het systeem
+styling alleen beetje de kleuren van het logo overnemen
+Melding als er een contract bijna is verlopen (melding ruim van tevoren)
+factuur moet verstuurd worden
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
