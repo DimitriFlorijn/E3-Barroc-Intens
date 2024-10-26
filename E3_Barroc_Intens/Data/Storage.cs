@@ -8,5 +8,13 @@ namespace E3_Barroc_Intens.Data
 {
     internal class Storage
     {
+        public int? ProductId { get; set; }
+        public Product Product { get; set; }
+        public int? BeanId { get; set; }
+        public Bean Bean { get; set; }
+        public int? PartId { get; set; }
+        public Part Part { get; set; }
+        public int Amount { get; set; }
+
     }
 }
