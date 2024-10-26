@@ -255,13 +255,38 @@ namespace E3_Barroc_Intens.Data
         {
 
         }
-        public static void AddRole()
+        public static void AddRole(string name, List<int> userIds = null)
         {
+            using (var db = new AppDbContext())
+            {
+                var newRole = new Role
+                {
+                    Name = name,
+                };
+                db.Roles.Add(newRole);
+                db.SaveChanges();
+                if (userIds != null)
+                {
+                    foreach (var userId in userIds)
+                    {
+                        if (userId > 0)
+                        {
+                            var newRoleUser = new RoleUser
+                            {
+                                UserId = userId,
+                                RoleId = newRole.Id
+                            };
 
+                            db.RoleUsers.Add(newRoleUser);
+                        }
+                    }
+
+                    db.SaveChanges();
+                }
+            }
         }
         public static void UpdateRole()
         {
-
         }
         public static void DeleteRole()
         {
