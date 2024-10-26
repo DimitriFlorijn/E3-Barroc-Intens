@@ -134,6 +134,29 @@ namespace E3_Barroc_Intens.Data
                 }
             }
         }
+        public static void UpdateUser(int userId, string name = null, string email = null, string password = null)
+        {
+            using (var db = new AppDbContext())
+            {
+                var user = db.Users.Find(userId);
+                if (user != null)
+                {
+                    if (name != null && name != "")
+                    {
+                        user.Name = name;
+                    }
+                    if (email != null && email != "")
+                    {
+                        user.Email = email;
+                    }
+                    if (password != null && password != "")
+                    {
+                        user.Password = HashPassword(password);
+                    }
+                    db.SaveChanges();
+                }
+            }
+        }
         private static string HashPassword(string password)
         {
             // moet nog een hash-functie worden toegevoegd
