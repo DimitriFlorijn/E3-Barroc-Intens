@@ -8,5 +8,9 @@ namespace E3_Barroc_Intens.Data
 {
     internal class Department
     {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int HeadDepartmentId {  get; set; }
+        public User HeadDepartment { get; set; }
     }
 }
