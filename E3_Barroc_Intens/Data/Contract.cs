@@ -8,5 +8,16 @@ namespace E3_Barroc_Intens.Data
 {
     internal class Contract
     {
+        public int CustomerId { get; set; }
+        public Customer Customer { get; set; }
+        public int ProductId { get; set; }
+        public Product Product { get; set; }
+        public int? BeanId { get; set; }
+        public Bean Bean { get; set; }
+        public DateOnly StartDate { get; set; }
+        public DateOnly EndDate { get; set; }
+        public bool IsLeased { get; set; }
+        public bool IsPaid { get; set; }
+        public DateOnly LastUpdate { get; set; }
     }
 }
