@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -153,6 +154,20 @@ namespace E3_Barroc_Intens.Data
                     {
                         user.Password = HashPassword(password);
                     }
+                    db.SaveChanges();
+                }
+            }
+        }
+        public static void DeleteUser(int userId)
+        {
+            using (var db = new AppDbContext())
+            {
+                var user = db.Users.Where(u => u.Id == userId).Include(u => u.RoleUsers).FirstOrDefault();
+                if (user != null)
+                {
+                    var roleUser = db.RoleUsers.Where(ru => ru.UserId == userId).ToList();
+                    db.RoleUsers.RemoveRange(roleUser);
+                    db.Users.Remove(user);
                     db.SaveChanges();
                 }
             }
