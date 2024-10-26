@@ -135,6 +135,162 @@ namespace E3_Barroc_Intens.Data
                 }
             }
         }
+        public static void AddBean()
+        {
+
+        }
+        public static void UpdateBean()
+        {
+
+        }
+        public static void DeleteBean()
+        {
+
+        }
+        public static void AddBrand()
+        {
+
+        }
+        public static void UpdateBrand()
+        {
+
+        }
+        public static void DeleteBrand()
+        {
+
+        }
+        public static void MakeContract()
+        {
+
+        }
+        public static void UpdateContract()
+        {
+
+        }
+        public static void DeleteContract()
+        {
+
+        }
+        public static void AddCustomer()
+        {
+
+        }
+        public static void UpdateCustomer()
+        {
+
+        }
+        public static void DeleteCustomer()
+        {
+
+        }
+        public static void AddCustomerOrder()
+        {
+
+        }
+        public static void UpdateCustomerOrder()
+        {
+
+        }
+        public static void DeleteCustomerOrder()
+        {
+
+        }
+        public static void AddDepartment()
+        {
+
+        }
+        public static void UpdateDepartment()
+        {
+
+        }
+        public static void DeleteDepartment()
+        {
+
+        }
+        public static void AddMaintenance()
+        {
+
+        }
+        public static void UpdateMaintenance()
+        {
+
+        }
+        public static void DeleteMaintenance()
+        {
+
+        }
+        public static void AddPart()
+        {
+
+        }
+        public static void UpdatePart()
+        {
+
+        }
+        public static void DeletePart()
+        {
+
+        }
+        public static void AddPartOrder()
+        {
+
+        }
+        public static void UpdatePartOrder()
+        {
+
+        }
+        public static void DeletePartOrder()
+        {
+
+        }
+        public static void AddProduct()
+        {
+
+        }
+        public static void UpdateProduct()
+        {
+
+        }
+        public static void DeleteProduct()
+        {
+
+        }
+        public static void AddRole()
+        {
+
+        }
+        public static void UpdateRole()
+        {
+
+        }
+        public static void DeleteRole()
+        {
+
+        }
+        public static void AddRoleUser()
+        {
+
+        }
+        public static void UpdateRoleUser()
+        {
+
+        }
+        public static void DeleteRoleUser()
+        {
+
+        }
+        public static void AddStorage()
+        {
+
+        }
+        public static void UpdateStorage()
+        {
+
+        }
+        public static void DeleteStorage()
+        {
+
+        }
         public static void UpdateUser(int userId, string name = null, string email = null, string password = null)
         {
             using (var db = new AppDbContext())
