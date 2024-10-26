@@ -114,7 +114,7 @@ namespace E3_Barroc_Intens.Data
                 {
                     Name = name,
                     Email = email,
-                    Password = password
+                    Password = HashPassword(password)
                 };
 
                 db.Users.Add(newUser);
@@ -133,6 +133,11 @@ namespace E3_Barroc_Intens.Data
                     db.SaveChanges();
                 }
             }
+        }
+        private static string HashPassword(string password)
+        {
+            // moet nog een hash-functie worden toegevoegd
+            return password;
         }
     }
 }
