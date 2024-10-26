@@ -106,5 +106,33 @@ namespace E3_Barroc_Intens.Data
                 return db.Storages.ToList();
             }
         }
+        public static void MakeUser(string name, string email, string password, int roleId)
+        {
+            using (var db = new AppDbContext())
+            {
+                var newUser = new User
+                {
+                    Name = name,
+                    Email = email,
+                    Password = password
+                };
+
+                db.Users.Add(newUser);
+                db.SaveChanges();
+
+                var role = db.Roles.Find(roleId);
+                if (role != null)
+                {
+                    var roleUser = new RoleUser
+                    {
+                        RoleId = roleId,
+                        UserId = newUser.Id,
+                    };
+
+                    db.RoleUsers.Add(roleUser);
+                    db.SaveChanges();
+                }
+            }
+        }
     }
 }
