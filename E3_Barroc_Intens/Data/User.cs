@@ -12,8 +12,7 @@ namespace E3_Barroc_Intens.Data
         public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public bool BkrRegisted { get; set; }
         public List<RoleUser> RoleUsers { get; set; } = new List<RoleUser>();
-        public List<Maintenance> Maintenances { get; set; } = new List<Maintenance>();
+        //public List<Maintenance>? Maintenances { get; set; } = new List<Maintenance>();
     }
 }
