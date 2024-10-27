@@ -13,6 +13,7 @@ namespace E3_Barroc_Intens.Data
         public string Description { get; set; }
         public string Type { get; set; }
         public decimal Price { get; set; }
+        public decimal InstallationCost { get; set; }
         public int BrandId { get; set; }
         public Brand Brand { get; set; }
         public List<Contract> contracts { get; set; } = new List<Contract>();
