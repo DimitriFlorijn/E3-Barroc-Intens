@@ -32,6 +32,8 @@ namespace E3_Barroc_Intens
                 db.Database.EnsureDeleted();
                 db.Database.EnsureCreated();
             }
+
+            SetVisibilityLogOutSellectorBarItemOnCollapsed();
         }
 
         private void contentSelectorBar_SelectionChanged(SelectorBar sender, SelectorBarSelectionChangedEventArgs args)
