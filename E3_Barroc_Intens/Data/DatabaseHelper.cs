@@ -107,7 +107,7 @@ namespace E3_Barroc_Intens.Data
                 return db.Storages.ToList();
             }
         }
-        public static void MakeUser(string name, string email, string password, int roleId)
+        public static void AddUser(string name, string email, string password, int roleId)
         {
             using (var db = new AppDbContext())
             {
