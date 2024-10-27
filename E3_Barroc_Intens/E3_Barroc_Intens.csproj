@@ -13,6 +13,8 @@
     <EnableMsixTooling>true</EnableMsixTooling>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Auth\LogInPage.xaml" />
+    <None Remove="Auth\RegisterPage.xaml" />
     <None Remove="Maintenance\Head_Maintenance\HeadMaintenancePage.xaml" />
     <None Remove="Maintenance\Planner\PlannerPage.xaml" />
     <None Remove="Maintenance\Technical_Service\TechnicalServicePage.xaml" />
@@ -52,6 +54,11 @@
     <ProjectCapability Include="Msix" />
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Auth\RegisterPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="Sales\Head_Sales\HeadSalesPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -88,6 +95,11 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="Maintenance\Planner\PlannerPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Auth\LogInPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
