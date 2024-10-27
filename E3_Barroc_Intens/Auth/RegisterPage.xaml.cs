@@ -32,5 +32,10 @@ namespace E3_Barroc_Intens.Auth
         {
             base.OnNavigatedTo(e);
         }
+
+        private void roleCheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
