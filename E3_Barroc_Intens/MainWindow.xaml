@@ -19,9 +19,9 @@
             <SelectorBarItem x:Name="salesSelectorBarItem" Text="Sales" />
             <SelectorBarItem x:Name="inkoopSelectorBarItem" Text="Inkoop" />
             <SelectorBarItem x:Name="maintenanceSelectorBarItem" Text="Maintenance" />
-            <SelectorBarItem x:Name="registrerenSelectorBarItem" Text="Registreren" />
-            <SelectorBarItem x:Name="inloggenSelectorBarItem" Text="Inloggen" />
-            <SelectorBarItem x:Name="uitloggenSelectorBarItem" Text="Uitloggen" />
+            <SelectorBarItem x:Name="registerSelectorBarItem" Text="Registreren" />
+            <SelectorBarItem x:Name="loginSelectorBarItem" Text="Inloggen" />
+            <SelectorBarItem x:Name="logoutSelectorBarItem" Text="Uitloggen" />
         </SelectorBar>
         
         <Frame Grid.Row="1" x:Name="contentFrame"/>
