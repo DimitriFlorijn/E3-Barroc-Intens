@@ -285,8 +285,17 @@ namespace E3_Barroc_Intens.Data
                 }
             }
         }
-        public static void UpdateRole()
+        public static void UpdateRole(int RoleId, string name)
         {
+            using (var db = new AppDbContext())
+            {
+                var role = db.Roles.Find(RoleId);
+                if (role != null)
+                {
+                    role.Name = name;
+                    db.SaveChanges();
+                }
+            }
         }
         public static void DeleteRole()
         {
