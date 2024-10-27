@@ -39,7 +39,7 @@ namespace E3_Barroc_Intens
             
         }
 
-        public void SetVisibilityLogOutSellectorBarItemOnCallapsed()
+        public void SetVisibilityLogOutSellectorBarItemOnCollapsed()
         {
             logoutSelectorBarItem.Visibility = Visibility.Collapsed;
         }
@@ -49,7 +49,7 @@ namespace E3_Barroc_Intens
             logoutSelectorBarItem.Visibility = Visibility.Visible;
         }
 
-        public void SetVisibilityLogInSellectorBarItemOnCallapsed()
+        public void SetVisibilityLogInSellectorBarItemOnCollapsed()
         {
             loginSelectorBarItem.Visibility = Visibility.Collapsed;
         }
