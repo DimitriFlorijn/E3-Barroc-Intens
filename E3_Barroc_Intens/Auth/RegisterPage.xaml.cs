@@ -40,7 +40,7 @@ namespace E3_Barroc_Intens.Auth
 
         private void roleCheckBox_Unchecked(object sender, RoutedEventArgs e)
         {
-
+            comboBoxStackPanel.Visibility = Visibility.Collapsed;
         }
     }
 }
