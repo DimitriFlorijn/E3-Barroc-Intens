@@ -1,3 +1,4 @@
+using E3_Barroc_Intens.Data;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
@@ -26,6 +27,9 @@ namespace E3_Barroc_Intens.Auth
         public RegisterPage()
         {
             this.InitializeComponent();
+            var roles = DatabaseHelper.GetRoles();
+            roleComboBox.ItemsSource = roles;
+            roleComboBox.DisplayMemberPath = "Name";
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
