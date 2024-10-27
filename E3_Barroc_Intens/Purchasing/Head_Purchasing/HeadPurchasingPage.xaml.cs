@@ -27,5 +27,10 @@ namespace E3_Barroc_Intens.Purchasing.Head_Purchasing
         {
             this.InitializeComponent();
         }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+        }
     }
 }
