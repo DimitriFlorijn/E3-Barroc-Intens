@@ -34,9 +34,29 @@ namespace E3_Barroc_Intens
             }
         }
 
-        private void myButton_Click(object sender, RoutedEventArgs e)
+        private void contentSelectorBar_SelectionChanged(SelectorBar sender, SelectorBarSelectionChangedEventArgs args)
         {
-            myButton.Content = "Clicked";
+            
+        }
+
+        public void SetVisibilityLogOutSellectorBarItemOnCallapsed()
+        {
+            
+        }
+
+        public void SetVisibilityLogOutSellectorBarItemOnVisible()
+        {
+            
+        }
+
+        public void SetVisibilityLogInSellectorBarItemOnCallapsed()
+        {
+
+        }
+
+        public void SetVisibilityLogInSellectorBarItemOnVisible()
+        {
+
         }
     }
 }
