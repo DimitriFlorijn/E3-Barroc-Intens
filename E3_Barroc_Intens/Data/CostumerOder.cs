@@ -8,6 +8,7 @@ namespace E3_Barroc_Intens.Data
 {
     internal class CustomerOder
     {
+        public int Id { get; set; }
         public int CustomerId { get; set; }
         public Customer Customer { get; set; }
         public int? ProductId { get; set; }
@@ -16,7 +17,7 @@ namespace E3_Barroc_Intens.Data
         public Bean Bean { get; set; }
         public int Quantity { get; set; }
         public decimal Price { get; set; }
-        public DateTime DateTime { get; set; }
+        public DateTime OrderDate { get; set; }
         public bool IsPaid { get; set; }
     }
 }
