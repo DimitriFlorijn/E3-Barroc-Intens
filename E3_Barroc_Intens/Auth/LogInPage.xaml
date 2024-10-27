@@ -20,7 +20,7 @@
                 <PasswordBox x:Name="passwordPasswordBox" PlaceholderText="Vul wachtwoord in" />
             </StackPanel>
             <StackPanel>
-                <Button x:Name="loginButton" VerticalAlignment="Center" HorizontalAlignment="Stretch">Inloggen</Button>
+                <Button x:Name="loginButton" VerticalAlignment="Center" HorizontalAlignment="Stretch" Click="loginButton_Click">Inloggen</Button>
             </StackPanel>
         </StackPanel>
     </Grid>
