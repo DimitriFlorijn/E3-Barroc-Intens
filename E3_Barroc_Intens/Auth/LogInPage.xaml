@@ -10,6 +10,18 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Spacing="50">
+            <StackPanel>
+                <TextBlock Text="Gebruikersnaam:" TextAlignment="Center" HorizontalTextAlignment="Center"/>
+                <TextBox x:Name="usernameTextBox" PlaceholderText="Vul gebruikersnaam in" />
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="Wachtwoord" TextAlignment="Center" HorizontalTextAlignment="Center"/>
+                <PasswordBox x:Name="passwordPasswordBox" PlaceholderText="Vul wachtwoord in" />
+            </StackPanel>
+            <StackPanel>
+                <Button x:Name="loginButton" VerticalAlignment="Center" HorizontalAlignment="Stretch">Inloggen</Button>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>
