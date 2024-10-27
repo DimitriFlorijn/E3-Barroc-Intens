@@ -27,9 +27,9 @@ namespace E3_Barroc_Intens.Auth
         public RegisterPage()
         {
             this.InitializeComponent();
-            var roles = DatabaseHelper.GetRoles();
-            roleComboBox.ItemsSource = roles;
-            roleComboBox.DisplayMemberPath = "Name";
+            //var roles = DatabaseHelper.GetRoles();
+            //roleComboBox.ItemsSource = roles;
+            //roleComboBox.DisplayMemberPath = "Name";
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
