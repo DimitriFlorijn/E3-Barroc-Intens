@@ -41,7 +41,7 @@ namespace E3_Barroc_Intens
 
         public void SetVisibilityLogOutSellectorBarItemOnCallapsed()
         {
-            
+            logoutSelectorBarItem.Visibility = Visibility.Collapsed;
         }
 
         public void SetVisibilityLogOutSellectorBarItemOnVisible()
