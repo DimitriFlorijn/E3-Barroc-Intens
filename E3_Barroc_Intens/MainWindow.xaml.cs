@@ -1,3 +1,4 @@
+using E3_Barroc_Intens.Auth;
 using E3_Barroc_Intens.Data;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
@@ -38,7 +39,12 @@ namespace E3_Barroc_Intens
 
         private void contentSelectorBar_SelectionChanged(SelectorBar sender, SelectorBarSelectionChangedEventArgs args)
         {
-            
+            SelectorBarItem selectedItem = sender.SelectedItem;
+
+            if (selectedItem == loginSelectorBarItem)
+            {
+                contentFrame.Navigate(typeof(LogInPage));
+            }
         }
 
         public void SetVisibilityLogOutSellectorBarItemOnCollapsed()
