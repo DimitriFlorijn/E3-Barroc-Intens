@@ -56,7 +56,7 @@ namespace E3_Barroc_Intens
 
         public void SetVisibilityLogInSellectorBarItemOnVisible()
         {
-
+            loginSelectorBarItem.Visibility = Visibility.Visible;
         }
     }
 }
