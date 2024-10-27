@@ -45,6 +45,10 @@ namespace E3_Barroc_Intens
             {
                 contentFrame.Navigate(typeof(LogInPage));
             }
+            else if (selectedItem == registerSelectorBarItem)
+            {
+                contentFrame.Navigate(typeof(RegisterPage));
+            }
         }
 
         public void SetVisibilityLogOutSellectorBarItemOnCollapsed()
