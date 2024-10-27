@@ -32,5 +32,10 @@ namespace E3_Barroc_Intens.Auth
         {
             base.OnNavigatedTo(e);
         }
+
+        private void loginButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
