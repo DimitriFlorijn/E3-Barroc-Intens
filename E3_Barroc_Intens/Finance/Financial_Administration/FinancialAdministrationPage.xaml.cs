@@ -27,5 +27,10 @@ namespace E3_Barroc_Intens.Finance.Financial_Administration
         {
             this.InitializeComponent();
         }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+        }
     }
 }
