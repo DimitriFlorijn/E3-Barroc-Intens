@@ -17,7 +17,7 @@ namespace E3_Barroc_Intens.Data
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Contract> Contracts { get; set; }
         public DbSet<Customer> Customers { get; set; }
-        public DbSet<CustomerOder> CustomerOders { get; set; }
+        public DbSet<CustomerOder> CustomerOrders { get; set; }
         public DbSet<Department> Department { get; set; }
         public DbSet<Maintenance> Maintenances { get; set; }
         public DbSet<PartOrder> PartOrder { get; set; }
@@ -38,22 +38,6 @@ namespace E3_Barroc_Intens.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
-            modelBuilder.Entity<Contract>().HasKey(
-                c => new { c.ProductId, c.BeanId, c.CustomerId }
-            );
-
-            modelBuilder.Entity<CustomerOder>().HasKey(
-                co => new { co.CustomerId, co.DateTime }
-            );
-
-            modelBuilder.Entity<Maintenance>().HasKey(
-                m => new { m.UserId, m.CostumerId }
-            );
-
-            modelBuilder.Entity<PartOrder>().HasKey(
-                po => new { po.PartId }
-            );
 
             modelBuilder.Entity<RoleUser>().HasKey(
                 ru => new { ru.UserId, ru.RoleId }
