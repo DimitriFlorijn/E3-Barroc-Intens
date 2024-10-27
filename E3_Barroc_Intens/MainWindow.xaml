@@ -8,7 +8,22 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button x:Name="myButton" Click="myButton_Click">Click Me</Button>
-    </StackPanel>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <SelectorBar HorizontalAlignment="Stretch" Grid.Row="0" x:Name="contentSelectorBar" SelectionChanged="contentSelectorBar_SelectionChanged">
+            <SelectorBarItem x:Name="financeSelectorBarItem" Text="Finance" />
+            <SelectorBarItem x:Name="salesSelectorBarItem" Text="Sales" />
+            <SelectorBarItem x:Name="inkoopSelectorBarItem" Text="Inkoop" />
+            <SelectorBarItem x:Name="maintenanceSelectorBarItem" Text="Maintenance" />
+            <SelectorBarItem x:Name="registrerenSelectorBarItem" Text="Registreren" />
+            <SelectorBarItem x:Name="inloggenSelectorBarItem" Text="Inloggen" />
+            <SelectorBarItem x:Name="uitloggenSelectorBarItem" Text="Uitloggen" />
+        </SelectorBar>
+        
+        <Frame Grid.Row="1" x:Name="contentFrame"/>
+    </Grid>
 </Window>
