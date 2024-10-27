@@ -14,7 +14,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <SelectorBar HorizontalAlignment="Stretch" Grid.Row="0" x:Name="contentSelectorBar" SelectionChanged="contentSelectorBar_SelectionChanged">
+        <SelectorBar HorizontalAlignment="Center" Grid.Row="0" x:Name="contentSelectorBar" SelectionChanged="contentSelectorBar_SelectionChanged">
             <SelectorBarItem x:Name="financeSelectorBarItem" Text="Finance" />
             <SelectorBarItem x:Name="salesSelectorBarItem" Text="Sales" />
             <SelectorBarItem x:Name="inkoopSelectorBarItem" Text="Inkoop" />
