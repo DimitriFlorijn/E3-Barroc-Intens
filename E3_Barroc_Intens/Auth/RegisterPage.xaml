@@ -10,6 +10,31 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Spacing="50">
+            <StackPanel>
+                <TextBlock Text="Gebruikersnaam:" TextAlignment="Center" HorizontalTextAlignment="Center"/>
+                <TextBox x:Name="usernameTextBox" PlaceholderText="Vul gebruikersnaam in" />
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="Wachtwoord" TextAlignment="Center" HorizontalTextAlignment="Center"/>
+                <PasswordBox x:Name="passwordPasswordBox" PlaceholderText="Vul wachtwoord in" />
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="Herhaal Wachtwoord" TextAlignment="Center" HorizontalTextAlignment="Center"/>
+                <PasswordBox x:Name="repeatPasswordPasswordBox" PlaceholderText="Vul wachtwoord in" />
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="Rol aan gebruiker toevoegen" />
+                <CheckBox x:Name="roleCheckBox" Checked="roleCheckBox_Checked" Unchecked="roleCheckBox_Unchecked"/>
+            </StackPanel>
+            <StackPanel x:Name="comboBoxStackPanel" Visibility="Collapsed">
+                <TextBlock Text="Kies een rol:" />
+                <ComboBox x:Name="roleComboBox">
+                </ComboBox>
+            </StackPanel>
+            <StackPanel>
+                <Button x:Name="registerButton" VerticalAlignment="Center" HorizontalAlignment="Stretch">Registreren</Button>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>
