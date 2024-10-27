@@ -51,7 +51,7 @@ namespace E3_Barroc_Intens
 
         public void SetVisibilityLogInSellectorBarItemOnCallapsed()
         {
-
+            loginSelectorBarItem.Visibility = Visibility.Collapsed;
         }
 
         public void SetVisibilityLogInSellectorBarItemOnVisible()
