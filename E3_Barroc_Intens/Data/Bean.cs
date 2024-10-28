@@ -14,6 +14,6 @@ namespace E3_Barroc_Intens.Data
         public string Type { get; set; }
         public decimal PricePerKg { get; set; }
         public List<Contract> Contracts { get; set; } = new List<Contract>();
-        public List<CustomerOder> Costumers { get; set; } = new List<CustomerOder>();
+        public List<CustomerOrder> Costumers { get; set; } = new List<CustomerOrder>();
     }
 }

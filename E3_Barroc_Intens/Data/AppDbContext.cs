@@ -17,7 +17,7 @@ namespace E3_Barroc_Intens.Data
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Contract> Contracts { get; set; }
         public DbSet<Customer> Customers { get; set; }
-        public DbSet<CustomerOder> CustomerOrders { get; set; }
+        public DbSet<CustomerOrder> CustomerOrders { get; set; }
         public DbSet<Department> Department { get; set; }
         public DbSet<Maintenance> Maintenances { get; set; }
         public DbSet<PartOrder> PartOrder { get; set; }
@@ -503,8 +503,8 @@ namespace E3_Barroc_Intens.Data
                 }
             );
 
-            modelBuilder.Entity<CustomerOder>().HasData(
-                new CustomerOder
+            modelBuilder.Entity<CustomerOrder>().HasData(
+                new CustomerOrder
                 {
                     Id = 1,
                     CustomerId = 1,
@@ -515,7 +515,7 @@ namespace E3_Barroc_Intens.Data
                     OrderDate = new DateTime(2024, 2, 1),
                     IsPaid = true
                 },
-                new CustomerOder
+                new CustomerOrder
                 {
                     Id = 2,
                     CustomerId = 2,
@@ -526,7 +526,7 @@ namespace E3_Barroc_Intens.Data
                     OrderDate = new DateTime(2024, 2, 5),
                     IsPaid = false
                 },
-                new CustomerOder
+                new CustomerOrder
                 {
                     Id = 3,
                     CustomerId = 3,
@@ -537,7 +537,7 @@ namespace E3_Barroc_Intens.Data
                     OrderDate = new DateTime(2024, 2, 10),
                     IsPaid = true
                 },
-                new CustomerOder
+                new CustomerOrder
                 {
                     Id = 4,
                     CustomerId = 4,
