@@ -17,6 +17,6 @@ namespace E3_Barroc_Intens.Data
         public int BrandId { get; set; }
         public Brand Brand { get; set; }
         public List<Contract> contracts { get; set; } = new List<Contract>();
-        public List<CustomerOder> costumers { get; set; } = new List<CustomerOder>();
+        public List<CustomerOrder> costumers { get; set; } = new List<CustomerOrder>();
     }
 }
