@@ -2,6 +2,7 @@
 <configuration>
 	<connectionStrings>
 		<add name="E3-Barroc-Intens-Database"
-			 connectionString="server = localhost;port = 3306;user = ;password =;database = " />
+			 connectionString="server=localhost;  port=3306;  user=root;  password=; database=E3-Barroc-Intens-Database"/>
 	</connectionStrings>
+	<!--standard login-->
 </configuration>
