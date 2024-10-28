@@ -17,6 +17,7 @@ namespace E3_Barroc_Intens.Data
         public string FaultCode { get; set; }
         public bool IsResolved { get; set; }
         public string? FollowUp { get; set; }
+        //public string FollowUp { get; set; } > geen error maybo not work, oftewijl de ? weg
         public string IncidentDescription { get; set; }
         public List<Part> UsedParts { get; set; }
     }
