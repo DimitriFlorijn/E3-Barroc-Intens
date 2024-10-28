@@ -401,6 +401,230 @@ namespace E3_Barroc_Intens.Data
                 new Customer { Id = 154, Name = "Klant Inactief 4", Email = "inactief4@example.com", Location = "Locatie 154", Number = "0612345691", BkrRegistered = false },
                 new Customer { Id = 155, Name = "Klant Inactief 5", Email = "inactief5@example.com", Location = "Locatie 155", Number = "0612345692", BkrRegistered = false }
             );
+
+            modelBuilder.Entity<Part>().HasData(
+                new Part { Id = 1, Name = "Rubber 10 mm", Description = "", Price = 0.39m, BrandId = 1 },
+                new Part { Id = 2, Name = "Rubber 14 mm", Description = "", Price = 0.45m, BrandId = 1 },
+                new Part { Id = 3, Name = "Slang", Description = "", Price = 4.45m, BrandId = 1 },
+                new Part { Id = 4, Name = "Voeding (elektra)", Description = "", Price = 68.69m, BrandId = 1 },
+                new Part { Id = 5, Name = "Ontkalker", Description = "", Price = 4.00m, BrandId = 1 },
+                new Part { Id = 6, Name = "Waterfilter", Description = "", Price = 299.45m, BrandId = 1 },
+                new Part { Id = 7, Name = "Reservoir sensor", Description = "", Price = 89.99m, BrandId = 1 },
+                new Part { Id = 8, Name = "Druppelstop", Description = "", Price = 122.43m, BrandId = 1 },
+                new Part { Id = 9, Name = "Electrische pomp", Description = "", Price = 478.59m, BrandId = 1 },
+                new Part { Id = 10, Name = "Tandwiel 110mm", Description = "", Price = 5.45m, BrandId = 1 },
+                new Part { Id = 11, Name = "Tandwiel 70mm", Description = "", Price = 5.25m, BrandId = 1 },
+                new Part { Id = 12, Name = "Maalmotor", Description = "", Price = 119.20m, BrandId = 1 },
+                new Part { Id = 13, Name = "Zeef", Description = "", Price = 28.80m, BrandId = 1 },
+                new Part { Id = 14, Name = "Reinigingstabletten", Description = "", Price = 3.45m, BrandId = 1 },
+                new Part { Id = 15, Name = "Reinigingsborsteltjes", Description = "", Price = 8.45m, BrandId = 1 },
+                new Part { Id = 16, Name = "Ontkalkingspijp", Description = "", Price = 21.70m, BrandId = 1 }
+            );
+
+            modelBuilder.Entity<Storage>().HasData(
+                new Storage { /*Id = 1,*/ ProductId = 1, BeanId = 1, PartId = 1, Amount = 10 },
+                new Storage { /*Id = 2,*/ ProductId = 2, BeanId = 2, PartId = 2, Amount = 5 },
+                new Storage { /*Id = 3,*/ ProductId = 3, BeanId = 3, PartId = 3, Amount = 20 },
+                new Storage { /*Id = 4,*/ ProductId = 4, BeanId = 4, PartId = 4, Amount = 15 }
+            );
+
+            modelBuilder.Entity<Contract>().HasData(
+                new Contract { Id = 1, CustomerId = 1, ProductId = 1, BeanId = 1, StartDate = new DateOnly(2024, 1, 1), EndDate = new DateOnly(2025, 1, 1), IsLeased = true, IsPaid = false, LastUpdate = new DateOnly(2023, 10, 1) },
+                new Contract { Id = 2, CustomerId = 2, ProductId = 2, BeanId = 2, StartDate = new DateOnly(2024, 2, 1), EndDate = new DateOnly(2025, 2, 1), IsLeased = true, IsPaid = true, LastUpdate = new DateOnly(2023, 10, 2) },
+                new Contract { Id = 3, CustomerId = 3, ProductId = 3, BeanId = null, StartDate = new DateOnly(2024, 3, 1), EndDate = new DateOnly(2025, 3, 1), IsLeased = false, IsPaid = false, LastUpdate = new DateOnly(2023, 10, 3) },
+                new Contract { Id = 4, CustomerId = 4, ProductId = 4, BeanId = 3, StartDate = new DateOnly(2024, 4, 1), EndDate = new DateOnly(2025, 4, 1), IsLeased = true, IsPaid = true, LastUpdate = new DateOnly(2023, 10, 4) }
+            );
+
+            modelBuilder.Entity<Invoice>().HasData(
+                new Invoice { Id = 1, CustomerId = 1, ContractId = 1, DateIssued = new DateTime(2024, 1, 5), DueDate = new DateTime(2024, 2, 5), TotalAmount = 499.00M, IsPaid = false },
+                new Invoice { Id = 2, CustomerId = 2, ContractId = 2, DateIssued = new DateTime(2024, 2, 6), DueDate = new DateTime(2024, 3, 6), TotalAmount = 599.00M, IsPaid = true },
+                new Invoice { Id = 3, CustomerId = 3, ContractId = 3, DateIssued = new DateTime(2024, 3, 7), DueDate = new DateTime(2024, 4, 7), TotalAmount = 799.00M, IsPaid = false },
+                new Invoice { Id = 4, CustomerId = 4, ContractId = 4, DateIssued = new DateTime(2024, 4, 8), DueDate = new DateTime(2024, 5, 8), TotalAmount = 999.00M, IsPaid = true }
+            );
+
+            modelBuilder.Entity<IncendentReport>().HasData(
+                new IncendentReport
+                {
+                    Id = 1,
+                    CustomerId = 1,
+                    DateReported = new DateTime(2024, 1, 10),
+                    InitialMessage = "Koffieautomaat start niet op.",
+                    CoffeeMachineType = "Barroc Intens Italian Light",
+                    FaultCode = "E01",
+                    IsResolved = false,
+                    FollowUp = null,
+                    IncidentDescription = "De koffieautomaat reageert niet op de aan/uit-knop."
+                },
+                new IncendentReport
+                {
+                    Id = 2,
+                    CustomerId = 2,
+                    DateReported = new DateTime(2024, 1, 12),
+                    InitialMessage = "Er komt geen water uit de machine.",
+                    CoffeeMachineType = "Barroc Intens Italian",
+                    FaultCode = "E02",
+                    IsResolved = true,
+                    FollowUp = "Watervoorziening gecontroleerd, probleem opgelost.",
+                    IncidentDescription = "De waterpomp leek defect, maar het bleek een verstopte waterfilter te zijn."
+                },
+                new IncendentReport
+                {
+                    Id = 3,
+                    CustomerId = 3,
+                    DateReported = new DateTime(2024, 1, 15),
+                    InitialMessage = "Koffie smaakt vreemd.",
+                    CoffeeMachineType = "Barroc Intens Italian Deluxe",
+                    FaultCode = "E03",
+                    IsResolved = false,
+                    FollowUp = null,
+                    IncidentDescription = "Klant meldt dat de koffie niet goed smaakt. Mogelijk defecte onderdelen."
+                },
+                new IncendentReport
+                {
+                    Id = 4,
+                    CustomerId = 4,
+                    DateReported = new DateTime(2024, 1, 20),
+                    InitialMessage = "Machine maakt een raar geluid.",
+                    CoffeeMachineType = "Barroc Intens Italian Deluxe Special",
+                    FaultCode = "E04",
+                    IsResolved = true,
+                    FollowUp = "Reservoir sensor vervangen.",
+                    IncidentDescription = "De machine maakt een schurend geluid. Sensor was defect en is vervangen."
+                }
+            );
+
+            modelBuilder.Entity<CustomerOder>().HasData(
+                new CustomerOder
+                {
+                    Id = 1,
+                    CustomerId = 1,
+                    ProductId = 1,
+                    BeanId = 1,
+                    Quantity = 2,
+                    Price = 499.00M,
+                    OrderDate = new DateTime(2024, 2, 1),
+                    IsPaid = true
+                },
+                new CustomerOder
+                {
+                    Id = 2,
+                    CustomerId = 2,
+                    ProductId = 3,
+                    BeanId = 2,
+                    Quantity = 1,
+                    Price = 799.00M,
+                    OrderDate = new DateTime(2024, 2, 5),
+                    IsPaid = false
+                },
+                new CustomerOder
+                {
+                    Id = 3,
+                    CustomerId = 3,
+                    ProductId = 2,
+                    BeanId = 3,
+                    Quantity = 3,
+                    Price = 1797.00M, // 3 x 599.00
+                    OrderDate = new DateTime(2024, 2, 10),
+                    IsPaid = true
+                },
+                new CustomerOder
+                {
+                    Id = 4,
+                    CustomerId = 4,
+                    ProductId = 4,
+                    BeanId = 4,
+                    Quantity = 1,
+                    Price = 999.00M,
+                    OrderDate = new DateTime(2024, 2, 15),
+                    IsPaid = false
+                }
+            );
+
+            modelBuilder.Entity<PartOrder>().HasData(
+                new PartOrder
+                {
+                    Id = 1,
+                    PartId = 1,
+                    Quantity = 10,
+                    Price = 3.90m, // 10 x 0.39m
+                    OrderDate = new DateTime(2024, 1, 15)
+                },
+                new PartOrder
+                {
+                    Id = 2,
+                    PartId = 4,
+                    Quantity = 2,
+                    Price = 137.38m, // 2 x 68.69m
+                    OrderDate = new DateTime(2024, 1, 20)
+                },
+                new PartOrder
+                {
+                    Id = 3,
+                    PartId = 6,
+                    Quantity = 1,
+                    Price = 299.45m,
+                    OrderDate = new DateTime(2024, 1, 25)
+                },
+                new PartOrder
+                {
+                    Id = 4,
+                    PartId = 7,
+                    Quantity = 5,
+                    Price = 449.95m, // 5 x 89.99m
+                    OrderDate = new DateTime(2024, 2, 1)
+                },
+                new PartOrder
+                {
+                    Id = 5,
+                    PartId = 9,
+                    Quantity = 1,
+                    Price = 478.59m,
+                    OrderDate = new DateTime(2024, 2, 5)
+                }
+            );
+
+            modelBuilder.Entity<Maintenance>().HasData(
+                new Maintenance
+                {
+                    Id = 1,
+                    UserId = 11,
+                    CostumerId = 1,
+                    Description = "Routine onderhoud koffieautomaat.",
+                    AppointmentDate = new DateTime(2024, 1, 15, 10, 0, 0)
+                },
+                new Maintenance
+                {
+                    Id = 2,
+                    UserId = 12,
+                    CostumerId = 2,
+                    Description = "Probleem met waterfilter vervangen.",
+                    AppointmentDate = new DateTime(2024, 1, 20, 14, 30, 0)
+                },
+                new Maintenance
+                {
+                    Id = 3,
+                    UserId = 13,
+                    CostumerId = 3,
+                    Description = "Algemene inspectie van de apparatuur.",
+                    AppointmentDate = new DateTime(2024, 1, 25, 9, 0, 0)
+                },
+                new Maintenance
+                {
+                    Id = 4,
+                    UserId = 14,
+                    CostumerId = 4,
+                    Description = "Reparatie van de koffiemachine.",
+                    AppointmentDate = new DateTime(2024, 2, 1, 11, 15, 0)
+                },
+                new Maintenance
+                {
+                    Id = 5,
+                    UserId = 11,
+                    CostumerId = 5,
+                    Description = "Installatie van nieuwe koffieautomaat.",
+                    AppointmentDate = new DateTime(2024, 2, 5, 13, 45, 0)
+                }
+            );
         }
     }
 }
