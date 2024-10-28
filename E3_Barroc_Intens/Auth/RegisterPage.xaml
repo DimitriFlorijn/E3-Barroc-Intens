@@ -29,11 +29,11 @@
             </StackPanel>
             <StackPanel x:Name="comboBoxStackPanel" Visibility="Collapsed">
                 <TextBlock Text="Kies een rol:" />
-                <ComboBox x:Name="roleComboBox">
+                <ComboBox x:Name="roleComboBox" SelectionChanged="roleComboBox_SelectionChanged">
                 </ComboBox>
             </StackPanel>
             <StackPanel>
-                <Button x:Name="registerButton" VerticalAlignment="Center" HorizontalAlignment="Stretch">Registreren</Button>
+                <Button x:Name="RegisterButton" VerticalAlignment="Center" HorizontalAlignment="Stretch" Click="RegisterButton_Click">Registreren</Button>
             </StackPanel>
         </StackPanel>
     </Grid>
