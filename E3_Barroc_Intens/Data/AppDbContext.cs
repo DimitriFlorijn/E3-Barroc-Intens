@@ -625,6 +625,33 @@ namespace E3_Barroc_Intens.Data
                     AppointmentDate = new DateTime(2024, 2, 5, 13, 45, 0)
                 }
             );
+
+            modelBuilder.Entity<Department>().HasData(
+                new Department
+                {
+                    Id = 1,
+                    Name = "Finance",
+                    HeadDepartmentId = 1,
+                },
+                new Department
+                {
+                    Id = 2,
+                    Name = "Sales",
+                    HeadDepartmentId = 2,
+                },
+                new Department
+                {
+                    Id = 3,
+                    Name = "Inkoop",
+                    HeadDepartmentId = 7,
+                },
+                new Department
+                {
+                    Id = 4,
+                    Name = "Maintenance",
+                    HeadDepartmentId = 10,
+                }
+            );
         }
     }
 }
