@@ -24,12 +24,16 @@ namespace E3_Barroc_Intens.Auth
     /// </summary>
     public sealed partial class RegisterPage : Page
     {
+        private Role selectedRole;
         public RegisterPage()
         {
             this.InitializeComponent();
-            //var roles = DatabaseHelper.GetRoles();
-            //roleComboBox.ItemsSource = roles;
-            //roleComboBox.DisplayMemberPath = "Name";
+            using (var db = new AppDbContext())
+            {
+                var roles = db.Roles.ToList();
+                roleComboBox.ItemsSource = roles;
+                roleComboBox.DisplayMemberPath = "Name";
+            }
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -45,6 +49,51 @@ namespace E3_Barroc_Intens.Auth
         private void roleCheckBox_Unchecked(object sender, RoutedEventArgs e)
         {
             comboBoxStackPanel.Visibility = Visibility.Collapsed;
+        }
+
+        private void roleComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var selectedItem = roleComboBox.SelectedItem as Role;
+            selectedRole = selectedItem;
+        }
+
+        private void RegisterButton_Click(object sender, RoutedEventArgs e)
+        {
+            var username  = usernameTextBox.Text;
+            var password = passwordPasswordBox.Password;
+            var repeatPassword = repeatPasswordPasswordBox.Password;
+            using (var db = new AppDbContext())
+            {
+                if (roleCheckBox.IsChecked == true && password == repeatPassword && selectedRole != null)
+                {
+                    var user = new User
+                    {
+                        Name = username,
+                        Password = password,
+                    };
+                    db.Users.Add(user);
+                    db.SaveChanges();
+
+                    var roleUser = new RoleUser
+                    {
+                        UserId = user.Id,
+                        RoleId = selectedRole.Id
+                    };
+
+                    db.RoleUsers.Add(roleUser);
+                    db.SaveChanges();
+                }
+                else if (roleCheckBox.IsChecked == false && password == repeatPassword)
+                {
+                    var user = new User
+                    {
+                        Name = username,
+                        Password = password,
+                    };
+                    db.Users.Add(user);
+                    db.SaveChanges();
+                }
+            }
         }
     }
 }
