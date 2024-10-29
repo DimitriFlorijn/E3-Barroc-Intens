@@ -36,6 +36,7 @@ namespace E3_Barroc_Intens.Data
             );
 
         }
+        // zie  data / app db config example 
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //{
         //    optionsBuilder.UseMySql(
@@ -207,7 +208,7 @@ namespace E3_Barroc_Intens.Data
                     Id = 13,
                     Name = "Cindy Passier",
                     Email = "Cindy.Passier@Barroc.Intens.com",
-                    Password = "Simon.Nagelkerke"
+                    Password = "Simon Nagelkerke"
                 },
                 new User
                 {
