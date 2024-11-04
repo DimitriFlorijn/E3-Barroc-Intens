@@ -10,8 +10,8 @@ Dit document beschrijft de code conventions die moeten worden gevolgd om de lees
 5. [Functies](#functies)
 6. [Fout Preventie](#Fout-Preventie)
 7. [Bestandsnamen en Mappenstructuur](#bestandsnamen-en-mappenstructuur)
-   -[Mappen](#mappen)
-   -[Bestanden](#bestanden)
+   7.1[Mappen](#mappen)
+   7.2[Bestanden](#bestanden)
 
 ---
 
@@ -62,6 +62,16 @@ Dit document beschrijft de code conventions die moeten worden gevolgd om de lees
   1. Namen zijn gebaseerd op beroep in plaats van afdeling.
   2. Andere bestanden mogen daar ook in staan. **Let op**: Dit geldt alleen voor bestanden die bij dat beroep horen. Bestanden die niet bij dat beroep horen, mogen daar niet in worden opgeslagen. Bestanden die bij het beroep "planner" horen, mogen bijvoorbeeld niet worden opgeslagen in de map voor het beroep "inkoper".
 
-- Mappen die in een tweede rangs map zitten, worden derde rangs mappen genoemd. Derde rangs mappen zijn *optioneel*, maar het gebruik ervan wordt aangeraden voor een nettere mappenstructuur. In een derde rangs map vind je bestanden die een aparte locatie hebben omdat ze een functionaliteit van het hoofdbestand ondersteunen. Een voorbeeld: de inkoper ziet op het dashboard in de tweede rangs map van inkoop dat van bepaalde producten de voorraad bijna op is. De inkoper kan dan op een product klikken en wordt geleid naar de inkooppagina die in een derde rang map zit om daar de aankoop van het product te voltooien.
+- Mappen die in een tweede rangs map zitten, worden derde rangs mappen genoemd. Derde rangs mappen zijn *optioneel*, maar het gebruik ervan wordt aangeraden voor een nettere mappenstructuur.
+  
+#### Derde Rangs (*optioneel*)
+- In een derde rangs map vind je bestanden die een aparte locatie hebben omdat ze een functionaliteit van het hoofdbestand ondersteunen. Een voorbeeld: de inkoper ziet op het dashboard in de tweede rangs map van inkoop dat van bepaalde producten de voorraad bijna op is. De inkoper kan dan op een product klikken en wordt geleid naar de inkooppagina die in een derde rang map zit om daar de aankoop van het product te voltooien.
 
 ### bestanden
+- Bestanden zijn niet verdeeld in verschillende categorieën zoals bij mappen, maar volgen bijna dezelfde regels als bij de mappen. Bestandensnamen zijn in het Engels, beginnen met een hoofdletter en zijn aan elkaar geschreven met het woord Page achteraan. Bestanden bevinden alleen in een tweede rangsmap en kan ook bevinden in een derde rangsmap, maar niet in een eerste rangsmap.
+
+- Hierbij gelden een aantal uitzonderingen. De uitzonderingen zijn:
+   1. De bestanden in de map Data
+   2. Bestanden die Visual Studio standaard aanmaakt bij het aanmaken van een project
+ 
+- Voor bestanden in de derde rangsmappen moeten vernoemd worden naar de functionaliteit die ze ondersteunen. Ook hierbij geldt dat de bestandsnaam in het Engels is en begint met een hoofdletter, eindigt met het woord Page en aan elkaar zit.
