@@ -648,7 +648,8 @@ namespace E3_Barroc_Intens.Data
             modelBuilder.Entity<Contract>().HasData(
                 new Contract { Id = 1, CustomerId = 1, ProductId = 1, BeanId = 1, StartDate = new DateOnly(2024, 1, 1), EndDate = new DateOnly(2025, 1, 1), IsLeased = true, IsPaid = false, LastUpdate = new DateOnly(2023, 10, 1) },
                 new Contract { Id = 2, CustomerId = 2, ProductId = 2, BeanId = 2, StartDate = new DateOnly(2024, 2, 1), EndDate = new DateOnly(2025, 2, 1), IsLeased = true, IsPaid = true, LastUpdate = new DateOnly(2023, 10, 2) },
-                new Contract { Id = 3, CustomerId = 3, ProductId = 3, BeanId = null, StartDate = new DateOnly(2024, 3, 1), EndDate = new DateOnly(2025, 3, 1), IsLeased = false, IsPaid = false, LastUpdate = new DateOnly(2023, 10, 3) }
+                new Contract { Id = 3, CustomerId = 3, ProductId = 3, BeanId = null, StartDate = new DateOnly(2024, 3, 1), EndDate = new DateOnly(2025, 3, 1), IsLeased = false, IsPaid = false, LastUpdate = new DateOnly(2023, 10, 3) },
+                new Contract { Id = 4, CustomerId = 4, ProductId = 4, BeanId = 3, StartDate = new DateOnly(2024, 4, 1), EndDate = new DateOnly(2025, 4, 1), IsLeased = true, IsPaid = true, LastUpdate = new DateOnly(2023, 10, 4) }
                 /*new Contract { Id = 5, CustomerId = 5, ProductId = 1, BeanId = 1, StartDate = new DateOnly(2024, 5, 1), EndDate = new DateOnly(2025, 5, 1), IsLeased = true, IsPaid = true, LastUpdate = new DateOnly(2023, 10, 5) },
                 new Contract { Id = 6, CustomerId = 6, ProductId = 2, BeanId = 2, StartDate = new DateOnly(2024, 6, 1), EndDate = new DateOnly(2025, 6, 1), IsLeased = false, IsPaid = false, LastUpdate = new DateOnly(2023, 10, 6) },
                 new Contract { Id = 7, CustomerId = 7, ProductId = 3, BeanId = 3, StartDate = new DateOnly(2024, 7, 1), EndDate = new DateOnly(2025, 7, 1), IsLeased = true, IsPaid = false, LastUpdate = new DateOnly(2023, 10, 7) },
