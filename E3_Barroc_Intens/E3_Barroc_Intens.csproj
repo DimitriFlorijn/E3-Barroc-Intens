@@ -17,6 +17,7 @@
     <None Remove="Auth\LogInPage.xaml" />
     <None Remove="Auth\RegisterPage.xaml" />
     <None Remove="FinanceDashboard.xaml" />
+    <None Remove="InkoopDashboard.xaml" />
     <None Remove="Login.xaml" />
     <None Remove="MaintenanceDashboard.xaml" />
     <None Remove="Maintenance\Head_Maintenance\HeadMaintenancePage.xaml" />
