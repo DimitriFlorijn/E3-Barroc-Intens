@@ -15,8 +15,10 @@
         </Grid.RowDefinitions>
 
         <StackPanel x:Name="buttonStackPanel" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="LoginButton" Click="Login_Button_Click" Content="Inloggen" />
             <Button Click="Register_Button_Click" Content="Registreren" />
         </StackPanel>
+
         <Frame x:Name="contentFrame" Grid.Row="1" />
     </Grid>
 </Window>

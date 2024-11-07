@@ -44,14 +44,14 @@ namespace E3_Barroc_Intens
             contentFrame.Navigate(typeof(Register));
         }
 
-        public void SetVisibilityLogInSellectorBarItemOnCollapsed()
+        private void Login_Button_Click(object sender, RoutedEventArgs e)
         {
-            loginSelectorBarItem.Visibility = Visibility.Collapsed;
+            contentFrame.Navigate(typeof(Login));
         }
 
-        public void SetVisibilityLogInSellectorBarItemOnVisible()
+        public void SetLoginButtonText(string text)
         {
-            loginSelectorBarItem.Visibility = Visibility.Visible;
+            LoginButton.Content = text;
         }
     }
 }
