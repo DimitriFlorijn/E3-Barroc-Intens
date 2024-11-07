@@ -60,6 +60,41 @@ namespace E3_Barroc_Intens
                     password = PasswordTextBox.Text = "";
                     isLoggedIn = true;
 
+                    var roleUser = connection.RoleUsers
+                .FirstOrDefault(ru => ru.UserId == user.Id);
+
+                    if (roleUser != null)
+                    {
+                        var role = connection.Roles.FirstOrDefault(r => r.Id == roleUser.RoleId);
+
+                        if (role != null)
+                        {
+                            // Navigeer naar het juiste dashboard op basis van de rol
+                            switch (role.Name)
+                            {
+                                case "Finance":
+                                    this.Frame.Navigate(typeof(FinanceDashboard));
+                                    break;
+
+                                case "Sales":
+                                    this.Frame.Navigate(typeof(SalesDashboard));
+                                    break;
+
+                                case "Inkoop":
+                                    this.Frame.Navigate(typeof(InkoopDashboard));
+                                    break;
+
+                                case "Maintenance":
+                                    this.Frame.Navigate(typeof(MaintenanceDashboard));
+                                    break;
+
+                                default:
+                                    MessageTextBlock.Text = "Role not assigned.";
+                                    break;
+                            }
+                        }
+                    }
+
                     MainWindow.Instance?.SetLoginButtonText("Logout");
                 }
             }
