@@ -27,14 +27,32 @@ namespace E3_Barroc_Intens
         public Register()
         {
             this.InitializeComponent();
+            LoadRoles();
         }
 
+        private void LoadRoles()
+        {
+            using (var db = new AppDbContext())
+            {
+                var roles = db.Roles.ToList();
+                RoleComboBox.ItemsSource = roles;
+            }
+        }
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
             var name = UsernameTextBox.Text;
             var email = EmailTextBox.Text;
             var password = PasswordBox.Password;
+
+            if (RoleComboBox.SelectedItem == null)
+            {
+                MessageTextBlock.Text = "Select a role.";
+                return;
+            }
+
+            // Verkrijg de geselecteerde rol als een Role-object
+            var selectedRole = (Role)RoleComboBox.SelectedItem;
 
             using (var db = new AppDbContext())
             {
@@ -48,6 +66,16 @@ namespace E3_Barroc_Intens
 
                 db.Users.Add(user);
                 db.SaveChanges(); // Sla de gebruiker op om het Id te genereren
+
+                // Maak de relatie aan tussen de gebruiker en de geselecteerde rol
+                var roleUser = new RoleUser
+                {
+                    UserId = user.Id,
+                    RoleId = selectedRole.Id
+                };
+
+                db.RoleUsers.Add(roleUser);
+                db.SaveChanges(); // Sla de relatie op in de database
             }
 
             MessageTextBlock.Text = "Account created successfully!";
