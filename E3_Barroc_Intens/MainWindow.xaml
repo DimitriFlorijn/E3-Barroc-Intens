@@ -14,16 +14,9 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <SelectorBar HorizontalAlignment="Center" Grid.Row="0" x:Name="contentSelectorBar" SelectionChanged="contentSelectorBar_SelectionChanged">
-            <SelectorBarItem x:Name="financeSelectorBarItem" Text="Finance" />
-            <SelectorBarItem x:Name="salesSelectorBarItem" Text="Sales" />
-            <SelectorBarItem x:Name="inkoopSelectorBarItem" Text="Inkoop" />
-            <SelectorBarItem x:Name="maintenanceSelectorBarItem" Text="Maintenance" />
-            <SelectorBarItem x:Name="registerSelectorBarItem" Text="Registreren" />
-            <SelectorBarItem x:Name="loginSelectorBarItem" Text="Inloggen" />
-            <SelectorBarItem x:Name="logoutSelectorBarItem" Text="Uitloggen" />
-        </SelectorBar>
-        
-        <Frame Grid.Row="1" x:Name="contentFrame"/>
+        <StackPanel x:Name="buttonStackPanel" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Click="Register_Button_Click" Content="Registreren" />
+        </StackPanel>
+        <Frame x:Name="contentFrame" Grid.Row="1" />
     </Grid>
 </Window>

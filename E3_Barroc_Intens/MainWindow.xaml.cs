@@ -25,40 +25,23 @@ namespace E3_Barroc_Intens
     /// </summary>
     public sealed partial class MainWindow : Window
     {
+        public static MainWindow Instance { get; private set; }
+
         public MainWindow()
         {
             this.InitializeComponent();
+            Instance = this;
+
             using (var db = new AppDbContext())
             {
                 db.Database.EnsureDeleted();
                 db.Database.EnsureCreated();
             }
-
-            SetVisibilityLogOutSellectorBarItemOnCollapsed();
         }
 
-        private void contentSelectorBar_SelectionChanged(SelectorBar sender, SelectorBarSelectionChangedEventArgs args)
+        private void Register_Button_Click(object sender, RoutedEventArgs e)
         {
-            SelectorBarItem selectedItem = sender.SelectedItem;
-
-            if (selectedItem == loginSelectorBarItem)
-            {
-                contentFrame.Navigate(typeof(LogInPage));
-            }
-            else if (selectedItem == registerSelectorBarItem)
-            {
-                contentFrame.Navigate(typeof(RegisterPage));
-            }
-        }
-
-        public void SetVisibilityLogOutSellectorBarItemOnCollapsed()
-        {
-            logoutSelectorBarItem.Visibility = Visibility.Collapsed;
-        }
-
-        public void SetVisibilityLogOutSellectorBarItemOnVisible()
-        {
-            logoutSelectorBarItem.Visibility = Visibility.Visible;
+            contentFrame.Navigate(typeof(Register));
         }
 
         public void SetVisibilityLogInSellectorBarItemOnCollapsed()
