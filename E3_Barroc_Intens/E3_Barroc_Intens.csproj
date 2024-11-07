@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
@@ -16,7 +16,9 @@
   <ItemGroup>
     <None Remove="Auth\LogInPage.xaml" />
     <None Remove="Auth\RegisterPage.xaml" />
+    <None Remove="FinanceDashboard.xaml" />
     <None Remove="Login.xaml" />
+    <None Remove="MaintenanceDashboard.xaml" />
     <None Remove="Maintenance\Head_Maintenance\HeadMaintenancePage.xaml" />
     <None Remove="Maintenance\Planner\PlannerPage.xaml" />
     <None Remove="Maintenance\Technical_Service\TechnicalServicePage.xaml" />
@@ -24,6 +26,7 @@
     <None Remove="Purchasing\Purchaser\PurchaserPage.xaml" />
     <None Remove="Purchasing\Warehouse_Staff\WarehouseStaffPage.xaml" />
     <None Remove="Register.xaml" />
+    <None Remove="SalesDashboard.xaml" />
     <None Remove="Sales\Consultant\ConsultantPage.xaml" />
     <None Remove="Sales\Head_Sales\HeadSalesPage.xaml" />
   </ItemGroup>
@@ -55,6 +58,26 @@
   -->
   <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
     <ProjectCapability Include="Msix" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MaintenanceDashboard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="InkoopDashboard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="SalesDashboard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="FinanceDashboard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Login.xaml">
