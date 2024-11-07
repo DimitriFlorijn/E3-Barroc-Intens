@@ -10,6 +10,6 @@ namespace E3_Barroc_Intens.Data
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public List<RoleUser> RoleUsers { get; set; } = new List<RoleUser>();
+        public ICollection<RoleUser> RoleUsers { get; set; } = new List<RoleUser>();
     }
 }

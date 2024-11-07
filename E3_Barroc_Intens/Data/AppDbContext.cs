@@ -65,52 +65,22 @@ namespace E3_Barroc_Intens.Data
                 new Role
                 {
                     Id = 2,
-                    Name = "Head Finance"
+                    Name = "Finance"
                 },
                 new Role
                 {
-                    Id = 3,
-                    Name = "Financiële Administratie"
+                    Id =3,
+                    Name = "Sales"
                 },
                 new Role
                 {
                     Id = 4,
-                    Name = "Head Sales"
+                    Name = "Inkoop"
                 },
                 new Role
                 {
                     Id = 5,
-                    Name = "Consultant"
-                },
-                new Role
-                {
-                    Id = 6,
-                    Name = "Head Inkoop"
-                },
-                new Role
-                {
-                    Id = 7,
-                    Name = "Inkoper"
-                },
-                new Role
-                {
-                    Id = 8,
-                    Name = "Medewerker magazijn"
-                },
-                new Role
-                {
-                    Id = 9,
-                    Name = "Head Maintenance"
-                },
-                new Role
-                {
-                    Id = 10,
-                    Name = "Technische Dienst"
-                },
-                new Role
-                {
-                    Id = 11,
-                    Name = "Planner"
+                    Name = "Maintenance"
                 }
             );
 
@@ -265,47 +235,47 @@ namespace E3_Barroc_Intens.Data
                 },
                 new RoleUser
                 {
-                    RoleId = 6,
+                    RoleId = 2,
                     UserId = 7,
                 },
                 new RoleUser
                 {
-                    RoleId = 7,
+                    RoleId = 2,
                     UserId = 8,
                 },
                 new RoleUser
                 {
-                    RoleId = 8,
+                    RoleId = 3,
                     UserId = 9,
                 },
                 new RoleUser
                 {
-                    RoleId = 9,
+                    RoleId = 3,
                     UserId = 10,
                 },
                 new RoleUser
                 {
-                    RoleId = 10,
+                    RoleId = 4,
                     UserId = 11,
                 },
                 new RoleUser
                 {
-                    RoleId = 10,
+                    RoleId = 4,
                     UserId = 12,
                 },
                 new RoleUser
                 {
-                    RoleId = 10,
+                    RoleId = 5,
                     UserId = 13,
                 },
                 new RoleUser
                 {
-                    RoleId = 10,
+                    RoleId = 5,
                     UserId = 14,
                 },
                 new RoleUser
                 {
-                    RoleId = 11,
+                    RoleId = 5,
                     UserId = 15,
                 }
             );
