@@ -60,8 +60,7 @@ namespace E3_Barroc_Intens
                     password = PasswordTextBox.Text = "";
                     isLoggedIn = true;
 
-                    var roleUser = connection.RoleUsers
-                .FirstOrDefault(ru => ru.UserId == user.Id);
+                    var roleUser = connection.RoleUsers.FirstOrDefault(ru => ru.UserId == user.Id);
 
                     if (roleUser != null)
                     {
@@ -69,7 +68,6 @@ namespace E3_Barroc_Intens
 
                         if (role != null)
                         {
-                            // Navigeer naar het juiste dashboard op basis van de rol
                             switch (role.Name)
                             {
                                 case "Finance":
