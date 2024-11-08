@@ -1,4 +1,3 @@
-using E3_Barroc_Intens.Auth;
 using E3_Barroc_Intens.Data;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
@@ -47,6 +46,7 @@ namespace E3_Barroc_Intens
         private void Login_Button_Click(object sender, RoutedEventArgs e)
         {
             contentFrame.Navigate(typeof(Login));
+            SetLoginButtonText("Inloggen");
         }
 
         public void SetLoginButtonText(string text)
