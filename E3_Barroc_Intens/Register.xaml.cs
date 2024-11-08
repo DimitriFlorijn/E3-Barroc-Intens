@@ -51,12 +51,10 @@ namespace E3_Barroc_Intens
                 return;
             }
 
-            // Verkrijg de geselecteerde rol als een Role-object
             var selectedRole = (Role)RoleComboBox.SelectedItem;
 
             using (var db = new AppDbContext())
             {
-                // Maak een nieuwe gebruiker aan
                 var user = new User
                 {
                     Name = name,
@@ -65,9 +63,8 @@ namespace E3_Barroc_Intens
                 };
 
                 db.Users.Add(user);
-                db.SaveChanges(); // Sla de gebruiker op om het Id te genereren
+                db.SaveChanges();
 
-                // Maak de relatie aan tussen de gebruiker en de geselecteerde rol
                 var roleUser = new RoleUser
                 {
                     UserId = user.Id,
@@ -75,7 +72,7 @@ namespace E3_Barroc_Intens
                 };
 
                 db.RoleUsers.Add(roleUser);
-                db.SaveChanges(); // Sla de relatie op in de database
+                db.SaveChanges();
             }
 
             MessageTextBlock.Text = "Account created successfully!";
