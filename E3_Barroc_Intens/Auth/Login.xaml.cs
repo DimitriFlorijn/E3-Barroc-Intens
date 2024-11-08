@@ -93,7 +93,7 @@ namespace E3_Barroc_Intens
                         }
                     }
 
-                    MainWindow.Instance?.SetLoginButtonText("Logout");
+                    MainWindow.Instance?.SetLoginButtonText("Uitloggen");
                 }
             }
         }

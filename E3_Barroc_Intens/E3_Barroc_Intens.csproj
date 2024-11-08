@@ -14,22 +14,12 @@
 	  <WindowsSdkPackageVersion>10.0.19041.38</WindowsSdkPackageVersion>
   </PropertyGroup>
   <ItemGroup>
-    <None Remove="Auth\LogInPage.xaml" />
-    <None Remove="Auth\RegisterPage.xaml" />
     <None Remove="FinanceDashboard.xaml" />
     <None Remove="InkoopDashboard.xaml" />
     <None Remove="Login.xaml" />
     <None Remove="MaintenanceDashboard.xaml" />
-    <None Remove="Maintenance\Head_Maintenance\HeadMaintenancePage.xaml" />
-    <None Remove="Maintenance\Planner\PlannerPage.xaml" />
-    <None Remove="Maintenance\Technical_Service\TechnicalServicePage.xaml" />
-    <None Remove="Purchasing\Head_Purchasing\HeadPurchasingPage.xaml" />
-    <None Remove="Purchasing\Purchaser\PurchaserPage.xaml" />
-    <None Remove="Purchasing\Warehouse_Staff\WarehouseStaffPage.xaml" />
     <None Remove="Register.xaml" />
     <None Remove="SalesDashboard.xaml" />
-    <None Remove="Sales\Consultant\ConsultantPage.xaml" />
-    <None Remove="Sales\Head_Sales\HeadSalesPage.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -91,54 +81,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Auth\RegisterPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="Sales\Head_Sales\HeadSalesPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="Purchasing\Head_Purchasing\HeadPurchasingPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="Sales\Consultant\ConsultantPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="Purchasing\Purchaser\PurchaserPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="Purchasing\Warehouse_Staff\WarehouseStaffPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="Maintenance\Head_Maintenance\HeadMaintenancePage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="Maintenance\Technical_Service\TechnicalServicePage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="Maintenance\Planner\PlannerPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="Auth\LogInPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
+    <Folder Include="Auth\" />
+    <Folder Include="Finance\" />
+    <Folder Include="Inkoop\" />
+    <Folder Include="Maintenance\" />
   </ItemGroup>
 
   <!--
