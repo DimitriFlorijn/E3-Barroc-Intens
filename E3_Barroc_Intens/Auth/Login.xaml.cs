@@ -38,24 +38,24 @@ namespace E3_Barroc_Intens
             {
                 loggedInUserId = -1;
                 LoginButton.Content = "Login";
-                UsernameTextBox.IsEnabled = true;
+                EmailTextBox.IsEnabled = true;
                 PasswordTextBox.IsEnabled = true;
                 return;
             }
 
-            string username = UsernameTextBox.Text;
+            string email = EmailTextBox.Text;
             string password = PasswordTextBox.Text;
 
             using (var connection = new AppDbContext())
             {
                 User user = connection.Users
-                    .FirstOrDefault(u => u.Name == username && u.Password == password);
+                    .FirstOrDefault(u => u.Email == email && u.Password == password);
 
                 if (user != null)
                 {
                     loggedInUserId = user.Id;
                     LoginButton.Content = "Logout";
-                    UsernameTextBox.IsEnabled = false;
+                    EmailTextBox.IsEnabled = false;
                     PasswordTextBox.IsEnabled = false;
                     password = PasswordTextBox.Text = "";
                     isLoggedIn = true;

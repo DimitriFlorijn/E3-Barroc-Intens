@@ -55,6 +55,14 @@ namespace E3_Barroc_Intens
 
             using (var db = new AppDbContext())
             {
+                bool emailExists = db.Users.Any(u => u.Email == email);
+
+                if (emailExists)
+                {
+                    MessageTextBlock.Text = "Email already in use.";
+                    return;
+                }
+
                 var user = new User
                 {
                     Name = name,
