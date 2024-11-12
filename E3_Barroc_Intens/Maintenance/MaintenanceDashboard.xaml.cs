@@ -1,3 +1,5 @@
+using E3_Barroc_Intens.Data;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
@@ -26,6 +28,50 @@ namespace E3_Barroc_Intens
         public MaintenanceDashboard()
         {
             this.InitializeComponent();
+            GetIncedentReports();
+        }
+
+        private void GetIncedentReports()
+        {
+            using (var db = new AppDbContext())
+            {
+                MaintenanceListView.ItemsSource = db.IncendentReports.Include(c => c.Customer).ToList();
+            }
+        }
+
+        private void MaintenanceListView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var selectedIncendent = e.ClickedItem as IncendentReport;
+
+            if (selectedIncendent != null)
+            {
+                using (var db = new AppDbContext())
+                {
+                    var incedentReports = db.IncendentReports.Include(c => c.Customer).Where(i => i.Id == selectedIncendent.Id).ToList();
+                    if (incedentReports != null && incedentReports.Count > 0)
+                    {
+                        MaintenanceListViewStackPanel.Visibility = Visibility.Collapsed;
+                        MaintenanceIncedentReportStackPanel.Visibility = Visibility.Visible;
+
+                        foreach (var incendentReport in incedentReports)
+                        {
+                            IncedentReportCustomerNameTextBlock.Text = incendentReport.Customer.Name;
+                            IncedentReportCustomerLocationTextBlock.Text = incendentReport.Customer.Location;
+                            IncedentReportDateReportedTextBlock.Text = incendentReport.DateReported.ToString();
+                            IncedentReportInitialMessageTextBlock.Text = incendentReport.InitialMessage;
+                            IncedentReportCoffeeMachineTypeTextBlock.Text = incendentReport.CoffeeMachineType;
+                            IncendenReportFaultCodeTextBlock.Text = incendentReport.FaultCode;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void IncedentReportButton_Click(object sender, RoutedEventArgs e)
+        {
+            MaintenanceListViewStackPanel.Visibility = Visibility.Visible;
+            MaintenanceIncedentReportStackPanel.Visibility = Visibility.Collapsed;
+            GetIncedentReports();
         }
     }
 }
