@@ -15,8 +15,14 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock>Finance Dashboard</TextBlock>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center">
+            <TextBlock Padding="0,5,0,0">Finance Dashboard</TextBlock>
+            <!--<Button Margin="5,16,5,0" x:Name="Back" Content="terug" Click="FinanceDashboardButton_Click"/>-->
         </StackPanel>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Margin="5,16,5,0" x:Name="AddInvoiceButton" Content="Facatuur aanmaken" Click="AddInvoiceButton_Click"/>
+            <Button Margin="5,16,5,0" x:Name="LookInvoiceButton" Content="Facatuur inzien" Click="LookInvoiceButton_Click"/>
+        </StackPanel>
+        
     </Grid>
 </Page>

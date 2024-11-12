@@ -16,6 +16,7 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="FinanceDashboard.xaml" />
+    <None Remove="Finance\AddInvoice.xaml" />
     <None Remove="InkoopDashboard.xaml" />
     <None Remove="Login.xaml" />
     <None Remove="MaintenanceDashboard.xaml" />
@@ -83,9 +84,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Auth\" />
-    <Folder Include="Finance\" />
     <Folder Include="Inkoop\" />
     <Folder Include="Maintenance\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Finance\AddInvoice.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 
   <!--

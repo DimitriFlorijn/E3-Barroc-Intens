@@ -16,28 +16,20 @@ using Windows.Foundation.Collections;
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
 
-namespace E3_Barroc_Intens
+namespace E3_Barroc_Intens.Finance
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class FinanceDashboard : Page
+    public sealed partial class LookInvoice : Page
     {
-        public FinanceDashboard()
+        public LookInvoice()
         {
             this.InitializeComponent();
-        }
-        private void AddInvoiceButton_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(Finance.AddInvoice));
         }
         private void FinanceDashboardButton_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(FinanceDashboard));
-        }
-        private void LookInvoiceButton_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(Finance.LookInvoice));
         }
     }
 }
