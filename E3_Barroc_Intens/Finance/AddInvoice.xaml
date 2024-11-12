@@ -9,7 +9,12 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-
-    </Grid>
+    <StackPanel VerticalAlignment="Center">
+        <TextBlock HorizontalAlignment="Left" Padding="0,5,0,0">Finance Dashboard</TextBlock>
+        <Button HorizontalAlignment="Left" Margin="5,16,5,0" x:Name="Back" Content="Terug" Click="FinanceDashboardButton_Click"/>
+        <!--hier komen de creteriea voor het aanmaken-->
+        <TextBlock Margin="5,16,5,0" HorizontalAlignment="Center" >Een nieuwen facatuur aanmaken</TextBlock>
+        <TextBlock Margin="5,16,5,0" HorizontalAlignment="Center" >De BTW van 21% is meegerekend</TextBlock>
+    </StackPanel>
+    
 </Page>

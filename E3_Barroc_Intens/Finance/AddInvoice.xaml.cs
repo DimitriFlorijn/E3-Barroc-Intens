@@ -27,5 +27,9 @@ namespace E3_Barroc_Intens.Finance
         {
             this.InitializeComponent();
         }
+        private void FinanceDashboardButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(FinanceDashboard));
+        }
     }
 }
