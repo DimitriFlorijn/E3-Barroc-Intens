@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Xml.Linq;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
@@ -46,10 +47,34 @@ namespace E3_Barroc_Intens
             string email = EmailTextBox.Text;
             string password = PasswordTextBox.Text;
 
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                MessageTextBlock.Text = "Email is required.";
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(password))
+            {
+                MessageTextBlock.Text = "Password is required.";
+                return;
+            }
+
             using (var connection = new AppDbContext())
             {
                 User user = connection.Users
-                    .FirstOrDefault(u => u.Email == email && u.Password == password);
+                    .FirstOrDefault(u => u.Email == email);
+
+                if (user == null)
+                {
+                    MessageTextBlock.Text = "No account found with this email.";
+                    return;
+                }
+
+                if (user.Password != password)
+                {
+                    MessageTextBlock.Text = "Incorrect password.";
+                    return;
+                }
 
                 if (user != null)
                 {
