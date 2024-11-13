@@ -1,3 +1,5 @@
+using E3_Barroc_Intens.Data;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
@@ -7,6 +9,7 @@ using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -25,8 +28,26 @@ namespace E3_Barroc_Intens.Finance
     {
         public AddInvoice()
         {
-            this.InitializeComponent();
+            InitializeComponent();
+            LoadComboBoxData();
+            
         }
+
+        private void LoadComboBoxData()
+        {
+
+            using (var db = new AppDbContext())
+            {
+                Product.ItemsSource = db.Products.Include(p => p.Brand).ToList();
+                Bean.ItemsSource = db.Bean.ToList();
+                //an.ItemsSource = db.Bean.Include(b => b.Name).ToList();
+            }
+            
+        }
+
+        
+
+
         private void FinanceDashboardButton_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(FinanceDashboard));
