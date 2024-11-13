@@ -50,5 +50,10 @@ namespace E3_Barroc_Intens.Sales
             }
         }
 
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(SalesDashboard));
+        }
+
     }
 }

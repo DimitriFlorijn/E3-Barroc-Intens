@@ -39,12 +39,18 @@ namespace E3_Barroc_Intens.Sales
                     Email = EmailTextBox.Text,
                     Number = PhoneNumberTextBox.Text,
                     Location = AddressTextBox.Text,
+                    Notes = NotesTextBox.Text,
                     BkrRegistered = BKRCheckBox.IsChecked.Value
                 };
 
                 db.Customers.Add(client);
                 db.SaveChanges();
             }
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(SalesDashboard));
         }
     }
 }

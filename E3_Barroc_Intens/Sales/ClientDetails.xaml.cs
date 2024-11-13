@@ -32,6 +32,7 @@ namespace E3_Barroc_Intens.Sales
                         EmailTextBox.Text = client.Email;
                         NumberTextBox.Text = client.Number;
                         LocationTextBox.Text = client.Location;
+                        NotesTextBox.Text = client.Notes;
                         BkrRegisteredTextBox.IsChecked = client.BkrRegistered;
                     }
                 }
@@ -59,6 +60,11 @@ namespace E3_Barroc_Intens.Sales
                 Frame.Navigate(typeof(SalesDashboard));
 
             }
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(ViewClients));
         }
     }
 }

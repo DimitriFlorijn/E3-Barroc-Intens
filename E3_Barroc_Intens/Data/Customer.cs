@@ -13,7 +13,9 @@ namespace E3_Barroc_Intens.Data
         public string Email { get; set; }
         public string Location { get; set; }
         public string Number { get; set; }
+        public string Notes { get; set; }
         public bool BkrRegistered { get; set; }
+        
         public List<CustomerOrder> Orders { get; set; } = new List<CustomerOrder>();
         public List<Contract> contracts { get; set; } = new List<Contract>();
     }
