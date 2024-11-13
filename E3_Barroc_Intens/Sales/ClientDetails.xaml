@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="E3_Barroc_Intens.Sales.ClientDetails"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:E3_Barroc_Intens.Sales"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Margin="20">
+        <!-- Define rows for each row of the form -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title row with Back button and Client Details label -->
+        <StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center">
+            <Button x:Name="BackButton" Content="Terug" Click="BackButton_Click" Padding="10" Margin="0,0,10,0"/>
+            <TextBlock Text="Client Details" FontSize="24" VerticalAlignment="Center" Padding="10"/>
+        </StackPanel>
+
+        <!-- Name row with label and input field -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Name" Grid.Column="0" VerticalAlignment="Center" Padding="10"/>
+            <TextBox x:Name="NameTextBox" Grid.Column="1" HorizontalAlignment="Stretch" Padding="10"/>
+        </Grid>
+
+        <!-- Location row with label and input field -->
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Location" Grid.Column="0" VerticalAlignment="Center" Padding="10"/>
+            <TextBox x:Name="LocationTextBox" Grid.Column="1" HorizontalAlignment="Stretch" Padding="10"/>
+        </Grid>
+
+        <!-- Email row with label and input field -->
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Email" Grid.Column="0" VerticalAlignment="Center" Padding="10"/>
+            <TextBox x:Name="EmailTextBox" Grid.Column="1" HorizontalAlignment="Stretch" Padding="10"/>
+        </Grid>
+
+        <!-- Number row with label and input field -->
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Number" Grid.Column="0" VerticalAlignment="Center" Padding="10"/>
+            <TextBox x:Name="NumberTextBox" Grid.Column="1" HorizontalAlignment="Stretch" Padding="10"/>
+        </Grid>
+
+        <!-- Notes row with label and input field -->
+        <Grid Grid.Row="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Notities" Grid.Column="0" VerticalAlignment="Center" Padding="10"/>
+            <TextBox x:Name="NotesTextBox" Grid.Column="1" HorizontalAlignment="Stretch" Padding="10"/>
+        </Grid>
+
+        <!-- BkrRegistered row with label and checkbox -->
+        <Grid Grid.Row="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="BkrRegistered" Grid.Column="0" VerticalAlignment="Center" Padding="10"/>
+            <CheckBox x:Name="BkrRegisteredTextBox" Grid.Column="1" VerticalAlignment="Center" Padding="10"/>
+        </Grid>
+
+        <!-- Update Button aligned to the center in its own row -->
+        <Button x:Name="UpdateButton" Grid.Row="7" Content="Wijzigingen opslaan" Click="UpdateButton_Click" HorizontalAlignment="Center" Padding="10" Margin="0,10,0,0"/>
+    </Grid>
+</Page>

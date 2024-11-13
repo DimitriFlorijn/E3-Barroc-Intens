@@ -32,5 +32,10 @@ namespace E3_Barroc_Intens
         {
             Frame.Navigate(typeof(Sales.AddClient));
         }
+
+        private void ViewClientsButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Sales.ViewClients));
+        }
     }
 }
