@@ -53,7 +53,7 @@ namespace E3_Barroc_Intens.Finance
         //        // Create a new order with values from the form
         //        var order = new Invoice
         //        {
-        //            Customer = Customer,
+        //           
         //            DueDate = DateTime.Now,
         //            Contract = Customer,
         //          //product = Product
