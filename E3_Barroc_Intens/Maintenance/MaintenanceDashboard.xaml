@@ -24,6 +24,23 @@
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                 <TextBlock>Incedents</TextBlock>
             </StackPanel>
+            <StackPanel>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="Klantnaam" Grid.Column="0" TextAlignment="Center"></TextBlock>
+                    <TextBlock Text="Datum gemeld" Grid.Column="1" TextAlignment="Center"></TextBlock>
+                    <TextBlock Text="Bericht" Grid.Column="2" TextAlignment="Center"></TextBlock>
+                    <TextBlock Text="Type koffiemachine" Grid.Column="3" TextAlignment="Center"></TextBlock>
+                    <TextBlock Text="Foutmelding" Grid.Column="4" TextAlignment="Center"></TextBlock>
+                </Grid>
+            </StackPanel>
             <ListView x:Name="MaintenanceListView" IsItemClickEnabled="True" ItemClick="MaintenanceListView_ItemClick">
                 <ListView.ItemTemplate>
                     <DataTemplate x:DataType="localData:IncendentReport">
@@ -37,11 +54,11 @@
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
 
-                                <TextBlock Text="{x:Bind Customer.Name}" Grid.Column="0"></TextBlock>
-                                <TextBlock Text="{x:Bind DateReported}" Grid.Column="1"></TextBlock>
-                                <TextBlock Text="{x:Bind InitialMessage}" Grid.Column="2"></TextBlock>
-                                <TextBlock Text="{x:Bind CoffeeMachineType}" Grid.Column="3"></TextBlock>
-                                <TextBlock Text="{x:Bind FaultCode}" Grid.Column="4"></TextBlock>
+                                <TextBlock Text="{x:Bind Customer.Name}" Grid.Column="0" TextAlignment="Center"></TextBlock>
+                                <TextBlock Text="{x:Bind DateReported}" Grid.Column="1" TextAlignment="Center"></TextBlock>
+                                <TextBlock Text="{x:Bind InitialMessage}" Grid.Column="2" TextAlignment="Center"></TextBlock>
+                                <TextBlock Text="{x:Bind CoffeeMachineType}" Grid.Column="3" TextAlignment="Center"></TextBlock>
+                                <TextBlock Text="{x:Bind FaultCode}" Grid.Column="4" TextAlignment="Center"></TextBlock>
                             </Grid>
                         </StackPanel>
                     </DataTemplate>
