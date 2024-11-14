@@ -305,6 +305,26 @@ namespace E3_Barroc_Intens.Data
                 {
                     RoleId = 5,
                     UserId = 15,
+                },
+                new RoleUser
+                {
+                    RoleId = 2,
+                    UserId = 16,
+                },
+                new RoleUser
+                {
+                    RoleId = 3,
+                    UserId = 17,
+                },
+                new RoleUser
+                {
+                    RoleId = 4,
+                    UserId = 18,
+                },
+                new RoleUser
+                {
+                    RoleId = 5,
+                    UserId = 19,
                 }
             );
 
