@@ -41,8 +41,10 @@ namespace E3_Barroc_Intens.Finance
             {
                 Product.ItemsSource = db.Products.Include(p => p.Brand).ToList();
                 Bean.ItemsSource = db.Bean.ToList();
+                Customer.ItemsSource = db.Customers.ToList();
+
+                //saveButton.Click += SaveButton_Click;
             }
-            
         }
         //private void SaveButton_Click(object sender, EventArgs e)
         //{
@@ -51,7 +53,7 @@ namespace E3_Barroc_Intens.Finance
         //        // Create a new order with values from the form
         //        var order = new Invoice
         //        {
-        //            Customer = Customer,
+        //           
         //            DueDate = DateTime.Now,
         //            Contract = Customer,
         //          //product = Product
