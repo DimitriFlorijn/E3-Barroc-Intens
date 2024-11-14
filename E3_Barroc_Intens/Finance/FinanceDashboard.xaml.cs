@@ -27,5 +27,17 @@ namespace E3_Barroc_Intens
         {
             this.InitializeComponent();
         }
+        private void AddInvoiceButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Finance.AddInvoice));
+        }
+        private void FinanceDashboardButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(FinanceDashboard));
+        }
+        private void LookInvoiceButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Finance.LookInvoice));
+        }
     }
 }

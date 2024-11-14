@@ -45,6 +45,24 @@ namespace E3_Barroc_Intens
             var email = EmailTextBox.Text;
             var password = PasswordBox.Password;
 
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                MessageTextBlock.Text = "Username is required.";
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                MessageTextBlock.Text = "Email is required.";
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(password))
+            {
+                MessageTextBlock.Text = "Password is required.";
+                return;
+            }
+
             if (RoleComboBox.SelectedItem == null)
             {
                 MessageTextBlock.Text = "Select a role.";
@@ -55,6 +73,14 @@ namespace E3_Barroc_Intens
 
             using (var db = new AppDbContext())
             {
+                bool emailExists = db.Users.Any(u => u.Email == email);
+
+                if (emailExists)
+                {
+                    MessageTextBlock.Text = "Email already in use.";
+                    return;
+                }
+
                 var user = new User
                 {
                     Name = name,

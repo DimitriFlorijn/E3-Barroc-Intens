@@ -174,7 +174,7 @@ namespace E3_Barroc_Intens.Data
                     Id = 13,
                     Name = "Cindy Passier",
                     Email = "Cindy.Passier@Barroc.Intens.com",
-                    Password = "Simon Nagelkerke"
+                    Password = "Cindy Passier"
                 },
                 new User
                 {
@@ -189,6 +189,34 @@ namespace E3_Barroc_Intens.Data
                     Name = "Jimmy Choi",
                     Email = "Jimmy.Choi@Barroc.Intens.com",
                     Password = "Jimmy Choi"
+                },
+                new User
+                {
+                    Id = 16,
+                    Name = "Finance",
+                    Email = "finance@curio.nl",
+                    Password = "finance"
+                },
+                new User
+                {
+                    Id = 17,
+                    Name = "Sales",
+                    Email = "sales@curio.nl",
+                    Password = "sales"
+                },
+                new User
+                {
+                    Id = 18,
+                    Name = "Inkoop",
+                    Email = "inkoop@curio.nl",
+                    Password = "inkoop",
+                },
+                new User
+                {
+                    Id = 19,
+                    Name = "Maintenance",
+                    Email = "maintenance@curio.nl",
+                    Password = "maintenance"
                 }
             );
 
@@ -210,57 +238,57 @@ namespace E3_Barroc_Intens.Data
                 },
                 new RoleUser
                 {
-                    RoleId = 3,
+                    RoleId = 2,
                     UserId = 3,
                 },
                 new RoleUser
                 {
-                    RoleId = 3,
+                    RoleId = 2,
                     UserId = 4,
                 },
                 new RoleUser
                 {
-                    RoleId = 4,
+                    RoleId = 3,
                     UserId = 2,
                 },
                 new RoleUser
                 {
-                    RoleId = 5,
+                    RoleId = 3,
                     UserId = 5,
                 },
                 new RoleUser
                 {
-                    RoleId = 5,
+                    RoleId = 3,
                     UserId = 6,
                 },
                 new RoleUser
                 {
-                    RoleId = 2,
+                    RoleId = 4,
                     UserId = 7,
                 },
                 new RoleUser
                 {
-                    RoleId = 2,
+                    RoleId = 4,
                     UserId = 8,
                 },
                 new RoleUser
                 {
-                    RoleId = 3,
+                    RoleId = 4,
                     UserId = 9,
                 },
                 new RoleUser
                 {
-                    RoleId = 3,
+                    RoleId = 5,
                     UserId = 10,
                 },
                 new RoleUser
                 {
-                    RoleId = 4,
+                    RoleId = 5,
                     UserId = 11,
                 },
                 new RoleUser
                 {
-                    RoleId = 4,
+                    RoleId = 5,
                     UserId = 12,
                 },
                 new RoleUser
@@ -277,6 +305,26 @@ namespace E3_Barroc_Intens.Data
                 {
                     RoleId = 5,
                     UserId = 15,
+                },
+                new RoleUser
+                {
+                    RoleId = 2,
+                    UserId = 16,
+                },
+                new RoleUser
+                {
+                    RoleId = 3,
+                    UserId = 17,
+                },
+                new RoleUser
+                {
+                    RoleId = 4,
+                    UserId = 18,
+                },
+                new RoleUser
+                {
+                    RoleId = 5,
+                    UserId = 19,
                 }
             );
 

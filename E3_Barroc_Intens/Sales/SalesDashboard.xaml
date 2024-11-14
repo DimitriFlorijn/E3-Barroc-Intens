@@ -19,5 +19,8 @@
             <TextBlock>Sales Dashboard</TextBlock>
             <Button x:Name="AddClientButton" Content="Add Client" Click="AddClientButton_Click"/>
         </StackPanel>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="ViewClientsButton" Content="View Clients" Click="ViewClientsButton_Click"/>
+        </StackPanel>
     </Grid>
 </Page>

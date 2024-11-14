@@ -1,9 +1,9 @@
 using System;
-using E3_Barroc_Intens.Data;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using E3_Barroc_Intens.Data;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
@@ -22,29 +22,31 @@ namespace E3_Barroc_Intens.Sales
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class AddClient : Page
+    public sealed partial class ViewClients : Page
     {
-        public AddClient()
+        public ViewClients()
         {
             this.InitializeComponent();
-        }
 
-        private void AddButton_Click(object sender, RoutedEventArgs e)
-        {
             using (var db = new AppDbContext())
             {
-                var client = new Customer
-                {
-                    Name = NameTextBox.Text,
-                    Email = EmailTextBox.Text,
-                    Number = PhoneNumberTextBox.Text,
-                    Location = AddressTextBox.Text,
-                    Notes = NotesTextBox.Text,
-                    BkrRegistered = BKRCheckBox.IsChecked.Value
-                };
+                var clients = db.Customers.ToList();
 
-                db.Customers.Add(client);
-                db.SaveChanges();
+                foreach (var client in clients)
+                {
+                    var item = new ListViewItem
+                    {
+                        Content = client.Name,
+                        Tag = client.Id
+                    };
+
+                    item.Tapped += (sender, e) =>
+                    {
+                        Frame.Navigate(typeof(ClientDetails), client.Id);
+                    };
+
+                    ClientListView.Items.Add(item);
+                }
             }
         }
 
@@ -52,5 +54,6 @@ namespace E3_Barroc_Intens.Sales
         {
             Frame.Navigate(typeof(SalesDashboard));
         }
+
     }
 }

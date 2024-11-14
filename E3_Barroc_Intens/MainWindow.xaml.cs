@@ -30,6 +30,7 @@ namespace E3_Barroc_Intens
         {
             this.InitializeComponent();
             Instance = this;
+            Instance.Title = "Barroc Intens";
 
             using (var db = new AppDbContext())
             {

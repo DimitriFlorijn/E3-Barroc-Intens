@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Xml.Linq;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
@@ -38,26 +39,50 @@ namespace E3_Barroc_Intens
             {
                 loggedInUserId = -1;
                 LoginButton.Content = "Login";
-                UsernameTextBox.IsEnabled = true;
-                PasswordTextBox.IsEnabled = true;
+                EmailTextBox.IsEnabled = true;
+                PasswordBox.IsEnabled = true;
                 return;
             }
 
-            string username = UsernameTextBox.Text;
-            string password = PasswordTextBox.Text;
+            string email = EmailTextBox.Text;
+            string password = PasswordBox.Password;
+
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                MessageTextBlock.Text = "Email is required.";
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(password))
+            {
+                MessageTextBlock.Text = "Password is required.";
+                return;
+            }
 
             using (var connection = new AppDbContext())
             {
                 User user = connection.Users
-                    .FirstOrDefault(u => u.Name == username && u.Password == password);
+                    .FirstOrDefault(u => u.Email == email);
+
+                if (user == null)
+                {
+                    MessageTextBlock.Text = "No account found with this email.";
+                    return;
+                }
+
+                if (user.Password != password)
+                {
+                    MessageTextBlock.Text = "Incorrect password.";
+                    return;
+                }
 
                 if (user != null)
                 {
                     loggedInUserId = user.Id;
                     LoginButton.Content = "Logout";
-                    UsernameTextBox.IsEnabled = false;
-                    PasswordTextBox.IsEnabled = false;
-                    password = PasswordTextBox.Text = "";
+                    EmailTextBox.IsEnabled = false;
+                    PasswordBox.IsEnabled = false;
+                    password = PasswordBox.Password = "";
                     isLoggedIn = true;
 
                     var roleUser = connection.RoleUsers.FirstOrDefault(ru => ru.UserId == user.Id);
