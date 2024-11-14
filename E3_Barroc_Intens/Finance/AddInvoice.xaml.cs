@@ -41,8 +41,9 @@ namespace E3_Barroc_Intens.Finance
             {
                 Product.ItemsSource = db.Products.Include(p => p.Brand).ToList();
                 Bean.ItemsSource = db.Bean.ToList();
+
+                //saveButton.Click += SaveButton_Click;
             }
-            
         }
         //private void SaveButton_Click(object sender, EventArgs e)
         //{
