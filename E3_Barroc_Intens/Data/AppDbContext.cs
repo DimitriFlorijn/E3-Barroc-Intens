@@ -189,6 +189,34 @@ namespace E3_Barroc_Intens.Data
                     Name = "Jimmy Choi",
                     Email = "Jimmy.Choi@Barroc.Intens.com",
                     Password = "Jimmy Choi"
+                },
+                new User
+                {
+                    Id = 16,
+                    Name = "Finance",
+                    Email = "finance@curio.nl",
+                    Password = "finance"
+                },
+                new User
+                {
+                    Id = 17,
+                    Name = "Sales",
+                    Email = "sales@curio.nl",
+                    Password = "sales"
+                },
+                new User
+                {
+                    Id = 18,
+                    Name = "Inkoop",
+                    Email = "inkoop@curio.nl",
+                    Password = "inkoop",
+                },
+                new User
+                {
+                    Id = 19,
+                    Name = "Maintenance",
+                    Email = "maintenance@curio.nl",
+                    Password = "maintenance"
                 }
             );
 
