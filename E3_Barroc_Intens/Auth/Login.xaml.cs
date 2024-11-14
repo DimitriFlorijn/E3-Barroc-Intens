@@ -40,12 +40,12 @@ namespace E3_Barroc_Intens
                 loggedInUserId = -1;
                 LoginButton.Content = "Login";
                 EmailTextBox.IsEnabled = true;
-                PasswordTextBox.IsEnabled = true;
+                PasswordBox.IsEnabled = true;
                 return;
             }
 
             string email = EmailTextBox.Text;
-            string password = PasswordTextBox.Text;
+            string password = PasswordBox.Password;
 
             if (string.IsNullOrWhiteSpace(email))
             {
@@ -81,8 +81,8 @@ namespace E3_Barroc_Intens
                     loggedInUserId = user.Id;
                     LoginButton.Content = "Logout";
                     EmailTextBox.IsEnabled = false;
-                    PasswordTextBox.IsEnabled = false;
-                    password = PasswordTextBox.Text = "";
+                    PasswordBox.IsEnabled = false;
+                    password = PasswordBox.Password = "";
                     isLoggedIn = true;
 
                     var roleUser = connection.RoleUsers.FirstOrDefault(ru => ru.UserId == user.Id);

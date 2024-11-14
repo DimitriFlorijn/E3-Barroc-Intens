@@ -14,9 +14,45 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
 
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock>Inkoop Dashboard</TextBlock>
+        <!-- Header -->
+        <StackPanel Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
+            <TextBlock Text="Inkoop Dashboard" FontSize="24" FontWeight="Bold" />
         </StackPanel>
+
+        <!-- Left: Input Fields -->
+        <StackPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
+            <TextBlock Text="Product Name:" />
+            <TextBox x:Name="ProductNameTextBox" Width="200" Margin="5" PlaceholderText="Enter product name" />
+
+            <TextBlock Text="Product Price:" />
+            <TextBox x:Name="ProductPriceTextBox" Width="200" Margin="5" PlaceholderText="Enter product price" />
+
+            <TextBlock Text="Installation Cost:" />
+            <TextBox x:Name="InstallationCostTextBox" Width="200" Margin="5" PlaceholderText="Enter installation cost" />
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                <Button Content="Add Product" Click="AddProduct_Click" Margin="5"/>
+                <Button Content="Edit Product" Click="EditProduct_Click" Margin="5"/>
+                <Button Content="Delete Product" Click="DeleteProduct_Click" Margin="5"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Right: Product List -->
+        <ListView Grid.Row="1" Grid.Column="1" x:Name="ProductListView" Width="300" Margin="10">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical" Margin="5">
+                        <TextBlock Text="{Binding Name}" FontSize="16" Margin="5"/>
+                        <TextBlock Text="{Binding Price}" Margin="5"/>
+                        <TextBlock Text="{Binding InstallationCost}" Margin="5"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </Page>

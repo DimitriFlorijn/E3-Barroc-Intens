@@ -15,6 +15,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -40,12 +41,44 @@ namespace E3_Barroc_Intens.Finance
             {
                 Product.ItemsSource = db.Products.Include(p => p.Brand).ToList();
                 Bean.ItemsSource = db.Bean.ToList();
-                //an.ItemsSource = db.Bean.Include(b => b.Name).ToList();
+                Customer.ItemsSource = db.Customers.ToList();
+
+                //saveButton.Click += SaveButton_Click;
             }
-            
         }
+        //private void SaveButton_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        // Create a new order with values from the form
+        //        var order = new Invoice
+        //        {
+        //           
+        //            DueDate = DateTime.Now,
+        //            Contract = Customer,
+        //          //product = Product
+        //          //beans = beanTextBox.Text,
+        //            IsPaid = HasPaidCheckBox.Checked,
+        //            TotalAmount = Amount
+        //        };
+
+        //        // Add the new order to the database and save changes
+        //        _context.Orders.Add(order);
+        //        _context.SaveChanges();
+
+        //        // Optional: Inform the user
+        //        MessageBox.Show("Order saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        // Handle any errors
+        //        MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
 
         
+
+
 
 
         private void FinanceDashboardButton_Click(object sender, RoutedEventArgs e)
