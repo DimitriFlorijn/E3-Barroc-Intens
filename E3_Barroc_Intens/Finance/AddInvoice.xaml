@@ -11,19 +11,24 @@
 
     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
         <TextBlock  Padding="0,5,0,0">Finance Dashboard</TextBlock>
-        <Button  Margin="5,16,5,0" x:Name="Back" Content="Terug" Click="FinanceDashboardButton_Click"/>
+        <Button  Margin="5,16,5,9" x:Name="Back" Content="Terug" Click="FinanceDashboardButton_Click"/>
         <!--hier komen de creteriea voor het aanmaken-->
         <TextBlock Margin="5,16,5,0"  >Een nieuwen facatuur aanmaken</TextBlock>
-        <TextBlock Margin="5,16,5,0" >De BTW van 21% is meegerekend</TextBlock>
+        <TextBlock Margin="5,16,5,0" >De BTW van 21% is meegerekend en aansluit kosten van: ""</TextBlock>
         <!-- hier komen de benodigde invulvelden-->
-        <TextBlock Margin="5,20,5,0" >Naam bedrijf</TextBlock>
-        <TextBox x:Name="Customer" Width="150px"></TextBox>
+        <TextBlock Margin="5,30,5,0" >Naam bedrijf</TextBlock>
+        <TextBox x:Name="Customer"></TextBox>
+        <TextBlock>E-Mail</TextBlock>
+        <TextBox x:Name="Email"></TextBox>
         <TextBlock Margin="5,20,5,0" >Heeft het bedrijf betaald?</TextBlock>
         <CheckBox x:Name="HasPaid" ></CheckBox>
         <TextBlock Margin="5,20,5,0" >Welke product(en) heeft het bedrijf</TextBlock>
         <ComboBox x:Name="Product" Width="200" Height="30" DisplayMemberPath="Name"/>
         <TextBlock Margin="5,20,5,0" >Welke boonen?</TextBlock>
         <ComboBox x:Name="Bean" Width="200" Height="30" DisplayMemberPath="Name"/>
-    </StackPanel>
-    
+
+      <!--<TextBlock x:Name="TotalAmount">total:</TextBlock>-->
+        <Button Margin="5,20,5,0" x:Name="Save" Click="FinanceDashboardButton_Click">opslaan</Button>
+    </StackPanel> 
+
 </Page>
