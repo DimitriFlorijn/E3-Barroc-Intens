@@ -24,8 +24,7 @@
         <ComboBox x:Name="Product" Width="200" Height="30" DisplayMemberPath="Name"/>
         <TextBlock Margin="5,20,5,0" >Welke boonen?</TextBlock>
         <ComboBox x:Name="Bean" Width="200" Height="30" DisplayMemberPath="Name" Padding="0,0,0,10"/>
-
-      <!--<TextBlock x:Name="TotalAmount">total:</TextBlock>-->
+        <!--<TextBlock x:Name="TotalAmount">total:</TextBlock>-->
         <Button Margin="5,20,5,0" x:Name="Save" Click="FinanceDashboardButton_Click">opslaan</Button>
     </StackPanel> 
 
