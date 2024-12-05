@@ -25,7 +25,6 @@ namespace E3_Barroc_Intens
     public sealed partial class MainWindow : Window
     {
         public static MainWindow Instance { get; private set; }
-
         public MainWindow()
         {
             this.InitializeComponent();
@@ -38,18 +37,15 @@ namespace E3_Barroc_Intens
                 db.Database.EnsureCreated();
             }
         }
-
         private void Register_Button_Click(object sender, RoutedEventArgs e)
         {
             contentFrame.Navigate(typeof(Register));
         }
-
         private void Login_Button_Click(object sender, RoutedEventArgs e)
         {
             contentFrame.Navigate(typeof(Login));
             SetLoginButtonText("Inloggen");
         }
-
         public void SetLoginButtonText(string text)
         {
             LoginButton.Content = text;

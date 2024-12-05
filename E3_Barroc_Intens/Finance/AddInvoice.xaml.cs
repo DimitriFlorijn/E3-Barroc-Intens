@@ -33,7 +33,6 @@ namespace E3_Barroc_Intens.Finance
             LoadComboBoxData();
             
         }
-
         private void LoadComboBoxData()
         {
 
@@ -75,12 +74,6 @@ namespace E3_Barroc_Intens.Finance
         //        MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         //    }
         //}
-
-        
-
-
-
-
         private void FinanceDashboardButton_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(FinanceDashboard));
