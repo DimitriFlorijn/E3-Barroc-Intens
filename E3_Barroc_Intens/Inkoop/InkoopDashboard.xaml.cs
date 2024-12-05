@@ -168,29 +168,19 @@ namespace E3_Barroc_Intens
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
                     connection.Open();
-
-                    // Verwijder afhankelijke rijen in CustomerOrders
-                    MySqlCommand deleteOrdersCmd = new MySqlCommand(
-                        "DELETE FROM customerorders WHERE ProductId=@productId",
-                        connection);
-                    deleteOrdersCmd.Parameters.AddWithValue("@productId", selectedProduct.BrandId); // Zorg dat je de juiste kolom verwijst
-                    deleteOrdersCmd.ExecuteNonQuery();
-
-                    // Verwijder het product
-                    MySqlCommand deleteProductCmd = new MySqlCommand(
+                    MySqlCommand cmd = new MySqlCommand(
                         "DELETE FROM products WHERE name=@name AND price=@price AND installationCost=@installationCost AND brandId=@brandId",
                         connection);
-                    deleteProductCmd.Parameters.AddWithValue("@name", selectedProduct.Name);
-                    deleteProductCmd.Parameters.AddWithValue("@price", selectedProduct.Price);
-                    deleteProductCmd.Parameters.AddWithValue("@installationCost", selectedProduct.InstallationCost);
-                    deleteProductCmd.Parameters.AddWithValue("@brandId", selectedProduct.BrandId);
-                    deleteProductCmd.ExecuteNonQuery();
+                    cmd.Parameters.AddWithValue("@name", selectedProduct.Name);
+                    cmd.Parameters.AddWithValue("@price", selectedProduct.Price);
+                    cmd.Parameters.AddWithValue("@installationCost", selectedProduct.InstallationCost);
+                    cmd.Parameters.AddWithValue("@brandId", selectedProduct.BrandId);
+                    cmd.ExecuteNonQuery();
                 }
 
                 Products.Remove(selectedProduct);
             }
         }
-
 
         private void DeselectProduct_Click(object sender, RoutedEventArgs e)
         {
