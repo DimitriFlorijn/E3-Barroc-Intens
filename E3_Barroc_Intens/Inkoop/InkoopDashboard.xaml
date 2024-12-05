@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <Page
     x:Class="E3_Barroc_Intens.InkoopDashboard"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -8,6 +7,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <local:DecimalToCurrencyConverter x:Key="DecimalToCurrencyConverter" />
+    </Page.Resources>
 
     <Grid>
         <Grid.RowDefinitions>
@@ -19,12 +22,10 @@
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
 
-        <!-- Header -->
         <StackPanel Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
             <TextBlock Text="Inkoop Dashboard" FontSize="24" FontWeight="Bold" />
         </StackPanel>
 
-        <!-- Left: Input Fields -->
         <StackPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
             <TextBlock Text="Product Name:" />
             <TextBox x:Name="ProductNameTextBox" Width="200" Margin="5" PlaceholderText="Enter product name" />
@@ -35,22 +36,59 @@
             <TextBlock Text="Installation Cost:" />
             <TextBox x:Name="InstallationCostTextBox" Width="200" Margin="5" PlaceholderText="Enter installation cost" />
 
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                <Button Content="Add Product" Click="AddProduct_Click" Margin="5"/>
-                <Button Content="Edit Product" Click="EditProduct_Click" Margin="5"/>
-                <Button Content="Delete Product" Click="DeleteProduct_Click" Margin="5"/>
-            </StackPanel>
+            <TextBlock Text="Type:" />
+            <TextBox x:Name="ProductTypeTextBox" Width="200" Margin="5" PlaceholderText="Enter product type" />
+
+            <TextBlock Text="Description:" />
+            <TextBox x:Name="ProductDescriptionTextBox" Width="200" Margin="5" PlaceholderText="Enter product description" />
+
+            <TextBlock Text="Brand:" />
+            <ComboBox x:Name="BrandComboBox" Width="200" Margin="5" 
+                  DisplayMemberPath="Name" 
+                  SelectedValuePath="Id" />
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <Button Content="Add Product" Click="AddProduct_Click" Grid.Row="0" Grid.Column="0" Margin="5"/>
+                <Button Content="Edit Product" Click="EditProduct_Click" Grid.Row="0" Grid.Column="1" Margin="5"/>
+                <Button Content="Delete Product" Click="DeleteProduct_Click" Grid.Row="1" Grid.Column="0" Margin="5"/>
+                <Button Content="Deselect" Click="DeselectProduct_Click" Grid.Row="1" Grid.Column="1" Margin="5"/>
+            </Grid>
         </StackPanel>
 
-        <!-- Right: Product List -->
-        <ListView Grid.Row="1" Grid.Column="1" x:Name="ProductListView" Width="300" Margin="10">
+        <ListView Grid.Row="1" Grid.Column="1" x:Name="ProductListView" Width="300" Margin="10" SelectionChanged="ProductListView_SelectionChanged">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Orientation="Vertical" Margin="5">
-                        <TextBlock Text="{Binding Name}" FontSize="16" Margin="5"/>
-                        <TextBlock Text="{Binding Price}" Margin="5"/>
-                        <TextBlock Text="{Binding InstallationCost}" Margin="5"/>
-                    </StackPanel>
+                    <Border BorderThickness="1" BorderBrush="Gray" CornerRadius="5" Padding="10" Margin="5">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="Product Name:" FontWeight="Bold" Margin="0,0,0,2"/>
+                            <TextBlock Text="{Binding Name}" FontSize="16" Margin="0,0,0,5"/>
+
+                            <TextBlock Text="Price:" FontWeight="Bold" Margin="0,0,0,2"/>
+                            <TextBlock Text="{Binding Price, Converter={StaticResource DecimalToCurrencyConverter}}" Margin="0,0,0,5"/>
+
+                            <TextBlock Text="Installation Cost:" FontWeight="Bold" Margin="0,0,0,2"/>
+                            <TextBlock Text="{Binding InstallationCost, Converter={StaticResource DecimalToCurrencyConverter}}" Margin="0,0,0,5"/>
+
+                            <TextBlock Text="Type:" FontWeight="Bold" Margin="0,0,0,2"/>
+                            <TextBlock Text="{Binding Type}" Margin="0,0,0,5"/>
+
+                            <TextBlock Text="Description:" FontWeight="Bold" Margin="0,0,0,2"/>
+                            <TextBlock Text="{Binding Description}" Margin="0,0,0,5"/>
+
+                            <TextBlock Text="Brand id:" FontWeight="Bold" Margin="0,0,0,2"/>
+                            <TextBlock Text="{Binding Brand.Name}" Margin="0,0,0,5"/>
+
+                        </StackPanel>
+                    </Border>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
