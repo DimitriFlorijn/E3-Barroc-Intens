@@ -69,6 +69,8 @@ namespace E3_Barroc_Intens
                 return;
             }
 
+            var hashed = SecureHasher.Hash(password);
+
             var selectedRole = (Role)RoleComboBox.SelectedItem;
 
             using (var db = new AppDbContext())
@@ -85,7 +87,7 @@ namespace E3_Barroc_Intens
                 {
                     Name = name,
                     Email = email,
-                    Password = password
+                    Password = hashed
                 };
 
                 db.Users.Add(user);

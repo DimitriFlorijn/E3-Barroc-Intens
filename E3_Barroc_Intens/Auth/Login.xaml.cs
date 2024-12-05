@@ -70,20 +70,14 @@ namespace E3_Barroc_Intens
                     return;
                 }
 
-                if (user.Password != password)
-                {
-                    MessageTextBlock.Text = "Incorrect password.";
-                    return;
-                }
-
-                if (user != null)
+                if (SecureHasher.Verify(password, user.Password))
                 {
                     User.LoggedInUser = user;
                     loggedInUserId = user.Id;
                     LoginButton.Content = "Logout";
+                    password = PasswordBox.Password = "";
                     EmailTextBox.IsEnabled = false;
                     PasswordBox.IsEnabled = false;
-                    password = PasswordBox.Password = "";
                     isLoggedIn = true;
 
                     var roleUser = connection.RoleUsers.FirstOrDefault(ru => ru.UserId == user.Id);
@@ -91,11 +85,21 @@ namespace E3_Barroc_Intens
                     if (roleUser != null)
                     {
                         var role = connection.Roles.FirstOrDefault(r => r.Id == roleUser.RoleId);
-
+                        if (User.LoggedInUser != null)
+                        {
+                            MainWindow.Instance.IsCeo = User.LoggedInUser.RoleUsers.Any(roleUser => roleUser.RoleId == 1);
+                        }
+                        else
+                        {
+                            MainWindow.Instance.IsCeo = false;
+                        }
                         if (role != null)
                         {
                             switch (role.Name)
                             {
+                                case "CEO":
+                                    this.Frame.Navigate(typeof(CEODashboard));
+                                    break;
                                 case "Finance":
                                     this.Frame.Navigate(typeof(FinanceDashboard));
                                     break;
@@ -120,6 +124,11 @@ namespace E3_Barroc_Intens
                     }
 
                     MainWindow.Instance?.SetLoginButtonText("Uitloggen");
+                }
+                else
+                {
+                    MessageTextBlock.Text = "Incorrect password.";
+                    return;
                 }
             }
         }
