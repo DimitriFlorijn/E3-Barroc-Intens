@@ -25,6 +25,7 @@
             <Button BorderBrush="Black" Foreground="Black" x:Name="LoginButton" Click="Login_Button_Click" Content="Inloggen" />
         </StackPanel>
 
-        <Frame x:Name="contentFrame" Grid.Row="1" />
+        <Frame x:Name="contentFrame" Grid.Row="1">
+        </Frame>
     </Grid>
 </Window>

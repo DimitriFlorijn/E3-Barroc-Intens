@@ -20,6 +20,10 @@
             <PasswordBox x:Name="PasswordBox" PlaceholderText="Enter password" Width="200" Margin="0,0,0,10" Header="Wachtwoord"/>
             <Button x:Name="LoginButton" Content="Login" Click="Login_Button_Click" Width="200" Margin="0,0,0,10"/>
             <TextBlock x:Name="MessageTextBlock" Text="" Width="200" Margin="0,10,0,0"/>
+            <StackPanel x:Name="buttonStackPanel" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock>Geen account?</TextBlock>
+                <Button Click="Register_Button_Click" Content="Registreren" />
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Page>

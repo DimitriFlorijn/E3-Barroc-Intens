@@ -53,12 +53,12 @@ namespace E3_Barroc_Intens
                 db.Database.EnsureDeleted();
                 db.Database.EnsureCreated();
             }
+
+            contentFrame.Navigate(typeof(Login));
         }
-        private void Register_Button_Click(object sender, RoutedEventArgs e)
 
         private void RefreshHeader()
         {
-            contentFrame.Navigate(typeof(Register));
             RootGrid.DataContext = null;
             RootGrid.DataContext = this;
         }

@@ -123,5 +123,10 @@ namespace E3_Barroc_Intens
                 }
             }
         }
+
+        private void Register_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Register));
+        }
     }
 }
