@@ -25,9 +25,26 @@ namespace E3_Barroc_Intens
     public sealed partial class MainWindow : Window
     {
         public static MainWindow Instance { get; private set; }
+
+        private bool isCeo = false;
+        public bool IsCeo {
+            get
+            {
+                return isCeo;
+            }
+            set
+            {
+                isCeo = value;
+                RefreshHeader();
+            }
+        }
+
         public MainWindow()
         {
             this.InitializeComponent();
+
+            RootGrid.DataContext = this;
+
             Instance = this;
             Instance.Title = "Barroc Intens";
 
@@ -38,17 +55,52 @@ namespace E3_Barroc_Intens
             }
         }
         private void Register_Button_Click(object sender, RoutedEventArgs e)
+
+        private void RefreshHeader()
         {
             contentFrame.Navigate(typeof(Register));
+            RootGrid.DataContext = null;
+            RootGrid.DataContext = this;
         }
+
         private void Login_Button_Click(object sender, RoutedEventArgs e)
         {
             contentFrame.Navigate(typeof(Login));
+            User.LoggedInUser = null;
+            IsCeo = false;
+
+            RefreshHeader();
             SetLoginButtonText("Inloggen");
         }
+
         public void SetLoginButtonText(string text)
         {
             LoginButton.Content = text;
+        }
+
+        private void NavigateToFinance_Click(object sender, RoutedEventArgs e)
+        {
+            contentFrame.Navigate(typeof(FinanceDashboard));
+        }
+
+        private void NavigateToInkoop_Click(object sender, RoutedEventArgs e)
+        {
+            contentFrame.Navigate(typeof(InkoopDashboard));
+        }
+
+        private void NavigateToSales_Click(object sender, RoutedEventArgs e)
+        {
+            contentFrame.Navigate(typeof(SalesDashboard));
+        }
+
+        private void NavigateToMaintenance_Click(object sender, RoutedEventArgs e)
+        {
+            contentFrame.Navigate(typeof(MaintenanceDashboard));
+        }
+
+        private void NavigateToCEO_Click(object sender, RoutedEventArgs e)
+        {
+            contentFrame.Navigate(typeof(CEODashboard));
         }
     }
 }

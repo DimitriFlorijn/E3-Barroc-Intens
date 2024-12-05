@@ -78,6 +78,7 @@ namespace E3_Barroc_Intens
 
                 if (user != null)
                 {
+                    User.LoggedInUser = user;
                     loggedInUserId = user.Id;
                     LoginButton.Content = "Logout";
                     EmailTextBox.IsEnabled = false;

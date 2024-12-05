@@ -7,15 +7,22 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    <Grid>
+
+    <Grid x:Name="RootGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <StackPanel x:Name="buttonStackPanel" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button x:Name="LoginButton" Click="Login_Button_Click" Content="Inloggen" />
-            <Button Click="Register_Button_Click" Content="Registreren" />
+        <StackPanel Orientation="Horizontal" Background="#FDD716" Padding="10">
+            <StackPanel Orientation="Horizontal" Visibility="{Binding IsCeo, Converter={StaticResource fromBoolean}}">
+                <Button BorderBrush="Black" Foreground="Black" Content="CEO" Margin="5" Click="NavigateToCEO_Click"/>
+                <Button BorderBrush="Black" Foreground="Black" Content="Finance" Margin="5" Click="NavigateToFinance_Click"/>
+                <Button BorderBrush="Black" Foreground="Black" Content="Inkoop" Margin="5" Click="NavigateToInkoop_Click"/>
+                <Button BorderBrush="Black" Foreground="Black" Content="Sales" Margin="5" Click="NavigateToSales_Click"/>
+                <Button BorderBrush="Black" Foreground="Black" Content="Maintenance" Margin="5" Click="NavigateToMaintenance_Click"/>
+            </StackPanel>
+            <Button BorderBrush="Black" Foreground="Black" x:Name="LoginButton" Click="Login_Button_Click" Content="Inloggen" />
         </StackPanel>
 
         <Frame x:Name="contentFrame" Grid.Row="1" />

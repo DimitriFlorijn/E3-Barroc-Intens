@@ -217,6 +217,13 @@ namespace E3_Barroc_Intens.Data
                     Name = "Maintenance",
                     Email = "maintenance@curio.nl",
                     Password = "maintenance"
+                },
+                new User
+                {
+                    Id = 20,
+                    Name = "CEO",
+                    Email = "ceo@curio.nl",
+                    Password = "ceo"
                 }
             );
 
@@ -325,6 +332,11 @@ namespace E3_Barroc_Intens.Data
                 {
                     RoleId = 5,
                     UserId = 19,
+                },
+                new RoleUser
+                {
+                    RoleId = 1,
+                    UserId = 20,
                 }
             );
 
