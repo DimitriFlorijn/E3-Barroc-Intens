@@ -195,35 +195,35 @@ namespace E3_Barroc_Intens.Data
                     Id = 16,
                     Name = "Finance",
                     Email = "finance@curio.nl",
-                    Password = "finance"
+                    Password = SecureHasher.Hash("finance")
                 },
                 new User
                 {
                     Id = 17,
                     Name = "Sales",
                     Email = "sales@curio.nl",
-                    Password = "sales"
+                    Password = SecureHasher.Hash("sales")
                 },
                 new User
                 {
                     Id = 18,
                     Name = "Inkoop",
                     Email = "inkoop@curio.nl",
-                    Password = "inkoop",
+                    Password = SecureHasher.Hash("inkoop"),
                 },
                 new User
                 {
                     Id = 19,
                     Name = "Maintenance",
                     Email = "maintenance@curio.nl",
-                    Password = "maintenance"
+                    Password = SecureHasher.Hash("maintenance")
                 },
                 new User
                 {
                     Id = 20,
                     Name = "CEO",
                     Email = "ceo@curio.nl",
-                    Password = "ceo"
+                    Password = SecureHasher.Hash("ceo")
                 }
             );
 
