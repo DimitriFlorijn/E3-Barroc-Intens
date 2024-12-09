@@ -2,73 +2,50 @@ using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using MySql.Data.MySqlClient;
 using System.Collections.ObjectModel;
+using E3_Barroc_Intens.Data;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace E3_Barroc_Intens
 {
     public sealed partial class InkoopDashboard : Page
     {
-        private string connectionString = "Server=localhost;Database=e3-barroc-intens-database;Uid=root;Pwd=;";
-
-        public ObservableCollection<Product> Products { get; set; }
-        public ObservableCollection<Brand> Brands { get; set; }
-
+        private List<Product> products;
+        private List<Brand> brands;
 
         public InkoopDashboard()
         {
             this.InitializeComponent();
-            Products = new ObservableCollection<Product>();
-            Brands = new ObservableCollection<Brand>(); 
+
+            using (var db = new AppDbContext())
+            {
+                products = db.Products.ToList();
+                brands = db.Brands.ToList();
+            }
+
             LoadBrands();
             LoadProducts();
         }
 
         private void LoadProducts()
         {
-            Products.Clear();
-            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            using (var db = new AppDbContext())
             {
-                connection.Open();
-                MySqlCommand cmd = new MySqlCommand("SELECT * FROM products", connection);
-                using (MySqlDataReader reader = cmd.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        Products.Add(new Product
-                        {
-                            Name = reader.GetString("Name"),
-                            Price = reader.GetDecimal("Price"),
-                            InstallationCost = reader.GetDecimal("InstallationCost"),
-                            BrandId = reader.GetInt32("BrandId"),
-                            Type = reader.GetString("Type"),
-                            Description = reader.GetString("Description")
-                        });
-                    }
-                }
+                products = db.Products.ToList();
             }
-            ProductListView.ItemsSource = Products;
+
+            ProductListView.ItemsSource = products;
         }
 
         private void LoadBrands()
         {
-            Brands.Clear();
-            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            using (var db = new AppDbContext())
             {
-                connection.Open();
-                MySqlCommand cmd = new MySqlCommand("SELECT * FROM brands", connection);
-                using (MySqlDataReader reader = cmd.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        Brands.Add(new Brand
-                        {
-                            Id = reader.GetInt32("Id"),
-                            Name = reader.GetString("Name")
-                        });
-                    }
-                }
+                brands = db.Brands.ToList();
             }
 
-            BrandComboBox.ItemsSource = Brands;
+            BrandComboBox.ItemsSource = brands;
         }
 
         private void AddProduct_Click(object sender, RoutedEventArgs e)
@@ -82,22 +59,7 @@ namespace E3_Barroc_Intens
             {
                 int brandId = (BrandComboBox.SelectedItem as Brand)?.Id ?? 0;
 
-                using (MySqlConnection connection = new MySqlConnection(connectionString))
-                {
-                    connection.Open();
-                    MySqlCommand cmd = new MySqlCommand(
-                        "INSERT INTO products (name, price, installationCost, brandId, type, description) VALUES (@name, @price, @installationCost, @brandId, @type, @description)",
-                        connection);
-                    cmd.Parameters.AddWithValue("@name", name);
-                    cmd.Parameters.AddWithValue("@price", price);
-                    cmd.Parameters.AddWithValue("@installationCost", installationCost);
-                    cmd.Parameters.AddWithValue("@brandId", brandId);
-                    cmd.Parameters.AddWithValue("@type", type);
-                    cmd.Parameters.AddWithValue("@description", description);
-                    cmd.ExecuteNonQuery();
-                }
-
-                Products.Add(new Product
+                var newProduct = new Product
                 {
                     Name = name,
                     Price = price,
@@ -105,8 +67,16 @@ namespace E3_Barroc_Intens
                     BrandId = brandId,
                     Type = type,
                     Description = description
-                });
+                };
 
+                using (var db = new AppDbContext())
+                {
+                    db.Products.Add(newProduct);
+                    db.SaveChanges();
+                }
+
+                products.Add(newProduct);
+                RefreshProductList();
                 ClearInputFields();
             }
             else
@@ -128,24 +98,20 @@ namespace E3_Barroc_Intens
                 {
                     int brandId = (BrandComboBox.SelectedItem as Brand)?.Id ?? 0;
 
-
-                    using (MySqlConnection connection = new MySqlConnection(connectionString))
+                    using (var db = new AppDbContext())
                     {
-                        connection.Open();
-                        MySqlCommand cmd = new MySqlCommand(
-                            "UPDATE products SET name=@name, price=@price, installationCost=@installationCost, brandId=@brandId, type=@type, description=@description WHERE name=@oldName AND price=@oldPrice AND installationCost=@oldInstallationCost AND brandId=@oldBrandId",
-                            connection);
-                        cmd.Parameters.AddWithValue("@name", name);
-                        cmd.Parameters.AddWithValue("@price", price);
-                        cmd.Parameters.AddWithValue("@installationCost", installationCost);
-                        cmd.Parameters.AddWithValue("@brandId", brandId);
-                        cmd.Parameters.AddWithValue("@type", type);
-                        cmd.Parameters.AddWithValue("@description", description);
-                        cmd.Parameters.AddWithValue("@oldName", selectedProduct.Name);
-                        cmd.Parameters.AddWithValue("@oldPrice", selectedProduct.Price);
-                        cmd.Parameters.AddWithValue("@oldInstallationCost", selectedProduct.InstallationCost);
-                        cmd.Parameters.AddWithValue("@oldBrandId", selectedProduct.BrandId);
-                        cmd.ExecuteNonQuery();
+                        var productToUpdate = db.Products.FirstOrDefault(p => p.Id == selectedProduct.Id);
+                        if (productToUpdate != null)
+                        {
+                            productToUpdate.Name = name;
+                            productToUpdate.Price = price;
+                            productToUpdate.InstallationCost = installationCost;
+                            productToUpdate.BrandId = brandId;
+                            productToUpdate.Type = type;
+                            productToUpdate.Description = description;
+
+                            db.SaveChanges();
+                        }
                     }
 
                     selectedProduct.Name = name;
@@ -158,6 +124,10 @@ namespace E3_Barroc_Intens
                     RefreshProductList();
                     ClearInputFields();
                 }
+                else
+                {
+                    ShowErrorDialog("Voer geldige waarden in voor prijs en installatiekosten.");
+                }
             }
         }
 
@@ -165,20 +135,22 @@ namespace E3_Barroc_Intens
         {
             if (ProductListView.SelectedItem is Product selectedProduct)
             {
-                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                using (var db = new AppDbContext())
                 {
-                    connection.Open();
-                    MySqlCommand cmd = new MySqlCommand(
-                        "DELETE FROM products WHERE name=@name AND price=@price AND installationCost=@installationCost AND brandId=@brandId",
-                        connection);
-                    cmd.Parameters.AddWithValue("@name", selectedProduct.Name);
-                    cmd.Parameters.AddWithValue("@price", selectedProduct.Price);
-                    cmd.Parameters.AddWithValue("@installationCost", selectedProduct.InstallationCost);
-                    cmd.Parameters.AddWithValue("@brandId", selectedProduct.BrandId);
-                    cmd.ExecuteNonQuery();
+                    var productToDelete = db.Products.FirstOrDefault(p => p.Id == selectedProduct.Id);
+                    var customerOrders = db.CustomerOrders.Where(co => co.ProductId == selectedProduct.Id).ToList();
+                    var storages = db.Storages.Where(s => s.ProductId == selectedProduct.Id).ToList();
+                    if (productToDelete != null)
+                    {
+                        db.Products.Remove(productToDelete);
+                        db.CustomerOrders.RemoveRange(customerOrders);
+                        db.Storages.RemoveRange(storages);
+                        db.SaveChanges();
+                    }
                 }
 
-                Products.Remove(selectedProduct);
+                products.Remove(selectedProduct);
+                RefreshProductList();
             }
         }
 
@@ -223,24 +195,7 @@ namespace E3_Barroc_Intens
         private void RefreshProductList()
         {
             ProductListView.ItemsSource = null;
-            ProductListView.ItemsSource = Products;
+            ProductListView.ItemsSource = products;
         }
     }
-
-    public class Product
-    {
-        public string Name { get; set; }
-        public decimal Price { get; set; }
-        public decimal InstallationCost { get; set; }
-        public int BrandId { get; set; }
-        public string Type { get; set; }
-        public string Description { get; set; }
-    }
-
-    public class Brand
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-    }
-
 }
