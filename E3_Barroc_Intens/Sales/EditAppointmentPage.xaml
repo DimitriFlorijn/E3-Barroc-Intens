@@ -1,0 +1,22 @@
+<Page
+    x:Class="E3_Barroc_Intens.Sales.EditAppointmentPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:E3_Barroc_Intens.Sales"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Padding="20">
+        <StackPanel>
+            <TextBlock Text="Edit Appointment" FontSize="24" Margin="0,0,0,20" />
+
+            <ComboBox x:Name="CustomerComboBox" PlaceholderText="Select Customer" Margin="0,0,0,10" />
+            <DatePicker x:Name="DatePicker" Margin="0,0,0,10" />
+            <TimePicker x:Name="TimePicker" Margin="0,0,0,20" />
+
+            <Button Content="Update Appointment" Click="UpdateAppointment_Click" />
+        </StackPanel>
+    </Grid>
+</Page>

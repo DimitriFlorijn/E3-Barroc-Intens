@@ -26,6 +26,7 @@ namespace E3_Barroc_Intens.Data
         public DbSet<Storage> Storages { get; set; }
         public DbSet<IncendentReport> IncendentReports { get; set; }
         public DbSet<Invoice> Invoices { get; set; }
+        public DbSet<Appointment> Appointments { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -55,6 +56,7 @@ namespace E3_Barroc_Intens.Data
             modelBuilder.Entity<RoleUser>().HasKey(
                 ru => new { ru.UserId, ru.RoleId }
             );
+
 
             modelBuilder.Entity<Role>().HasData(
                 new Role
