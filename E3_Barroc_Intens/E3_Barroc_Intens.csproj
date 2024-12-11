@@ -23,6 +23,8 @@
     <None Remove="Register.xaml" />
     <None Remove="SalesDashboard.xaml" />
     <None Remove="Sales\AppointmentDetails.xaml" />
+    <None Remove="Sales\CreateAppointmentPage.xaml" />
+    <None Remove="Sales\EditAppointmentPage.xaml" />
     <None Remove="Sales\ViewAppointmentsPage.xaml" />
   </ItemGroup>
 
@@ -88,6 +90,16 @@
     <Folder Include="Auth\" />
     <Folder Include="Inkoop\" />
     <Folder Include="Maintenance\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Sales\EditAppointmentPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Sales\CreateAppointmentPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Sales\AppointmentDetails.xaml">

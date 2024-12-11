@@ -1,4 +1,5 @@
 using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Navigation;
 using System.Collections.ObjectModel;
 using E3_Barroc_Intens.Data;
 using System.Linq;
@@ -33,6 +34,19 @@ namespace E3_Barroc_Intens.Sales
 
             AppointmentListView.ItemsSource = Appointments;
         }
+
+        private void CreateNewAppointment_Click(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(CreateAppointmentPage));
+        }
+
+        private void AppointmentListView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (e.ClickedItem is AppointmentViewModel selectedAppointment)
+            {
+                Frame.Navigate(typeof(EditAppointmentPage), selectedAppointment.Id);
+            }
+        }
     }
 
     public class AppointmentViewModel
@@ -43,5 +57,4 @@ namespace E3_Barroc_Intens.Sales
 
         public string FormattedDateTime => DateTime.ToString("MMMM dd, yyyy HH:mm");
     }
-
 }

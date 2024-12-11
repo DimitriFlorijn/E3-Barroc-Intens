@@ -9,11 +9,11 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-
     <Grid Padding="20">
         <StackPanel>
+            <Button Content="Create New Appointment" Click="CreateNewAppointment_Click"  Margin="0,0,0,20" />
             <TextBlock Text="Appointments" FontSize="24" Margin="0,0,0,20" />
-            <ListView x:Name="AppointmentListView" Grid.Row="1">
+            <ListView x:Name="AppointmentListView" Grid.Row="1" ItemClick="AppointmentListView_ItemClick" IsItemClickEnabled="True">
                 <ListView.ItemTemplate>
                     <DataTemplate x:DataType="local:AppointmentViewModel">
                         <StackPanel>
