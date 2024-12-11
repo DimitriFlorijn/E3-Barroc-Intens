@@ -13,14 +13,20 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock>Sales Dashboard</TextBlock>
             <Button x:Name="AddClientButton" Content="Add Client" Click="AddClientButton_Click"/>
         </StackPanel>
-        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" Margin="10">
             <Button x:Name="ViewClientsButton" Content="View Clients" Click="ViewClientsButton_Click"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
+            <Button x:Name="VIewAppointmentsButton" Content="View Appointments" Click="VIewAppointmentsButton_Click"/>
         </StackPanel>
     </Grid>
 </Page>
+ 
