@@ -9,8 +9,51 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center">
-        <TextBlock Padding="0,5,0,0">Finance Dashboard</TextBlock>
-        <Button Margin="5,16,5,0" x:Name="Back" Content="terug" Click="FinanceDashboardButton_Click"/>
-    </StackPanel>
-</Page>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Navigatieknop naar Dashboard -->
+        <Button 
+            Content="Terug" 
+            Click="FinanceDashboardButton_Click" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Margin="10"/>
+
+        <!-- Facturenweergave -->
+        <ListView 
+            x:Name="InvoicesList" 
+            Grid.Row="1" 
+            Margin="10">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="Factuur ID:" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding Id}" FontSize="14"/>
+
+                        <TextBlock Text="Customer Name:" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding Customer.CustomerName}" FontSize="14"/>
+
+                        <TextBlock Text="Contract ID:" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding ContractId}" FontSize="14"/>
+
+                        <TextBlock Text="Date Issued:" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding DateIssued}" FontSize="14"/>
+
+                        <TextBlock Text="Due Date:" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding DueDate}" FontSize="14"/>
+
+                        <TextBlock Text="Total Amount:" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding TotalAmount}" FontSize="14"/>
+
+                        <TextBlock Text="Is Paid:" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding IsPaid}" FontSize="14"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+    </Page>

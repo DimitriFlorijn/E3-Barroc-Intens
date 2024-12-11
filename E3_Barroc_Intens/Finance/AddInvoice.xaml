@@ -6,26 +6,23 @@
     xmlns:local="using:E3_Barroc_Intens.Finance"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    mc:Ignorable="d">
 
-    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-        <TextBlock  Padding="0,5,0,0">Finance Dashboard</TextBlock>
-        <Button  Margin="5,16,5,20" x:Name="Back" Content="Terug" Click="FinanceDashboardButton_Click"/>
-        <!--hier komen de creteriea voor het aanmaken-->
-        <TextBlock Margin="5,16,5,0"  >Een nieuwen facatuur aanmaken</TextBlock>
-        <TextBlock Margin="5,16,5,0" >De BTW van 21% is meegerekend</TextBlock>
-        <!-- hier komen de benodigde invulvelden-->
-        <TextBlock Margin="5,30,5,0" >Naam bedrijf</TextBlock>
-        <ComboBox x:Name="Customer" DisplayMemberPath="Name" Width="200" Height="30"/>
-        <TextBlock Margin="5,20,5,0" >Heeft het bedrijf betaald?</TextBlock>
-        <CheckBox x:Name="HasPaid" ></CheckBox>
-        <TextBlock Margin="5,20,5,0" >Welke product</TextBlock>
-        <ComboBox x:Name="Product" Width="200" Height="30" DisplayMemberPath="Name"/>
-        <TextBlock Margin="5,20,5,0" >Welke boonen?</TextBlock>
-        <ComboBox x:Name="Bean" Width="200" Height="30" DisplayMemberPath="Name" Padding="0,0,0,10"/>
-        <!--<TextBlock x:Name="TotalAmount">total:</TextBlock>-->
-        <Button Margin="5,20,5,0" x:Name="Save" Click="FinanceDashboardButton_Click">opslaan</Button>
-    </StackPanel> 
-
+    <Grid Padding="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock Text="Nieuwe Factuur" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
+        <Button  Margin="5,16,5,20" x:Name="Back" Content="Terug" Click="FinanceDashboardButton_Click" HorizontalAlignment="Right"/>
+        <StackPanel Grid.Row="1" Spacing="15">
+            <ComboBox x:Name="Customer" PlaceholderText="Selecteer Klant" DisplayMemberPath="Name"/>
+            <ComboBox x:Name="Product" PlaceholderText="Selecteer Product" DisplayMemberPath="Name" />
+            <ComboBox x:Name="Bean" PlaceholderText="Selecteer Boon" DisplayMemberPath="Name" />
+            <TextBox x:Name="TotalAmount" Header="Totaalbedrag" InputScope="Number"/>
+        </StackPanel>
+        <Button Grid.Row="2" Content="Toevoegen" HorizontalAlignment="center" Click="AddInvoiceButton_Click" Background="#0078D7" Padding="10,5"/>
+    </Grid>
 </Page>

@@ -17,66 +17,74 @@ using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI;
 
-// To learn more about WinUI, the WinUI project structure,
-// and more about our project templates, see: http://aka.ms/winui-project-info.
-
 namespace E3_Barroc_Intens.Finance
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class AddInvoice : Page
     {
         public AddInvoice()
         {
             InitializeComponent();
             LoadComboBoxData();
-            
         }
+
         private void LoadComboBoxData()
         {
-
             using (var db = new AppDbContext())
             {
                 Product.ItemsSource = db.Products.Include(p => p.Brand).ToList();
                 Bean.ItemsSource = db.Bean.ToList();
                 Customer.ItemsSource = db.Customers.ToList();
-
-                //saveButton.Click += SaveButton_Click;
             }
         }
-        //private void SaveButton_Click(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        // Create a new order with values from the form
-        //        var order = new Invoice
-        //        {
-        //           
-        //            DueDate = DateTime.Now,
-        //            Contract = Customer,
-        //          //product = Product
-        //          //beans = beanTextBox.Text,
-        //            IsPaid = HasPaidCheckBox.Checked,
-        //            TotalAmount = Amount
-        //        };
 
-        //        // Add the new order to the database and save changes
-        //        _context.Orders.Add(order);
-        //        _context.SaveChanges();
 
-        //        // Optional: Inform the user
-        //        MessageBox.Show("Order saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        // Handle any errors
-        //        MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //}
+        private void AddInvoiceButton_Click(object sender, RoutedEventArgs e)
+        {
+            using (var db = new AppDbContext())
+            {
+                try
+                {
+                    if (Customer.SelectedItem == null || Product.SelectedItem == null || Bean.SelectedItem == null || string.IsNullOrEmpty(TotalAmount.Text))
+                    {
+                        ShowMessage("Alle velden zijn verplicht.", "Fout");
+                        return;
+                    }
+
+                    var invoice = new Invoice
+                    {
+                        CustomerId = ((Customer)Customer.SelectedItem).Id,
+                        ContractId = ((Contract)Product.SelectedItem).Id,
+                        DateIssued = DateTime.Now,
+                        DueDate = DateTime.Now.AddMonths(1),
+                        TotalAmount = decimal.Parse(TotalAmount.Text),
+                        IsPaid = false
+                    };
+
+                    db.Invoices.Add(invoice);
+                    db.SaveChanges();
+
+                    ShowMessage("Factuur succesvol toegevoegd.", "Succes");
+                }
+                catch (Exception ex)
+                {
+                    ShowMessage($"Er is een fout opgetreden: {ex.Message}", "Fout");
+                }
+            }
+        }
+
+        private void ShowMessage(string content, string title)
+        {
+            ContentDialog dialog = new ContentDialog
+            {
+                Title = title,
+                Content = content,
+                CloseButtonText = "Ok"
+            };
+            _ = dialog.ShowAsync();
+        }
         private void FinanceDashboardButton_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(FinanceDashboard));
         }
     }
-}
+};
