@@ -22,6 +22,7 @@
             <ComboBox x:Name="Product" PlaceholderText="Selecteer Product" DisplayMemberPath="Name" />
             <ComboBox x:Name="Bean" PlaceholderText="Selecteer Boon" DisplayMemberPath="Name" />
             <TextBox x:Name="TotalAmount" Header="Totaalbedrag" InputScope="Number"/>
+            <ComboBox x:Name="IsPaid" PlaceholderText="heeft betaald?" DisplayMemberPath="IsPaid"/>
         </StackPanel>
         <Button Grid.Row="2" Content="Toevoegen" HorizontalAlignment="center" Click="AddInvoiceButton_Click" Background="#0078D7" Padding="10,5"/>
     </Grid>

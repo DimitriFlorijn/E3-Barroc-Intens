@@ -26,7 +26,6 @@ namespace E3_Barroc_Intens.Finance
             InitializeComponent();
             LoadComboBoxData();
         }
-
         private void LoadComboBoxData()
         {
             using (var db = new AppDbContext())
@@ -34,22 +33,13 @@ namespace E3_Barroc_Intens.Finance
                 Product.ItemsSource = db.Products.Include(p => p.Brand).ToList();
                 Bean.ItemsSource = db.Bean.ToList();
                 Customer.ItemsSource = db.Customers.ToList();
+                IsPaid.ItemsSource = db.Invoices.ToList();
             }
         }
-
-
         private void AddInvoiceButton_Click(object sender, RoutedEventArgs e)
         {
             using (var db = new AppDbContext())
             {
-                try
-                {
-                    if (Customer.SelectedItem == null || Product.SelectedItem == null || Bean.SelectedItem == null || string.IsNullOrEmpty(TotalAmount.Text))
-                    {
-                        ShowMessage("Alle velden zijn verplicht.", "Fout");
-                        return;
-                    }
-
                     var invoice = new Invoice
                     {
                         CustomerId = ((Customer)Customer.SelectedItem).Id,
@@ -59,29 +49,11 @@ namespace E3_Barroc_Intens.Finance
                         TotalAmount = decimal.Parse(TotalAmount.Text),
                         IsPaid = false
                     };
-
                     db.Invoices.Add(invoice);
-                    db.SaveChanges();
-
-                    ShowMessage("Factuur succesvol toegevoegd.", "Succes");
-                }
-                catch (Exception ex)
-                {
-                    ShowMessage($"Er is een fout opgetreden: {ex.Message}", "Fout");
-                }
+                    db.SaveChanges();      
             }
-        }
-
-        private void ShowMessage(string content, string title)
-        {
-            ContentDialog dialog = new ContentDialog
-            {
-                Title = title,
-                Content = content,
-                CloseButtonText = "Ok"
-            };
-            _ = dialog.ShowAsync();
-        }
+            Frame.Navigate(typeof(FinanceDashboard));
+        }        
         private void FinanceDashboardButton_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(FinanceDashboard));
