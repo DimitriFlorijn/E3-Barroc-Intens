@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="E3_Barroc_Intens.Maintenance.AddAppointment"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:E3_Barroc_Intens.Maintenance"
+    xmlns:localData="using:E3_Barroc_Intens.Data"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Button Padding="15"
+                Grid.Column="0"
+                Click="GoBackButton_Click">
+                Go back
+            </Button>
+
+            <Button x:Name="MakeAppointmentButton"
+                Padding="15"
+                Foreground="Black"
+                Background="Gold"
+                Grid.Column="2"
+                Click="MakeAppointmentButton_Click">
+                Make an Appointment
+            </Button>
+        </Grid>
+        
+        <CalendarView x:Name="calendarView"
+                  Grid.Row="1"
+                  HorizontalAlignment="Stretch"
+                  VerticalAlignment="Stretch"
+                  CalendarItemBorderThickness="1"
+                  CalendarItemCornerRadius="0"
+                  HorizontalDayItemAlignment="Center"
+                  VerticalDayItemAlignment="Top"
+                  CalendarViewDayItemChanging="CalendarView_CalendarViewDayItemChanging">
+            <CalendarView.CalendarViewDayItemStyle>
+                <Style TargetType="CalendarViewDayItem">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate>
+                                <!-- Omdat we niet vanuit C# bij de ListView kunnen (omdat het in een datatemplate zit)
+                                Benaderen we de data via de DataContext, met behulp van {Binding} die daar naar verwijst -->
+                                <ListView ItemsSource="{Binding}"
+                                      IsItemClickEnabled="True"
+                                      ItemClick="DayItemListView_ItemClick">
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate x:DataType="localData:Maintenance">
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="{x:Bind Costumer.Name}"
+                                                       FontWeight="Bold" />
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </CalendarView.CalendarViewDayItemStyle>
+        </CalendarView>
+
+        <StackPanel x:Name="CreateAppointmentStackPanel" Grid.Row="2" Visibility="Collapsed">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock>Create Appointment</TextBlock>
+            </StackPanel>
+            <StackPanel>
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Orientation="Vertical">
+                        <TextBox x:Name="CreateAppointmentDiscriptionTextBox" Header="Discription"/>
+                        <CalendarDatePicker x:Name="CreateAppointmentFromDateCalendarDatePicker" Header="Select Date:"></CalendarDatePicker>
+                        <CheckBox x:Name="CreateAppointmentRoutineCheckBox" Checked="CreateAppointmentRoutineCheckBox_Checked" Unchecked="CreateAppointmentRoutineCheckBox_Unchecked">Routine Appointment?:</CheckBox>
+                        <StackPanel x:Name="CreateAppointmentRoutineStackPanel" Visibility="Collapsed">
+                            <RadioButtons Header="Choose Repeat Time:">
+                                <RadioButton x:Name="CreateAppointmentWeeklyRadioButton">Weekly</RadioButton>
+                                <RadioButton x:Name="CreateAppointmentMonthlyRadioButton">Monthly</RadioButton>
+                            </RadioButtons>
+                            <CalendarDatePicker x:Name="CreateAppointmentToDateCalenderDatePicker" Header="Select Date:"></CalendarDatePicker>
+                        </StackPanel>
+                        <ComboBox Header="Select User" x:Name="CreateAppointmentSelectUserComboBox">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate x:DataType="localData:RoleUser">
+                                    <TextBlock Text="{x:Bind User.Name}"/>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                        <ComboBox Header="Select Customer" x:Name="CreateAppointmentSelectCustomerComboBox">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate x:DataType="localData:Customer">
+                                    <TextBlock Text="{x:Bind Name}"/>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                    </StackPanel>
+
+                    <Button x:Name="CreateAppointmentButton" Grid.Row="1" Click="CreateAppointmentButton_Click">Create Appointment</Button>
+                </Grid>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
