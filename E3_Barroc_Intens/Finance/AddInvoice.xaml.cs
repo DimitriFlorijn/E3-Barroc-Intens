@@ -89,7 +89,6 @@ namespace E3_Barroc_Intens.Finance
 
                     var invoice = new Invoice
                     {
-                        CustomerId = selectedContract.CustomerId,
                         ContractId = selectedContract.Id,
                         DateIssued = DateTime.Now,
                         DueDate = DateTime.Now.AddMonths(1),
