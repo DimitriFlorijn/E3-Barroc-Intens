@@ -20,6 +20,7 @@
     <None Remove="InkoopDashboard.xaml" />
     <None Remove="Login.xaml" />
     <None Remove="MaintenanceDashboard.xaml" />
+    <None Remove="Maintenance\AddAppointment.xaml" />
     <None Remove="Register.xaml" />
     <None Remove="SalesDashboard.xaml" />
   </ItemGroup>
@@ -86,7 +87,11 @@
   <ItemGroup>
     <Folder Include="Auth\" />
     <Folder Include="Inkoop\" />
-    <Folder Include="Maintenance\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Maintenance\AddAppointment.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Finance\AddInvoice.xaml">
