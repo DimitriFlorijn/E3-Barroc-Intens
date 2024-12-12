@@ -1,4 +1,5 @@
 using E3_Barroc_Intens.Data;
+using E3_Barroc_Intens.Maintenance;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
@@ -72,6 +73,86 @@ namespace E3_Barroc_Intens
             MaintenanceListViewStackPanel.Visibility = Visibility.Visible;
             MaintenanceIncedentReportStackPanel.Visibility = Visibility.Collapsed;
             GetIncedentReports();
+        }
+
+        private void CreateAppointmentButton_Click(object sender, RoutedEventArgs e)
+        {
+            RadioButton repeatInterval = null;
+            if (CreateAppointmentDiscriptionTextBox.Text == null || CreateAppointmentDiscriptionTextBox.Text == "")
+            {
+                return;
+            }
+            if (CreateAppointmentFromDateCalendarDatePicker.Date == null)
+            {
+                return;
+            }
+            if (CreateAppointmentSelectUserComboBox.SelectedItem == null)
+            {
+                return;
+            }
+            if (CreateAppointmentSelectCustomerComboBox.SelectedItem == null)
+            {
+                return;
+            }
+            if (CreateAppointmentRoutineCheckBox.IsChecked == true)
+            {
+                if (CreateAppointmentWeeklyRadioButton.IsChecked == true)
+                {
+                    repeatInterval = CreateAppointmentWeeklyRadioButton as RadioButton;
+                }
+                if (CreateAppointmentMonthlyRadioButton.IsChecked == true)
+                {
+                    repeatInterval = CreateAppointmentMonthlyRadioButton as RadioButton;
+                }
+                if (CreateAppointmentToDateCalenderDatePicker.Date == null)
+                {
+                    return;
+                }
+                else
+                {
+                    return;
+                }
+            }
+
+            var description = CreateAppointmentDiscriptionTextBox.Text;
+            var date = CreateAppointmentFromDateCalendarDatePicker.Date.Value.Date;
+            var user = CreateAppointmentSelectUserComboBox.SelectedItem as User;
+            var customer = CreateAppointmentSelectCustomerComboBox.SelectedItem as Customer;
+
+            using (var db = new AppDbContext())
+            {
+                user = db.Users.Where(u => u.Name == user.Name).First();
+                customer = db.Customers.Where(c => c.Name == customer.Name).First();
+
+                while (date < CreateAppointmentToDateCalenderDatePicker.Date.Value.Date)
+                {
+                    var appointment = new Data.Maintenance
+                    {
+                        UserId = user.Id,
+                        CostumerId = customer.Id,
+                        Description = description,
+                        AppointmentDate = date,
+                    };
+
+                    db.Maintenances.Add(appointment);
+
+                    if (repeatInterval.ToString() == "Weekly")
+                    {
+                        date = date.AddDays(7);
+                    }
+                    else if (repeatInterval.ToString() == "Monthly")
+                    {
+                        date = date.AddMonths(1);
+                    }
+                }
+
+                db.SaveChanges();
+            }
+        }
+
+        private void MakeAppointmentButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(AddAppointment));
         }
     }
 }
