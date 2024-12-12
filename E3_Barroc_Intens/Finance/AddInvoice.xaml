@@ -18,11 +18,10 @@
         <TextBlock Text="Nieuwe Factuur" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
         <Button  Margin="5,16,5,20" x:Name="Back" Content="Terug" Click="FinanceDashboardButton_Click" HorizontalAlignment="Right"/>
         <StackPanel Grid.Row="1" Spacing="15">
-            <ComboBox x:Name="Customer" PlaceholderText="Selecteer Klant" DisplayMemberPath="Name"/>
-            <ComboBox x:Name="Product" PlaceholderText="Selecteer Product" DisplayMemberPath="Name" />
-            <ComboBox x:Name="Bean" PlaceholderText="Selecteer Boon" DisplayMemberPath="Name" />
-            <TextBox x:Name="TotalAmount" Header="Totaalbedrag" InputScope="Number"/>
-            <ComboBox x:Name="IsPaid" PlaceholderText="heeft betaald?" DisplayMemberPath="IsPaid"/>
+            <ComboBox x:Name="Contract" PlaceholderText="Selecteer Contract" DisplayMemberPath="Customer.Name" SelectionChanged="Contract_SelectionChanged" />
+            <TextBox x:Name="Product" Header="Product" IsReadOnly="True" />
+            <TextBox x:Name="Bean" Header="Boon" IsReadOnly="True" />
+            <TextBox x:Name="TotalAmount" Header="Totaalbedrag" IsReadOnly="True" />
         </StackPanel>
         <Button Grid.Row="2" Content="Toevoegen" HorizontalAlignment="center" Click="AddInvoiceButton_Click" Background="#0078D7" Padding="10,5"/>
     </Grid>
