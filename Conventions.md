@@ -12,6 +12,7 @@ Dit document beschrijft de code conventions die moeten worden gevolgd om de lees
 7. [Bestandsnamen en Mappenstructuur](#bestandsnamen-en-mappenstructuur)
    7.1[Mappen](#mappen)
    7.2[Bestanden](#bestanden)
+8. [Werken met Git](#git)
 
 ---
 
@@ -76,3 +77,8 @@ Dit document beschrijft de code conventions die moeten worden gevolgd om de lees
    2. Bestanden die Visual Studio standaard aanmaakt bij het aanmaken van een project
  
 - Voor bestanden in de derde rangsmappen moeten vernoemd worden naar de functionaliteit die ze ondersteunen. Ook hierbij geldt dat de bestandsnaam in het Engels is en begint met een hoofdletter, eindigt met het woord Page en aan elkaar zit.
+
+## Git
+- Als meer mensen in hetzelfde bestand aan het werken zijn moet er met branches gewerkt worden.
+- Commits met een korte titel die beschrijft wat er is veranderd.
+- Commits in het Nederlands.
