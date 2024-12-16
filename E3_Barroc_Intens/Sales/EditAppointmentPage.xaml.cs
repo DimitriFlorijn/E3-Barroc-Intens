@@ -57,11 +57,30 @@ namespace E3_Barroc_Intens.Sales
 
         private void UpdateAppointment_Click(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
         {
+
             if (CustomerComboBox.SelectedValue is int customerId)
             {
+                if (DatePicker.Date == null)
+                {
+                    ShowErrorMessage("Please select a date.");
+                    return;
+                }
+
+                if (TimePicker.Time == null)
+                {
+                    ShowErrorMessage("Please select a time.");
+                    return;
+                }
+
                 var date = DatePicker.Date.DateTime;
                 var time = TimePicker.Time;
                 var dateTime = date.Add(time);
+
+                if (dateTime <= DateTime.Now)
+                {
+                    ShowErrorMessage("The date and time cannot be in the past or be empty.");
+                    return;
+                }
 
                 using (var db = new AppDbContext())
                 {
@@ -78,6 +97,18 @@ namespace E3_Barroc_Intens.Sales
 
                 Frame.GoBack();
             }
+        }
+        private void ShowErrorMessage(string message)
+        {
+            var dialog = new ContentDialog
+            {
+                Title = "Error",
+                Content = message,
+                CloseButtonText = "OK",
+                XamlRoot = this.XamlRoot
+            };
+
+            _ = dialog.ShowAsync();
         }
 
         private void BackButton_Click(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
