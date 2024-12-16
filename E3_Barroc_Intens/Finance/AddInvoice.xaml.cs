@@ -52,7 +52,7 @@ namespace E3_Barroc_Intens.Finance
 
                     if (contract != null)
                     {
-                        Product.Text = contract.Product?.Name ?? "Geen product";
+                        ProductText.Text = contract.Product?.Name ?? "Geen product";
                         Bean.Text = contract.Bean?.Name ?? "Geen boon";
 
                         decimal totalAmount = contract.Product?.Price ?? 0;

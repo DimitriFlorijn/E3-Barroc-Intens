@@ -19,7 +19,7 @@
         <Button  Margin="5,16,5,20" x:Name="Back" Content="Terug" Click="FinanceDashboardButton_Click" HorizontalAlignment="Right"/>
         <StackPanel Grid.Row="1" Spacing="15">
             <ComboBox x:Name="Contract" PlaceholderText="Selecteer Contract" DisplayMemberPath="Customer.Name" SelectionChanged="Contract_SelectionChanged" />
-            <TextBox x:Name="Product" Header="Product" IsReadOnly="True" />
+            <TextBox x:Name="ProductText" Header="Product" IsReadOnly="True" />
             <TextBox x:Name="Bean" Header="Boon" IsReadOnly="True" />
             <TextBox x:Name="TotalAmount" Header="Totaalbedrag" IsReadOnly="True" />
         </StackPanel>
