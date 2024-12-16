@@ -8,8 +8,7 @@ namespace E3_Barroc_Intens.Data
     internal class Invoice
     {
         public int Id { get; set; }
-        public int CustomerId { get; set; }
-        public Customer Customer { get; set; }
+
         public int ContractId { get; set; }
         public Contract Contract { get; set; }
         public DateTime DateIssued { get; set; }

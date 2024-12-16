@@ -31,57 +31,89 @@ namespace E3_Barroc_Intens.Finance
         {
             using (var db = new AppDbContext())
             {
-                Product.ItemsSource = db.Products.Include(p => p.Brand).ToList();
-                Bean.ItemsSource = db.Bean.ToList();
-                Customer.ItemsSource = db.Customers.ToList();
+                Contract.ItemsSource = db.Contracts
+                    .Include(c => c.Product)
+                    .Include(c => c.Bean)
+                    .Include(c => c.Customer)
+                    .ToList();
             }
         }
 
+        private void Contract_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (Contract.SelectedItem is Contract selectedContract)
+            {
+                using (var db = new AppDbContext())
+                {
+                    var contract = db.Contracts
+                        .Include(c => c.Product)
+                        .Include(c => c.Bean)
+                        .FirstOrDefault(c => c.Id == selectedContract.Id);
+
+                    if (contract != null)
+                    {
+                        Product.Text = contract.Product?.Name ?? "Geen product";
+                        Bean.Text = contract.Bean?.Name ?? "Geen boon";
+
+                        decimal totalAmount = contract.Product?.Price ?? 0;
+                        if (contract.Bean != null)
+                        {
+                            totalAmount += contract.Bean.PricePerKg;
+                        }
+
+                        TotalAmount.Text = totalAmount.ToString("C");
+                    }
+                }
+            }
+        }
 
         private void AddInvoiceButton_Click(object sender, RoutedEventArgs e)
         {
-            using (var db = new AppDbContext())
+            if (Contract.SelectedItem == null)
             {
-                try
+                ContentDialog errorDialog = new ContentDialog
                 {
-                    if (Customer.SelectedItem == null || Product.SelectedItem == null || Bean.SelectedItem == null || string.IsNullOrEmpty(TotalAmount.Text))
-                    {
-                        ShowMessage("Alle velden zijn verplicht.", "Fout");
-                        return;
-                    }
+                    Title = "Fout",
+                    Content = "Selecteer een contract voordat je een factuur toevoegt.",
+                    CloseButtonText = "OK"
+                };
+                _ = errorDialog.ShowAsync();
+                return;
+            }
+
+            try
+            {
+                using (var db = new AppDbContext())
+                {
+                    var selectedContract = (Contract)Contract.SelectedItem;
 
                     var invoice = new Invoice
                     {
-                        CustomerId = ((Customer)Customer.SelectedItem).Id,
-                        ContractId = ((Contract)Product.SelectedItem).Id,
+                        ContractId = selectedContract.Id,
                         DateIssued = DateTime.Now,
                         DueDate = DateTime.Now.AddMonths(1),
-                        TotalAmount = decimal.Parse(TotalAmount.Text),
+                        TotalAmount = decimal.Parse(TotalAmount.Text, System.Globalization.NumberStyles.Currency),
                         IsPaid = false
                     };
 
                     db.Invoices.Add(invoice);
                     db.SaveChanges();
+                }
 
-                    ShowMessage("Factuur succesvol toegevoegd.", "Succes");
-                }
-                catch (Exception ex)
+                Frame.Navigate(typeof(FinanceDashboard));
+            }
+            catch (Exception ex)
+            {
+                ContentDialog errorDialog = new ContentDialog
                 {
-                    ShowMessage($"Er is een fout opgetreden: {ex.Message}", "Fout");
-                }
+                    Title = "Fout",
+                    Content = $"Er is een fout opgetreden: {ex.Message}",
+                    CloseButtonText = "OK"
+                };
+                _ = errorDialog.ShowAsync();
             }
         }
 
-        private void ShowMessage(string content, string title)
-        {
-            ContentDialog dialog = new ContentDialog
-            {
-                Title = title,
-                Content = content,
-                CloseButtonText = "Ok"
-            };
-            _ = dialog.ShowAsync();
-        }
         private void FinanceDashboardButton_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(FinanceDashboard));

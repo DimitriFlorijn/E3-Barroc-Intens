@@ -12,26 +12,28 @@ Dit document beschrijft de code conventions die moeten worden gevolgd om de lees
 7. [Bestandsnamen en Mappenstructuur](#bestandsnamen-en-mappenstructuur)
    7.1[Mappen](#mappen)
    7.2[Bestanden](#bestanden)
+8. [Werken met Git](#git)
 
 ---
 
 ## Naming Conventions
-- **Variabelen en functies**: Gebruik `UperCamelCase` voor variabelen en functies.
+- **Variabelen en functies**: Gebruik `UperCamelCase` voor functies en `lowerCamelCase` voor variabelen.
 
 ## Wit Ruimte's
 - niet al te veel witruimtes > hou het beperkt tot max 1 regel ertussen
 
 ## Indentatie
-- **indentatie**: parent child relation 
+- **indentatie**: parent child relation. Als een stuk code een child is van een ander stuk code, zorg er dan voor dat die met tab eronder staat.
 
 ## Commentaar
 - **comments**: gebruik bij wat complexere dingen en bijv niet bij het standart crud reeks.
 
 ## Functies
-- een Db link dat er met een functie om in te kunnen loggen en van hun afdeling hun projecten kunnen doen en dat het intern gecomuniceerd word
+- Naam van functie geeft aan wat er in de functie gedaan wordt.
+- Als we in een functie verbinding met de database willen maken gebruiken we AppDbContext.
 
 ## Fout Preventie
-- voor fouten eerst kijken en weeten wat er fout is en dan noog niet git pushen zoadat er geen foute kode guplublished woordt en dat er geen gitconflicten er komen
+- voor fouten eerst kijken en weeten wat er fout is en dan nog niet git pushen zoadat er geen foute code gepublished wordt en dat er geen gitconflicten komen
 
 ## Bestandsnamen en Mappenstructuur
 - De structuur en naamconventies zijn vastgesteld in de alpha-versie van het project.
@@ -75,3 +77,8 @@ Dit document beschrijft de code conventions die moeten worden gevolgd om de lees
    2. Bestanden die Visual Studio standaard aanmaakt bij het aanmaken van een project
  
 - Voor bestanden in de derde rangsmappen moeten vernoemd worden naar de functionaliteit die ze ondersteunen. Ook hierbij geldt dat de bestandsnaam in het Engels is en begint met een hoofdletter, eindigt met het woord Page en aan elkaar zit.
+
+## Git
+- Als meer mensen in hetzelfde bestand aan het werken zijn moet er met branches gewerkt worden.
+- Commits met een korte titel die beschrijft wat er is veranderd.
+- Commits in het Nederlands.

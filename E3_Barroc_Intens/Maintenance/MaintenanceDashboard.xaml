@@ -85,6 +85,7 @@
                         <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
 
                     <TextBlock Grid.Column="0" Text="Klantnaam"/>
@@ -102,7 +103,56 @@
                     <TextBlock x:Name="IncendenReportFaultCodeTextBlock" Grid.Column="5" Grid.Row="1"></TextBlock>
 
                     <Button x:Name="IncedentReportButton" Click="IncedentReportButton_Click" Grid.Row="2" Grid.ColumnSpan="6" HorizontalAlignment="Stretch">Terug naar lijst van Incedenten</Button>
+                    <!---<Button x:Name="IncedentUpdateReportButton" Click="IncedentUpdateReportButton_Click" Grid.Row="3" Grid.ColumnSpan="6" HorizontalAlignment="Stretch">Update geselecteerde Incedent</Button>-->
+                    <Button x:Name="MakeAppointmentButton" Click="MakeAppointmentButton_Click" Grid.Row="3" Grid.ColumnSpan="6" HorizontalAlignment="Stretch">Maak afspraak</Button>
+                    
+                </Grid>
+            </StackPanel>
+        </StackPanel>
 
+        <StackPanel x:Name="CreateAppointmentStackPanel" Grid.Row="2" Visibility="Collapsed">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock>Create Appointment</TextBlock>
+            </StackPanel>
+            <StackPanel>
+                <Grid>
+                    
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Orientation="Vertical">
+                        <TextBox x:Name="CreateAppointmentDiscriptionTextBox" Header="Discription"/>
+                        <CalendarDatePicker x:Name="CreateAppointmentFromDateCalendarDatePicker" Header="Select Date:"></CalendarDatePicker>
+                        <CheckBox x:Name="CreateAppointmentRoutineCheckBox">Routine Appointment?:</CheckBox>
+                        <StackPanel x:Name="CreateAppointmentRoutineStackPanel" Visibility="Collapsed">
+                            <RadioButtons Header="Choose Repeat Time:">
+                                <RadioButton x:Name="CreateAppointmentWeeklyRadioButton">Weekly</RadioButton>
+                                <RadioButton x:Name="CreateAppointmentMonthlyRadioButton">Monthly</RadioButton>
+                            </RadioButtons>
+                            <CalendarDatePicker x:Name="CreateAppointmentToDateCalenderDatePicker" Header="Select Date:"></CalendarDatePicker>
+                        </StackPanel>
+                        <ComboBox Header="Select User" x:Name="CreateAppointmentSelectUserComboBox">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate x:DataType="localData:User">
+                                    <TextBlock Text="{x:Bind Name}"/>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                        <ComboBox Header="Select Customer" x:Name="CreateAppointmentSelectCustomerComboBox">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate x:DataType="localData:Customer">
+                                    <TextBlock Text="{x:Bind Name}"/>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                    </StackPanel>
+
+                    <Button x:Name="CreateAppointmentButton" Click="CreateAppointmentButton_Click">Create Appointment</Button>
                 </Grid>
             </StackPanel>
         </StackPanel>
