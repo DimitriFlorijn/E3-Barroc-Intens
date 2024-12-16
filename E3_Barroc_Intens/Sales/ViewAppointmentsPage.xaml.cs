@@ -47,6 +47,12 @@ namespace E3_Barroc_Intens.Sales
                 Frame.Navigate(typeof(EditAppointmentPage), selectedAppointment.Id);
             }
         }
+
+        private void BackButton_Click(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(SalesDashboard));
+
+        }
     }
 
     public class AppointmentViewModel

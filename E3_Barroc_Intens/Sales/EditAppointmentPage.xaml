@@ -10,11 +10,13 @@
 
     <Grid Padding="20">
         <StackPanel>
+            <Button Content="Back" Click="BackButton_Click"  HorizontalAlignment="Left" VerticalAlignment="Top" Padding="10" />
             <TextBlock Text="Edit Appointment" FontSize="24" Margin="0,0,0,20" />
 
             <ComboBox x:Name="CustomerComboBox" PlaceholderText="Select Customer" Margin="0,0,0,10" />
             <DatePicker x:Name="DatePicker" Margin="0,0,0,10" />
             <TimePicker x:Name="TimePicker" Margin="0,0,0,20" />
+            <TextBox x:Name="NoteBox" Margin="0,0,0,10" />
 
             <Button Content="Update Appointment" Click="UpdateAppointment_Click" />
         </StackPanel>

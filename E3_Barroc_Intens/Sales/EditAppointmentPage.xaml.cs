@@ -38,6 +38,7 @@ namespace E3_Barroc_Intens.Sales
                     CustomerComboBox.SelectedValue = appointment.ClientId;
                     DatePicker.Date = appointment.DateTime.Date;
                     TimePicker.Time = appointment.DateTime.TimeOfDay;
+                    NoteBox.Text = appointment.Notes;
                 }
             }
         }
@@ -50,6 +51,7 @@ namespace E3_Barroc_Intens.Sales
                 CustomerComboBox.ItemsSource = customers;
                 CustomerComboBox.DisplayMemberPath = "Name";
                 CustomerComboBox.SelectedValuePath = "Id";
+
             }
         }
 
@@ -68,16 +70,19 @@ namespace E3_Barroc_Intens.Sales
                     {
                         appointment.ClientId = customerId;
                         appointment.DateTime = dateTime;
+                        appointment.Notes = NoteBox.Text;
+
                         db.SaveChanges();
                     }
                 }
 
                 Frame.GoBack();
             }
-            else
-            {
-                // Handle case where no customer is selected
-            }
+        }
+
+        private void BackButton_Click(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
+        {
+            Frame.GoBack();
         }
     }
 }

@@ -3,6 +3,7 @@ using Microsoft.UI.Xaml.Navigation;
 using E3_Barroc_Intens.Data;
 using System;
 using System.Linq;
+using Microsoft.UI.Xaml;
 
 namespace E3_Barroc_Intens.Sales
 {
@@ -25,20 +26,42 @@ namespace E3_Barroc_Intens.Sales
             }
         }
 
-        private void SaveAppointment_Click(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
+        private void SaveAppointment_Click(object sender, RoutedEventArgs e)
         {
-            if (CustomerComboBox.SelectedValue is int customerId)
+            if (CustomerComboBox.SelectedValue == null)
             {
+                ShowErrorMessage("Please select a customer.");
+                return;
+            }
+
+            if (DatePicker.Date != null)
+            {
+                if (TimePicker.SelectedTime == null)
+                {
+                    ShowErrorMessage("Please select a time.");
+                    return;
+                }
+
+                int customerId = (int)CustomerComboBox.SelectedValue;
                 var date = DatePicker.Date.DateTime;
-                var time = TimePicker.Time;
+                var time = TimePicker.SelectedTime.Value;
+
                 var dateTime = date.Add(time);
+                if (dateTime <= DateTime.Now)
+                {
+                    ShowErrorMessage("The date and time cannot be in the past or be empty.");
+                    return;
+                }
+
+                var notes = NoteBox.Text;
 
                 using (var db = new AppDbContext())
                 {
                     var appointment = new Appointment
                     {
                         ClientId = customerId,
-                        DateTime = dateTime
+                        DateTime = dateTime,
+                        Notes = notes
                     };
 
                     db.Appointments.Add(appointment);
@@ -49,8 +72,27 @@ namespace E3_Barroc_Intens.Sales
             }
             else
             {
-                // Handle case where no customer is selected
+                ShowErrorMessage("Please select a date.");
+                return;
             }
+        }
+
+        private void ShowErrorMessage(string message)
+        {
+            var dialog = new ContentDialog
+            {
+                Title = "Error",
+                Content = message,
+                CloseButtonText = "OK",
+                XamlRoot = this.XamlRoot 
+            };
+
+            _ = dialog.ShowAsync();
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.GoBack();
         }
     }
 }
