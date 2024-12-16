@@ -45,6 +45,14 @@ namespace E3_Barroc_Intens.Sales
             {
                 var client = db.Customers.Find(thisCustomer.Id);
 
+                //check if nothing is empty
+                thisCustomer = client;
+                if (NameTextBox.Text == "" || EmailTextBox.Text == "" || NumberTextBox.Text == "" || LocationTextBox.Text == "")
+                {
+                    ShowErrorMessage("Please fill in all fields.");
+                    return;
+                }
+
                 if (client != null)
                 {
                     client.Name = NameTextBox.Text;
@@ -60,6 +68,18 @@ namespace E3_Barroc_Intens.Sales
                 Frame.Navigate(typeof(SalesDashboard));
 
             }
+        }
+        private void ShowErrorMessage(string message)
+        {
+            var dialog = new ContentDialog
+            {
+                Title = "Error",
+                Content = message,
+                CloseButtonText = "OK",
+                XamlRoot = this.XamlRoot
+            };
+
+            _ = dialog.ShowAsync();
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)

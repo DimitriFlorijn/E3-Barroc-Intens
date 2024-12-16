@@ -33,6 +33,13 @@ namespace E3_Barroc_Intens.Sales
         {
             using (var db = new AppDbContext())
             {
+
+                //check if nothing is empty 
+                if (NameTextBox.Text == "" || EmailTextBox.Text == "" || PhoneNumberTextBox.Text == "" || AddressTextBox.Text == "" || NotesTextBox.Text == "")
+                {
+                    ShowErrorMessage("Please fill in all fields.");
+                    return;
+                }
                 var client = new Customer
                 {
                     Name = NameTextBox.Text,
@@ -46,6 +53,18 @@ namespace E3_Barroc_Intens.Sales
                 db.Customers.Add(client);
                 db.SaveChanges();
             }
+        }
+        private void ShowErrorMessage(string message)
+        {
+            var dialog = new ContentDialog
+            {
+                Title = "Error",
+                Content = message,
+                CloseButtonText = "OK",
+                XamlRoot = this.XamlRoot
+            };
+
+            _ = dialog.ShowAsync();
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
