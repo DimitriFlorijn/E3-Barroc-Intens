@@ -18,12 +18,6 @@ namespace E3_Barroc_Intens
         {
             this.InitializeComponent();
 
-            using (var db = new AppDbContext())
-            {
-                products = db.Products.ToList();
-                brands = db.Brands.ToList();
-            }
-
             LoadBrands();
             LoadProducts();
         }
@@ -32,7 +26,7 @@ namespace E3_Barroc_Intens
         {
             using (var db = new AppDbContext())
             {
-                products = db.Products.ToList();
+                products = db.Products.Include(p => p.Brand).ToList();
             }
 
             ProductListView.ItemsSource = products;

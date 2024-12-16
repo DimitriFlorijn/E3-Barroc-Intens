@@ -84,7 +84,7 @@
                             <TextBlock Text="Description:" FontWeight="Bold" Margin="0,0,0,2"/>
                             <TextBlock Text="{Binding Description}" Margin="0,0,0,5"/>
 
-                            <TextBlock Text="Brand id:" FontWeight="Bold" Margin="0,0,0,2"/>
+                            <TextBlock Text="Brand:" FontWeight="Bold" Margin="0,0,0,2"/>
                             <TextBlock Text="{Binding Brand.Name}" Margin="0,0,0,5"/>
 
                         </StackPanel>
