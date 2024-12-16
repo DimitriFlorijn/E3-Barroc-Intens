@@ -9,6 +9,7 @@ using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -34,7 +35,7 @@ namespace E3_Barroc_Intens.Maintenance
         // de calendar items dan wel hetzelfde in de lijst. Zonder static zou de
         // lijst iedere keer opnieuw aangemaakt worden, wanneer de Page opnieuw
         // aangemaakt wordt (bij openen)
-        static List<Data.Maintenance> AllCalendarItems = new List<Data.Maintenance>();
+        static ObservableCollection<Data.Maintenance> AllCalendarItems = new ObservableCollection<Data.Maintenance>();
 
         private void CreateAppointmentButton_Click(object sender, RoutedEventArgs e)
         {
@@ -151,7 +152,12 @@ namespace E3_Barroc_Intens.Maintenance
 
             using (var db = new AppDbContext())
             {
-                AllCalendarItems = db.Maintenances.Include(ali => ali.Costumer).ToList();
+                var appointments = db.Maintenances.Include(ali => ali.Costumer).ToList();
+
+                foreach (var appointment in appointments)
+                {
+                    AllCalendarItems.Add(appointment);
+                }
 
                 var relevantCalendarItems = AllCalendarItems.Where(item => item.AppointmentDate.Date == calendarItemDate.Date);
 
@@ -176,20 +182,31 @@ namespace E3_Barroc_Intens.Maintenance
             using (var db = new AppDbContext())
             {
                 var appointment = db.Maintenances.Where(a => a.AppointmentDate == clickedCalendarItem.AppointmentDate && a.UserId == clickedCalendarItem.UserId && a.CostumerId == clickedCalendarItem.CostumerId).Include(a => a.Costumer).FirstOrDefault();
-                var dialog = new ContentDialog()
+
+                if (appointment.AppointmentDate > DateTime.Now)
                 {
-                    //Title = clickedCalendarItem.Subject,
-                    //Content = $"Start: {clickedCalendarItem.StartTime}\nEnd: {clickedCalendarItem.EndTime}\nLocation: {clickedCalendarItem.Location}\nDetails: {clickedCalendarItem.Details}",
-                    //CloseButtonText = "Close",
-                    //XamlRoot = this.XamlRoot,
+                    var dialog = new ContentDialog()
+                    {
+                        //Title = clickedCalendarItem.Subject,
+                        //Content = $"Start: {clickedCalendarItem.StartTime}\nEnd: {clickedCalendarItem.EndTime}\nLocation: {clickedCalendarItem.Location}\nDetails: {clickedCalendarItem.Details}",
+                        //CloseButtonText = "Close",
+                        //XamlRoot = this.XamlRoot,
 
-                    Title = $"Appointment {appointment.Costumer.Name}",
-                    Content = $"Customer Name: {appointment.Costumer.Name}\nCustomer Location: {appointment.Costumer.Location}\nDiscription: {appointment.Description}\nAppointment Date and Time: {appointment.AppointmentDate}",
-                    CloseButtonText = "Close",
-                    XamlRoot = this.XamlRoot,
-                };
+                        Title = $"Appointment {appointment.Costumer.Name}",
+                        Content = $"Customer Name: {appointment.Costumer.Name}\nCustomer Location: {appointment.Costumer.Location}\nDiscription: {appointment.Description}\nAppointment Date and Time: {appointment.AppointmentDate}",
+                        CloseButtonText = "Close",
+                        XamlRoot = this.XamlRoot,
+                    };
 
-                await dialog.ShowAsync();
+                    await dialog.ShowAsync();
+                }
+                else
+                {
+                    calendarView.Visibility = Visibility.Collapsed;
+                    CreateWorkVoucherStackPanel.Visibility = Visibility.Visible;
+                    AppointmentIdTextBlock.Text = appointment.Id.ToString();
+                    AppointmentInformationTextBlock.Text = $"Customer Name: {appointment.Costumer.Name}\nCustomer Location: {appointment.Costumer.Location}\nDiscription: {appointment.Description}\nAppointment Date and Time: {appointment.AppointmentDate}";
+                }
             }
         }
 
@@ -221,6 +238,39 @@ namespace E3_Barroc_Intens.Maintenance
         private void CreateAppointmentRoutineCheckBox_Unchecked(object sender, RoutedEventArgs e)
         {
             CreateAppointmentRoutineStackPanel.Visibility = Visibility.Collapsed;
+        }
+
+        private void CreateWorkVoucherButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (WorkVoucherTextBox.Text == null || WorkVoucherTextBox.Text == "")
+            {
+                return;
+            }
+
+            CreateWorkVoucherStackPanel.Visibility = Visibility.Collapsed;
+
+            using (var db = new AppDbContext())
+            {
+                var appointment = db.Maintenances.Where(a => a.Id.ToString() == AppointmentIdTextBlock.Text).FirstOrDefault();
+                if (appointment != null)
+                {
+                    var appointmentItem = AllCalendarItems.Where(item => item.UserId == appointment.UserId && item.CostumerId == appointment.CostumerId && item.AppointmentDate == appointment.AppointmentDate).FirstOrDefault();
+                    if (appointmentItem != null && AllCalendarItems.Remove(appointmentItem))
+                    {
+                        //throw new Exception("het is verwijderd");
+                    }
+                    appointment.Description = $"{appointment.Description}\n\nWorkVoucher: {WorkVoucherTextBox.Text}";
+                    db.SaveChanges();
+                }
+            }
+
+            calendarView.Visibility = Visibility.Visible;
+
+            // Er blijkt geen nette manier om de CalendarView te 'refreshen', zodat de 
+            // 'CalendarView_CalendarViewDayItemChanging' event opnieuw wordt
+            // aangeroepen. Deze workaround forceert toch dat de calender ververst:
+            calendarView.MinDate = calendarView.MinDate.AddMilliseconds(1);
+            calendarView.SetDisplayDate(DateTime.Now);
         }
     }
 }
