@@ -10,7 +10,6 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!-- Navigatieknop naar Dashboard -->
         <Button 
             Content="Terug" 
             Click="FinanceDashboardButton_Click" 
@@ -18,7 +17,6 @@
             VerticalAlignment="Top" 
             Margin="10"/>
 
-        <!-- Facturenweergave -->
         <ListView 
             x:Name="InvoicesList" 
             Grid.Row="1" 
