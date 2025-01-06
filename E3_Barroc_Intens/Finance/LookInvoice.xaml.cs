@@ -1,7 +1,9 @@
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Linq;
+using E3_Barroc_Intens.Data;
 
 namespace E3_Barroc_Intens.Finance
 {
@@ -9,11 +11,26 @@ namespace E3_Barroc_Intens.Finance
     {
         public LookInvoice()
         {
-            this.InitializeComponent();
+            InitializeComponent();
+            LoadInvoices();
         }
+
+        // Navigatie naar het dashboard
         private void FinanceDashboardButton_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(FinanceDashboard));
+        }
+        private void LoadInvoices()
+        {
+            using (var db = new AppDbContext())
+            {
+                var invoices = db.Invoices
+                    .Include(i => i.Contract)
+                    .ThenInclude(c => c.Customer)
+                    .ToList();
+                
+                InvoicesList.ItemsSource = invoices;
+            }
         }
     }
 }
