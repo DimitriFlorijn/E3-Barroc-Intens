@@ -134,7 +134,6 @@ namespace E3_Barroc_Intens
             if (string.IsNullOrWhiteSpace(email))
                 return false;
 
-            // Basic Regex for email validation
             string emailPattern = @"^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$";
             return Regex.IsMatch(email, emailPattern);
         }
