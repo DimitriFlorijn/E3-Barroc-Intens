@@ -26,7 +26,7 @@
                     <StackPanel>
                         <TextBlock Text="Factuur ID:" FontWeight="Bold"/>
                         <TextBlock Text="{Binding Id}" FontSize="14"/>
-
+                        
                         <TextBlock Text="Customer Name:" FontWeight="Bold"/>
                         <TextBlock Text="{Binding Customer.CustomerName}" FontSize="14"/>
 

@@ -26,7 +26,6 @@ namespace E3_Barroc_Intens.Finance
             InitializeComponent();
             LoadComboBoxData();
         }
-
         private void LoadComboBoxData()
         {
             using (var db = new AppDbContext())
@@ -38,7 +37,6 @@ namespace E3_Barroc_Intens.Finance
                     .ToList();
             }
         }
-
         private void Contract_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (Contract.SelectedItem is Contract selectedContract)
@@ -66,7 +64,6 @@ namespace E3_Barroc_Intens.Finance
                 }
             }
         }
-
         private void AddInvoiceButton_Click(object sender, RoutedEventArgs e)
         {
             if (Contract.SelectedItem == null)
@@ -80,7 +77,6 @@ namespace E3_Barroc_Intens.Finance
                 _ = errorDialog.ShowAsync();
                 return;
             }
-
             try
             {
                 using (var db = new AppDbContext())
@@ -113,7 +109,6 @@ namespace E3_Barroc_Intens.Finance
                 _ = errorDialog.ShowAsync();
             }
         }
-
         private void FinanceDashboardButton_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(FinanceDashboard));

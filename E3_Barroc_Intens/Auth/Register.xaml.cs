@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text.RegularExpressions;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
@@ -39,11 +40,16 @@ namespace E3_Barroc_Intens
             }
         }
 
+       
+
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
             var name = UsernameTextBox.Text;
             var email = EmailTextBox.Text;
             var password = PasswordBox.Password;
+            var passwordCheck = PasswordCheckBox.Password;
+
+            
 
             if (string.IsNullOrWhiteSpace(name))
             {
@@ -56,11 +62,27 @@ namespace E3_Barroc_Intens
                 MessageTextBlock.Text = "Email is required.";
                 return;
             }
+            if (!IsValidEmail(email))
+            {
+                MessageTextBlock.Text = "Invalid email format. Please enter a valid email.";
+                return;
+            }
 
             if (string.IsNullOrWhiteSpace(password))
             {
                 MessageTextBlock.Text = "Password is required.";
                 return;
+            }
+            if (string.IsNullOrWhiteSpace(passwordCheck))
+            {
+                MessageTextBlock.Text = "Password check is required.";
+                return;
+            }
+
+            if (passwordCheck != password)
+            {
+                MessageTextBlock.Text = "Wachtwoord komt niet overeen.";
+                return;   
             }
 
             if (RoleComboBox.SelectedItem == null)
@@ -68,6 +90,7 @@ namespace E3_Barroc_Intens
                 MessageTextBlock.Text = "Select a role.";
                 return;
             }
+
 
             var hashed = SecureHasher.Hash(password);
 
@@ -103,7 +126,17 @@ namespace E3_Barroc_Intens
                 db.SaveChanges();
             }
 
+
             MessageTextBlock.Text = "Account created successfully!";
+        }
+        private bool IsValidEmail(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+                return false;
+
+            // Basic Regex for email validation
+            string emailPattern = @"^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$";
+            return Regex.IsMatch(email, emailPattern);
         }
     }
 }
