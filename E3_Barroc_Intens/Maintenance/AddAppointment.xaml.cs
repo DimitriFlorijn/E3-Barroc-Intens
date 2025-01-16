@@ -161,7 +161,6 @@ namespace E3_Barroc_Intens.Maintenance
 
                 var relevantCalendarItems = AllCalendarItems.Where(item => item.AppointmentDate.Date == calendarItemDate.Date);
 
-                // De DataContext is vanuit de xaml te benaderen met {Binding}
                 args.Item.DataContext = relevantCalendarItems;
 
                 if (relevantCalendarItems.Count() == 0)
@@ -187,11 +186,6 @@ namespace E3_Barroc_Intens.Maintenance
                 {
                     var dialog = new ContentDialog()
                     {
-                        //Title = clickedCalendarItem.Subject,
-                        //Content = $"Start: {clickedCalendarItem.StartTime}\nEnd: {clickedCalendarItem.EndTime}\nLocation: {clickedCalendarItem.Location}\nDetails: {clickedCalendarItem.Details}",
-                        //CloseButtonText = "Close",
-                        //XamlRoot = this.XamlRoot,
-
                         Title = $"Appointment {appointment.Costumer.Name}",
                         Content = $"Customer Name: {appointment.Costumer.Name}\nCustomer Location: {appointment.Costumer.Location}\nDiscription: {appointment.Description}\nAppointment Date and Time: {appointment.AppointmentDate}",
                         CloseButtonText = "Close",
@@ -265,10 +259,6 @@ namespace E3_Barroc_Intens.Maintenance
             }
 
             calendarView.Visibility = Visibility.Visible;
-
-            // Er blijkt geen nette manier om de CalendarView te 'refreshen', zodat de 
-            // 'CalendarView_CalendarViewDayItemChanging' event opnieuw wordt
-            // aangeroepen. Deze workaround forceert toch dat de calender ververst:
             calendarView.MinDate = calendarView.MinDate.AddMilliseconds(1);
             calendarView.SetDisplayDate(DateTime.Now);
         }
