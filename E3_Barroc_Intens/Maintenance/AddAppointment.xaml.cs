@@ -13,6 +13,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.ApplicationModel.Appointments;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
@@ -40,22 +41,63 @@ namespace E3_Barroc_Intens.Maintenance
         private void CreateAppointmentButton_Click(object sender, RoutedEventArgs e)
         {
             RadioButton repeatInterval = null;
+
             if (CreateAppointmentDiscriptionTextBox.Text == null || CreateAppointmentDiscriptionTextBox.Text == "")
             {
+                ContentDialogView("discription niet ingevult", "discription is niet ingevult. vul het in om een appointment aan te kunnen maken");
                 return;
             }
+
+            bool isLetterInDescription = false;
+            int firstLetterNumber = 0;
+            int lastLetterNumber = 0;
+            string description = "";
+
+            for (int i = 0; i < CreateAppointmentDiscriptionTextBox.Text.Length; i++)
+            {
+                if (isLetterInDescription && firstLetterNumber != 0 && CreateAppointmentDiscriptionTextBox.Text[i].ToString() != " ")
+                {
+                    lastLetterNumber = i;
+                }
+                else if (CreateAppointmentDiscriptionTextBox.Text[i].ToString() != " ")
+                {
+                    isLetterInDescription = true;
+                        firstLetterNumber = i;
+                }
+            }
+
+            if (isLetterInDescription)
+            {
+                for (int i = firstLetterNumber; i < lastLetterNumber + 1; i++)
+                {
+                    description = description + CreateAppointmentDiscriptionTextBox.Text[i].ToString();
+                }
+            }
+
+            if (description == "")
+            {
+                ContentDialogView("discription bevat alleen spaties", "discription bevat alleen spaties. zorg dat je voor discription niet alleen spaties invult om een appointment aan te kunnen maken");
+                return;
+            }
+
             if (CreateAppointmentFromDateCalendarDatePicker.Date == null)
             {
+                ContentDialogView("vanaf datum niet geselecteerd", "er is geen vanaf datum geselecteerd. selecteer een vanaf datum om een appointment aan te kunnen maken");
                 return;
             }
+
             if (CreateAppointmentSelectUserComboBox.SelectedItem == null)
             {
+                ContentDialogView("geen medewerker geselecteerd", "er is geen medewerker geselecteerd. selecteer een medewerker om een appointment aan te kunnen maken");
                 return;
             }
+
             if (CreateAppointmentSelectCustomerComboBox.SelectedItem == null)
             {
+                ContentDialogView("geen klant geselecteerd", "er is geen klant geselecteerd. selecteer een klant om een appointment aan te kunnen maken");
                 return;
             }
+
             if (CreateAppointmentRoutineCheckBox.IsChecked == true)
             {
                 if (CreateAppointmentWeeklyRadioButton.IsChecked == true)
@@ -68,15 +110,17 @@ namespace E3_Barroc_Intens.Maintenance
                 }
                 else if (CreateAppointmentToDateCalenderDatePicker.Date == null)
                 {
+                    ContentDialogView("eind datum niet geselecteerd", "er is geen eind datum geselecteerd. selecteer een eind datum om een appointment aan te kunnen maken");
                     return;
                 }
                 else
                 {
+                    ContentDialogView("datum interval niet geselecteerd", "er is geen datum interval geselecteerd. selecteer een datum interval om een appointment aan te kunnen maken");
                     return;
                 }
             }
 
-            var description = CreateAppointmentDiscriptionTextBox.Text;
+            //var description = CreateAppointmentDiscriptionTextBox.Text;
             var date = CreateAppointmentFromDateCalendarDatePicker.Date.Value.Date;
             var selectedUser = CreateAppointmentSelectUserComboBox.SelectedItem as RoleUser;
             var customer = CreateAppointmentSelectCustomerComboBox.SelectedItem as Customer;
@@ -238,6 +282,7 @@ namespace E3_Barroc_Intens.Maintenance
         {
             if (WorkVoucherTextBox.Text == null || WorkVoucherTextBox.Text == "")
             {
+                ContentDialogView("er is geen discription ingevult", "er is geen workvoucher discription ingevult. vul een discription in om een workvoucher aan te kunnen maken");
                 return;
             }
 
@@ -261,6 +306,19 @@ namespace E3_Barroc_Intens.Maintenance
             calendarView.Visibility = Visibility.Visible;
             calendarView.MinDate = calendarView.MinDate.AddMilliseconds(1);
             calendarView.SetDisplayDate(DateTime.Now);
+        }
+
+        private async void ContentDialogView(string title, string content)
+        {
+            var dialog = new ContentDialog()
+            {
+                Title = title,
+                Content = content,
+                CloseButtonText = "Close",
+                XamlRoot = this.XamlRoot,
+            };
+
+            await dialog.ShowAsync();
         }
     }
 }
