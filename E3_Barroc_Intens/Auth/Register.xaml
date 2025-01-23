@@ -28,7 +28,7 @@
             </ComboBox>
             <PasswordBox x:Name="PasswordBox" PlaceholderText="Enter password" Width="200" Margin="0,0,0,10" Header="Wachtwoord, 1 Hoofdletter, 1 Cijfer, 8 Characters"/>
             <PasswordBox x:Name="PasswordCheckBox" PlaceholderText="Enter password again" Width="200" Margin="0,0,0,10" Header="Wachtwoord check"/>
-            <Button Content="Register" Click="RegisterButton_Click" Width="200" Margin="0,0,0,10"/>
+            <Button Content="Register" Style="{StaticResource ButtonStyle}" Click="RegisterButton_Click" Width="200" Margin="0,0,0,10"/>
             <TextBlock x:Name="MessageTextBlock" Text="" Width="200" Margin="0,10,0,0"/>
             
 

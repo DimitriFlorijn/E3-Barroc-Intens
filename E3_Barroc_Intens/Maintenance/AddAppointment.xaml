@@ -23,13 +23,15 @@
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
 
-            <Button Padding="15"
+            <Button Style="{StaticResource ButtonStyle}"
+                Padding="15"
                 Grid.Column="0"
                 Click="GoBackButton_Click">
                 Go back
             </Button>
 
-            <Button x:Name="MakeAppointmentButton"
+            <Button Style="{StaticResource ButtonStyle}"
+                x:Name="MakeAppointmentButton"
                 Padding="15"
                 Foreground="Black"
                 Background="Gold"
@@ -117,7 +119,7 @@
                         </ComboBox>
                     </StackPanel>
 
-                    <Button x:Name="CreateAppointmentButton" Grid.Row="1" Click="CreateAppointmentButton_Click">Create Appointment</Button>
+                    <Button Style="{StaticResource ButtonStyle}" x:Name="CreateAppointmentButton" Grid.Row="1" Click="CreateAppointmentButton_Click">Create Appointment</Button>
                 </Grid>
             </StackPanel>
         </StackPanel>
@@ -137,7 +139,7 @@
                         <TextBlock x:Name="AppointmentInformationTextBlock"/>
                         <TextBox x:Name="WorkVoucherTextBox" Header="Work Voucher Discription:"/>
                     </StackPanel>
-                    <Button Grid.Row="1" x:Name="CreateWorkVoucherButton" Click="CreateWorkVoucherButton_Click">Create Work Voucher</Button>
+                    <Button Grid.Row="1" Style="{StaticResource ButtonStyle}" x:Name="CreateWorkVoucherButton" Click="CreateWorkVoucherButton_Click">Create Work Voucher</Button>
                 </Grid>
             </StackPanel>
         </StackPanel>

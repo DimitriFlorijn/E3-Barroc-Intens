@@ -57,10 +57,10 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
 
-                <Button Content="Add Product" Click="AddProduct_Click" Grid.Row="0" Grid.Column="0" Margin="5"/>
-                <Button Content="Edit Product" Click="EditProduct_Click" Grid.Row="0" Grid.Column="1" Margin="5"/>
-                <Button Content="Delete Product" Click="DeleteProduct_Click" Grid.Row="1" Grid.Column="0" Margin="5"/>
-                <Button Content="Deselect" Click="DeselectProduct_Click" Grid.Row="1" Grid.Column="1" Margin="5"/>
+                <Button Style="{StaticResource ButtonStyle}" Content="Add Product" Click="AddProduct_Click" Grid.Row="0" Grid.Column="0" Margin="5"/>
+                <Button Style="{StaticResource ButtonStyle}" Content="Edit Product" Click="EditProduct_Click" Grid.Row="0" Grid.Column="1" Margin="5"/>
+                <Button Style="{StaticResource ButtonStyle}" Content="Delete Product" Click="DeleteProduct_Click" Grid.Row="1" Grid.Column="0" Margin="5"/>
+                <Button Style="{StaticResource ButtonStyle}" Content="Deselect" Click="DeselectProduct_Click" Grid.Row="1" Grid.Column="1" Margin="5"/>
             </Grid>
         </StackPanel>
 
