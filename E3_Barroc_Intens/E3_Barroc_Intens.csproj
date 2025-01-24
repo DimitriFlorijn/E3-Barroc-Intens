@@ -88,6 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Auth\" />
+    <Folder Include="Images\" />
     <Folder Include="Inkoop\" />
   </ItemGroup>
   <ItemGroup>

@@ -10,14 +10,14 @@
 
     <Grid Padding="20">
         <StackPanel>
-            <Button Content="Back" Click="BackButton_Click"  HorizontalAlignment="Left" VerticalAlignment="Top" Padding="10" />
+            <Button Style="{StaticResource ButtonStyle}" Content="Back" Click="BackButton_Click"  HorizontalAlignment="Left" VerticalAlignment="Top" Padding="10" />
             <TextBlock Text="Create New Appointment" FontSize="24" Margin="0,0,0,20" />
             <ComboBox x:Name="CustomerComboBox" PlaceholderText="Select Customer" Margin="0,0,0,10" />
             <DatePicker x:Name="DatePicker" Margin="0,0,0,10" />
             <TimePicker x:Name="TimePicker" Margin="0,0,0,20" />
             <TextBox x:Name="NoteBox" Margin="0,0,0,10" />
 
-            <Button Content="Save Appointment" Click="SaveAppointment_Click" />
+            <Button Style="{StaticResource ButtonStyle}" Content="Save Appointment" Click="SaveAppointment_Click" />
         </StackPanel>
     </Grid>
 </Page>

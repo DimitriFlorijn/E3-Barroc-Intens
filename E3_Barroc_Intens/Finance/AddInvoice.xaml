@@ -15,14 +15,14 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         
-        <TextBlock Text="Nieuwe Factuur" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
-        <Button  Margin="5,16,5,20" x:Name="Back" Content="Terug" Click="FinanceDashboardButton_Click" HorizontalAlignment="Right"/>
+        <TextBlock Text="Nieuwe Factuur" FontSize="24" FontWeight="Bold" Margin="0,0,0,20" HorizontalAlignment="center"/>
+        <Button Style="{StaticResource ButtonStyle}" Margin="5,16,5,20" x:Name="Back" Content="Terug" Click="FinanceDashboardButton_Click" HorizontalAlignment="left"/>
         <StackPanel Grid.Row="1" Spacing="15">
             <ComboBox x:Name="Contract" PlaceholderText="Selecteer Contract" DisplayMemberPath="Customer.Name" SelectionChanged="Contract_SelectionChanged" />
             <TextBox x:Name="ProductText" Header="Product" IsReadOnly="True" />
             <TextBox x:Name="Bean" Header="Boon" IsReadOnly="True" />
             <TextBox x:Name="TotalAmount" Header="Totaalbedrag" IsReadOnly="True" />
         </StackPanel>
-        <Button Grid.Row="2" Content="Toevoegen" HorizontalAlignment="center" Click="AddInvoiceButton_Click" Background="#0078D7" Padding="10,5"/>
+        <Button Grid.Row="2" Style="{StaticResource ButtonStyle}" Content="Toevoegen" HorizontalAlignment="center" Click="AddInvoiceButton_Click" Background="#0078D7" Padding="10,5"/>
     </Grid>
 </Page>

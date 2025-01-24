@@ -16,7 +16,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Button x:Name="BackButton" Grid.Row="0" Content="Terug" Click="BackButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Padding="10" />
+        <Button Style="{StaticResource ButtonStyle}" x:Name="BackButton" Grid.Row="0" Content="Terug" Click="BackButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Padding="10" />
 
         <ListView x:Name="ClientListView" ItemsSource="{Binding Customer}" Grid.Row="1">
             <ListView.ItemTemplate>

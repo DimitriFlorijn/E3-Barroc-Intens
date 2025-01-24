@@ -102,9 +102,9 @@
                     <TextBlock x:Name="IncedentReportCoffeeMachineTypeTextBlock" Grid.Column="4" Grid.Row="1"></TextBlock>
                     <TextBlock x:Name="IncendenReportFaultCodeTextBlock" Grid.Column="5" Grid.Row="1"></TextBlock>
 
-                    <Button x:Name="IncedentReportButton" Click="IncedentReportButton_Click" Grid.Row="2" Grid.ColumnSpan="6" HorizontalAlignment="Stretch">Terug naar lijst van Incedenten</Button>
+                    <Button Style="{StaticResource ButtonStyle}" x:Name="IncedentReportButton" Click="IncedentReportButton_Click" Grid.Row="2" Grid.ColumnSpan="6" HorizontalAlignment="Stretch">Terug naar lijst van Incedenten</Button>
                     <!---<Button x:Name="IncedentUpdateReportButton" Click="IncedentUpdateReportButton_Click" Grid.Row="3" Grid.ColumnSpan="6" HorizontalAlignment="Stretch">Update geselecteerde Incedent</Button>-->
-                    <Button x:Name="MakeAppointmentButton" Click="MakeAppointmentButton_Click" Grid.Row="3" Grid.ColumnSpan="6" HorizontalAlignment="Stretch">Maak afspraak</Button>
+                    <Button Style="{StaticResource ButtonStyle}" x:Name="MakeAppointmentButton" Click="MakeAppointmentButton_Click" Grid.Row="3" Grid.ColumnSpan="6" HorizontalAlignment="Stretch">Maak afspraak</Button>
                     
                 </Grid>
             </StackPanel>
@@ -152,7 +152,7 @@
                         </ComboBox>
                     </StackPanel>
 
-                    <Button x:Name="CreateAppointmentButton" Click="CreateAppointmentButton_Click">Create Appointment</Button>
+                    <Button Style="{StaticResource ButtonStyle}" x:Name="CreateAppointmentButton" Click="CreateAppointmentButton_Click">Create Appointment</Button>
                 </Grid>
             </StackPanel>
         </StackPanel>

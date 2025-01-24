@@ -11,6 +11,7 @@
         </Grid.RowDefinitions>
 
         <Button 
+            Style="{StaticResource ButtonStyle}"
             Content="Terug" 
             Click="FinanceDashboardButton_Click" 
             HorizontalAlignment="Left" 
@@ -23,28 +24,30 @@
             Margin="10">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel>
-                        <TextBlock Text="Factuur ID:" FontWeight="Bold"/>
-                        <TextBlock Text="{Binding Id}" FontSize="14"/>
-                        
-                        <TextBlock Text="Customer Name:" FontWeight="Bold"/>
-                        <TextBlock Text="{Binding Customer.CustomerName}" FontSize="14"/>
+                    <Border BorderThickness="1" BorderBrush="Gray" CornerRadius="5" Padding="10" Margin="5">
+                        <StackPanel>
+                            <TextBlock Text="Factuur ID:" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding Id}" FontSize="14"/>
 
-                        <TextBlock Text="Contract ID:" FontWeight="Bold"/>
-                        <TextBlock Text="{Binding ContractId}" FontSize="14"/>
+                            <TextBlock Text="Customer Name:" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding Contract.Customer.Name}" FontSize="14"/>
 
-                        <TextBlock Text="Date Issued:" FontWeight="Bold"/>
-                        <TextBlock Text="{Binding DateIssued}" FontSize="14"/>
+                            <TextBlock Text="Contract ID:" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding ContractId}" FontSize="14"/>
 
-                        <TextBlock Text="Due Date:" FontWeight="Bold"/>
-                        <TextBlock Text="{Binding DueDate}" FontSize="14"/>
+                            <TextBlock Text="Date Issued:" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding DateIssued}" FontSize="14"/>
 
-                        <TextBlock Text="Total Amount:" FontWeight="Bold"/>
-                        <TextBlock Text="{Binding TotalAmount}" FontSize="14"/>
+                            <TextBlock Text="Due Date:" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding DueDate}" FontSize="14"/>
 
-                        <TextBlock Text="Is Paid:" FontWeight="Bold"/>
-                        <TextBlock Text="{Binding IsPaid}" FontSize="14"/>
-                    </StackPanel>
+                            <TextBlock Text="Total Amount:" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding TotalAmount}" FontSize="14"/>
+
+                            <TextBlock Text="Is Paid:" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding IsPaid}" FontSize="14"/>
+                        </StackPanel>
+                    </Border>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

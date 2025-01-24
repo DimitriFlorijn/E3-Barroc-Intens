@@ -45,7 +45,7 @@ namespace E3_Barroc_Intens.Sales
             {
                 var client = db.Customers.Find(thisCustomer.Id);
 
-                //check if nothing is empty
+               
                 thisCustomer = client;
                 if (NameTextBox.Text == "" || EmailTextBox.Text == "" || NumberTextBox.Text == "" || LocationTextBox.Text == "")
                 {

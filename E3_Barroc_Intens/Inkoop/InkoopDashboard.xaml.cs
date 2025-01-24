@@ -6,6 +6,7 @@ using E3_Barroc_Intens.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace E3_Barroc_Intens
 {
@@ -44,109 +45,156 @@ namespace E3_Barroc_Intens
 
         private void AddProduct_Click(object sender, RoutedEventArgs e)
         {
-            string name = ProductNameTextBox.Text;
-            string type = ProductTypeTextBox.Text;
-            string description = ProductDescriptionTextBox.Text;
-
-            if (decimal.TryParse(ProductPriceTextBox.Text, out decimal price) &&
-                decimal.TryParse(InstallationCostTextBox.Text, out decimal installationCost))
-            {
-                int brandId = (BrandComboBox.SelectedItem as Brand)?.Id ?? 0;
-
-                var newProduct = new Product
-                {
-                    Name = name,
-                    Price = price,
-                    InstallationCost = installationCost,
-                    BrandId = brandId,
-                    Type = type,
-                    Description = description
-                };
-
-                using (var db = new AppDbContext())
-                {
-                    db.Products.Add(newProduct);
-                    db.SaveChanges();
-                }
-
-                products.Add(newProduct);
-                RefreshProductList();
-                ClearInputFields();
-            }
-            else
-            {
-                ShowErrorDialog("Voer geldige waarden in voor prijs en installatiekosten.");
-            }
-        }
-
-        private void EditProduct_Click(object sender, RoutedEventArgs e)
-        {
-            if (ProductListView.SelectedItem is Product selectedProduct)
+            try
             {
                 string name = ProductNameTextBox.Text;
                 string type = ProductTypeTextBox.Text;
                 string description = ProductDescriptionTextBox.Text;
+
+                if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(type) || string.IsNullOrWhiteSpace(description) ||
+                    string.IsNullOrWhiteSpace(ProductPriceTextBox.Text) || string.IsNullOrWhiteSpace(InstallationCostTextBox.Text))
+                {
+                    ShowErrorDialog("Alle velden moeten worden ingevuld.");
+                    return;
+                }
 
                 if (decimal.TryParse(ProductPriceTextBox.Text, out decimal price) &&
                     decimal.TryParse(InstallationCostTextBox.Text, out decimal installationCost))
                 {
                     int brandId = (BrandComboBox.SelectedItem as Brand)?.Id ?? 0;
 
+                    var newProduct = new Product
+                    {
+                        Name = name,
+                        Price = price,
+                        InstallationCost = installationCost,
+                        BrandId = brandId,
+                        Type = type,
+                        Description = description
+                    };
+
                     using (var db = new AppDbContext())
                     {
-                        var productToUpdate = db.Products.FirstOrDefault(p => p.Id == selectedProduct.Id);
-                        if (productToUpdate != null)
-                        {
-                            productToUpdate.Name = name;
-                            productToUpdate.Price = price;
-                            productToUpdate.InstallationCost = installationCost;
-                            productToUpdate.BrandId = brandId;
-                            productToUpdate.Type = type;
-                            productToUpdate.Description = description;
-
-                            db.SaveChanges();
-                        }
+                        db.Products.Add(newProduct);
+                        db.SaveChanges();
                     }
 
-                    selectedProduct.Name = name;
-                    selectedProduct.Price = price;
-                    selectedProduct.InstallationCost = installationCost;
-                    selectedProduct.BrandId = brandId;
-                    selectedProduct.Type = type;
-                    selectedProduct.Description = description;
-
+                    products.Add(newProduct);
                     RefreshProductList();
                     ClearInputFields();
                 }
                 else
                 {
-                    ShowErrorDialog("Voer geldige waarden in voor prijs en installatiekosten.");
+                    ShowErrorDialog("Voer geldige numerieke waarden in voor prijs en installatiekosten.");
                 }
             }
+            catch (Exception ex)
+            {
+                ShowErrorDialog($"Er is een onverwachte fout opgetreden: {ex.Message}");
+            }
         }
+
+
+        private void EditProduct_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (ProductListView.SelectedItem is Product selectedProduct)
+                {
+                    string name = ProductNameTextBox.Text;
+                    string type = ProductTypeTextBox.Text;
+                    string description = ProductDescriptionTextBox.Text;
+
+                    if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(type) || string.IsNullOrWhiteSpace(description) ||
+                        string.IsNullOrWhiteSpace(ProductPriceTextBox.Text) || string.IsNullOrWhiteSpace(InstallationCostTextBox.Text))
+                    {
+                        ShowErrorDialog("Alle velden moeten worden ingevuld.");
+                        return;
+                    }
+
+                    if (decimal.TryParse(ProductPriceTextBox.Text, out decimal price) &&
+                        decimal.TryParse(InstallationCostTextBox.Text, out decimal installationCost))
+                    {
+                        int brandId = (BrandComboBox.SelectedItem as Brand)?.Id ?? 0;
+
+                        using (var db = new AppDbContext())
+                        {
+                            var productToUpdate = db.Products.FirstOrDefault(p => p.Id == selectedProduct.Id);
+                            if (productToUpdate != null)
+                            {
+                                productToUpdate.Name = name;
+                                productToUpdate.Price = price;
+                                productToUpdate.InstallationCost = installationCost;
+                                productToUpdate.BrandId = brandId;
+                                productToUpdate.Type = type;
+                                productToUpdate.Description = description;
+
+                                db.SaveChanges();
+                            }
+                        }
+
+                        selectedProduct.Name = name;
+                        selectedProduct.Price = price;
+                        selectedProduct.InstallationCost = installationCost;
+                        selectedProduct.BrandId = brandId;
+                        selectedProduct.Type = type;
+                        selectedProduct.Description = description;
+
+                        RefreshProductList();
+                        ClearInputFields();
+                    }
+                    else
+                    {
+                        ShowErrorDialog("Voer geldige numerieke waarden in voor prijs en installatiekosten.");
+                    }
+                }
+                else
+                {
+                    ShowErrorDialog("Selecteer een product om te bewerken.");
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowErrorDialog($"Er is een onverwachte fout opgetreden: {ex.Message}");
+            }
+        }
+
 
         private void DeleteProduct_Click(object sender, RoutedEventArgs e)
         {
-            if (ProductListView.SelectedItem is Product selectedProduct)
+            try
             {
-                using (var db = new AppDbContext())
+                if (ProductListView.SelectedItem is Product selectedProduct)
                 {
-                    var productToDelete = db.Products.FirstOrDefault(p => p.Id == selectedProduct.Id);
-                    var customerOrders = db.CustomerOrders.Where(co => co.ProductId == selectedProduct.Id).ToList();
-                    var storages = db.Storages.Where(s => s.ProductId == selectedProduct.Id).ToList();
-                    if (productToDelete != null)
+                    using (var db = new AppDbContext())
                     {
-                        db.Products.Remove(productToDelete);
-                        db.CustomerOrders.RemoveRange(customerOrders);
-                        db.Storages.RemoveRange(storages);
-                        db.SaveChanges();
-                    }
-                }
+                        var productToDelete = db.Products.FirstOrDefault(p => p.Id == selectedProduct.Id);
+                        var customerOrders = db.CustomerOrders.Where(co => co.ProductId == selectedProduct.Id).ToList();
+                        var storages = db.Storages.Where(s => s.ProductId == selectedProduct.Id).ToList();
 
-                products.Remove(selectedProduct);
-                RefreshProductList();
+                        if (productToDelete != null)
+                        {
+                            db.Products.Remove(productToDelete);
+                            db.CustomerOrders.RemoveRange(customerOrders);
+                            db.Storages.RemoveRange(storages);
+                            db.SaveChanges();
+                        }
+                    }
+
+                    products.Remove(selectedProduct);
+                    RefreshProductList();
+                }
+                else
+                {
+                    ShowErrorDialog("Selecteer een product om te verwijderen.");
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowErrorDialog($"Er is een onverwachte fout opgetreden: {ex.Message}");
             }
         }
+
 
         private void DeselectProduct_Click(object sender, RoutedEventArgs e)
         {
@@ -181,10 +229,13 @@ namespace E3_Barroc_Intens
             {
                 Title = "Foutmelding",
                 Content = message,
-                CloseButtonText = "Ok"
+                CloseButtonText = "Ok",
+                XamlRoot = this.XamlRoot 
             };
+
             _ = errorDialog.ShowAsync();
         }
+
 
         private void RefreshProductList()
         {
