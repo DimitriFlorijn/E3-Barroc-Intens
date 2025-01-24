@@ -474,7 +474,7 @@ namespace E3_Barroc_Intens.Data
                     Number = "0612345682",
                     BkrRegistered = false
                 },
-                /*new Customer
+                new Customer
                 {
                     Id = 6,
                     Name = "Klant Actief 6",
@@ -1778,7 +1778,7 @@ namespace E3_Barroc_Intens.Data
                     Location = "Locatie 150",
                     Number = "0612345827",
                     BkrRegistered = false
-                }, */
+                },
                 new Customer
                 {
                     Id = 151,
@@ -1823,8 +1823,8 @@ namespace E3_Barroc_Intens.Data
                     Location = "Locatie 155",
                     Number = "0612345692",
                     BkrRegistered = false
-                }
-                /*new Customer
+                },
+                new Customer
                 {
                     Id = 156,
                     Name = "Klant Inactief 6",
@@ -2228,7 +2228,7 @@ namespace E3_Barroc_Intens.Data
                     Location = "Locatie 200",
                     Number = "0612345877",
                     BkrRegistered = false
-                } */
+                }
             );
 
             modelBuilder.Entity<Part>().HasData(
@@ -2605,8 +2605,8 @@ namespace E3_Barroc_Intens.Data
                     IsLeased = true,
                     IsPaid = true,
                     LastUpdate = new DateOnly(2023, 10, 4)
-                }
-                /*new Contract
+                },
+                new Contract
                 {
                     Id = 5,
                     CustomerId = 5,
@@ -4357,7 +4357,7 @@ namespace E3_Barroc_Intens.Data
                     IsLeased = false,
                     IsPaid = false,
                     LastUpdate = new DateOnly(2024, 2, 27)
-                } */
+                }
             );
 
             modelBuilder.Entity<Invoice>().HasData(
@@ -9355,7 +9355,7 @@ namespace E3_Barroc_Intens.Data
                     IsResolved = true,
                     FollowUp = "Reservoir sensor vervangen.",
                     IncidentDescription = "De machine maakt een schurend geluid. Sensor was defect en is vervangen."
-                }/*
+                },
                 new IncendentReport
                 {
                     Id = 5,
@@ -9788,7 +9788,7 @@ namespace E3_Barroc_Intens.Data
                     FollowUp = "Verwarmingsonderdeel vervangen.",
                     IncidentDescription = "Het verwarmingselement was defect."
                 },
-                new IncedentReport
+                new IncendentReport
                 {
                     Id = 41,
                     CustomerId = 41,
@@ -9800,7 +9800,7 @@ namespace E3_Barroc_Intens.Data
                     FollowUp = null,
                     IncidentDescription = "De machine schakelt na enkele minuten automatisch uit."
                 },
-                new IncedentReport
+                new IncendentReport
                 {
                     Id = 42,
                     CustomerId = 42,
@@ -9812,7 +9812,7 @@ namespace E3_Barroc_Intens.Data
                     FollowUp = "Temperatuurinstellingen aangepast.",
                     IncidentDescription = "De koffie was lauw bij het zetten."
                 },
-                new IncedentReport
+                new IncendentReport
                 {
                     Id = 43,
                     CustomerId = 43,
@@ -9824,7 +9824,7 @@ namespace E3_Barroc_Intens.Data
                     FollowUp = null,
                     IncidentDescription = "De machine maakt een piepend geluid tijdens gebruik."
                 },
-                new IncedentReport
+                new IncendentReport
                 {
                     Id = 44,
                     CustomerId = 44,
@@ -9836,7 +9836,7 @@ namespace E3_Barroc_Intens.Data
                     FollowUp = "Drukregelaar vervangen.",
                     IncidentDescription = "De machine heeft onvoldoende druk om koffie te zetten."
                 },
-                new IncedentReport
+                new IncendentReport
                 {
                     Id = 45,
                     CustomerId = 45,
@@ -9847,7 +9847,7 @@ namespace E3_Barroc_Intens.Data
                     IsResolved = false,
                     FollowUp = null,
                     IncidentDescription = "De machine heeft veel koffiedik dat moeilijk te bereiken is."
-                }*/
+                }
             );
 
             modelBuilder.Entity<CustomerOrder>().HasData(
