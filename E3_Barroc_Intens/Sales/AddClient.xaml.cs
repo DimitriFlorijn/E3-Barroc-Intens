@@ -14,14 +14,10 @@ using Microsoft.UI.Xaml.Navigation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
-// To learn more about WinUI, the WinUI project structure,
-// and more about our project templates, see: http://aka.ms/winui-project-info.
 
 namespace E3_Barroc_Intens.Sales
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
+ 
     public sealed partial class AddClient : Page
     {
         public AddClient()
@@ -34,7 +30,7 @@ namespace E3_Barroc_Intens.Sales
             using (var db = new AppDbContext())
             {
 
-                //check if nothing is empty 
+                
                 if (NameTextBox.Text == "" || EmailTextBox.Text == "" || PhoneNumberTextBox.Text == "" || AddressTextBox.Text == "" || NotesTextBox.Text == "")
                 {
                     ShowErrorMessage("Please fill in all fields.");

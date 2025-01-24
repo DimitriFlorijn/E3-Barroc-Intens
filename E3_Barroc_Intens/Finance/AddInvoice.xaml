@@ -15,8 +15,8 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         
-        <TextBlock Text="Nieuwe Factuur" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
-        <Button Style="{StaticResource ButtonStyle}" Margin="5,16,5,20" x:Name="Back" Content="Terug" Click="FinanceDashboardButton_Click" HorizontalAlignment="Right"/>
+        <TextBlock Text="Nieuwe Factuur" FontSize="24" FontWeight="Bold" Margin="0,0,0,20" HorizontalAlignment="center"/>
+        <Button Style="{StaticResource ButtonStyle}" Margin="5,16,5,20" x:Name="Back" Content="Terug" Click="FinanceDashboardButton_Click" HorizontalAlignment="left"/>
         <StackPanel Grid.Row="1" Spacing="15">
             <ComboBox x:Name="Contract" PlaceholderText="Selecteer Contract" DisplayMemberPath="Customer.Name" SelectionChanged="Contract_SelectionChanged" />
             <TextBox x:Name="ProductText" Header="Product" IsReadOnly="True" />

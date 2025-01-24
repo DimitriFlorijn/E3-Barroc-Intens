@@ -17,25 +17,17 @@ using Windows.ApplicationModel.Appointments;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
-// To learn more about WinUI, the WinUI project structure,
-// and more about our project templates, see: http://aka.ms/winui-project-info.
 
 namespace E3_Barroc_Intens.Maintenance
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
+
     public sealed partial class AddAppointment : Page
     {
         public AddAppointment()
         {
             this.InitializeComponent();
         }
-        // Dankzij 'static' blijft er maar 1 instantie van deze lijst.
-        // Ondanks dat de gebruiker terug kan gaan (met de 'Go back'-knop) blijven
-        // de calendar items dan wel hetzelfde in de lijst. Zonder static zou de
-        // lijst iedere keer opnieuw aangemaakt worden, wanneer de Page opnieuw
-        // aangemaakt wordt (bij openen)
+       
         static ObservableCollection<Data.Maintenance> AllCalendarItems = new ObservableCollection<Data.Maintenance>();
 
         private void CreateAppointmentButton_Click(object sender, RoutedEventArgs e)

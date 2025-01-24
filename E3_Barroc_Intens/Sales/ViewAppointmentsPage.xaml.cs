@@ -21,7 +21,7 @@ namespace E3_Barroc_Intens.Sales
                                      .Select(a => new AppointmentViewModel
                                      {
                                          Id = a.Id,
-                                         ClientName = a.Client.Name, // Assuming `Client` navigation property exists
+                                         ClientName = a.Client.Name, 
                                          DateTime = a.DateTime
                                      })
                                      .ToList();
