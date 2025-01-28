@@ -4,6 +4,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:E3_Barroc_Intens"
+    xmlns:localdata="using:E3_Barroc_Intens.Data"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
@@ -15,18 +16,39 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
         <StackPanel Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
             <TextBlock Text="Sales Dashboard" FontSize="24" FontWeight="Bold" />
         </StackPanel>
 
-        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button Style="{StaticResource ButtonStyle}" x:Name="AddClientButton" Content="Add Client" Click="AddClientButton_Click"/>
+        <StackPanel Grid.Column="0" Grid.Row="1">
+            <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button Style="{StaticResource ButtonStyle}" x:Name="AddClientButton" Content="Add Client" Click="AddClientButton_Click"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" HorizontalAlignment="Center" Margin="10">
+                <Button Style="{StaticResource ButtonStyle}" x:Name="ViewClientsButton" Content="View Clients" Click="ViewClientsButton_Click"/>
+            </StackPanel>
         </StackPanel>
-        <StackPanel Grid.Row="1" HorizontalAlignment="Center" Margin="10">
-            <Button Style="{StaticResource ButtonStyle}" x:Name="ViewClientsButton" Content="View Clients" Click="ViewClientsButton_Click"/>
-        </StackPanel>
-        <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
-            <Button Style="{StaticResource ButtonStyle}" x:Name="VIewAppointmentsButton" Content="View Appointments" Click="VIewAppointmentsButton_Click"/>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center">
+            <Button HorizontalAlignment="Center" Style="{StaticResource ButtonStyle}" Content="Create New Appointment" Click="CreateNewAppointment_Click"  Margin="0,0,0,20" />
+            <TextBlock HorizontalAlignment="Center" Text="Appointments" FontSize="24" Margin="0,0,0,20" />
+            <ListView x:Name="AppointmentListView" Grid.Row="1" ItemClick="AppointmentListView_ItemClick" IsItemClickEnabled="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="localdata:Appointment">
+                        <StackPanel>
+                            <TextBlock Text="{x:Bind Client.Name}" FontSize="16" />
+                            <TextBlock Text="{x:Bind DateTime, Mode=OneTime}" FontSize="14" />
+                            <TextBlock Text="{x:Bind Notes}" FontSize="12" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackPanel>
     </Grid>
 </Page>

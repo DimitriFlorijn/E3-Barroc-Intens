@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace E3_Barroc_Intens.Data
 {
-    internal class AppDbContext : DbContext
+    public class AppDbContext : DbContext
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }

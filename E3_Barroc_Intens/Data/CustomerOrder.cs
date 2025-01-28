@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace E3_Barroc_Intens.Data
 {
-    internal class CustomerOrder
+    public class CustomerOrder
     {
         public int Id { get; set; }
         public int CustomerId { get; set; }

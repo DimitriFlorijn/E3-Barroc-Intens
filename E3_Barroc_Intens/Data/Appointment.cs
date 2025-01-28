@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace E3_Barroc_Intens.Data
 {
-    internal class Appointment
+    public class Appointment
     {
         public int Id { get; set; }
         public int ClientId { get; set; }

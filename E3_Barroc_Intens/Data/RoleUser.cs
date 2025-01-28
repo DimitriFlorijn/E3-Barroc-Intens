@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace E3_Barroc_Intens.Data
 {
-    internal class RoleUser
+    public class RoleUser
     {
         public int UserId { get; set; }
         public User User { get; set; }

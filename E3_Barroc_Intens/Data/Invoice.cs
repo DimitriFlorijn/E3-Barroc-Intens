@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace E3_Barroc_Intens.Data
 {
-    internal class Invoice
+    public class Invoice
     {
         public int Id { get; set; }
 
