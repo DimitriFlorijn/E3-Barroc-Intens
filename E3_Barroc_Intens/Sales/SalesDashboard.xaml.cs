@@ -44,6 +44,24 @@ namespace E3_Barroc_Intens
                 {
                     Appointments.Add(appointment);
                 }
+
+                var clients = db.Customers.ToList();
+
+                foreach (var client in clients)
+                {
+                    var item = new ListViewItem
+                    {
+                        Content = client.Name,
+                        Tag = client.Id
+                    };
+
+                    item.Tapped += (sender, e) =>
+                    {
+                        Frame.Navigate(typeof(ClientDetails), client.Id);
+                    };
+
+                    ClientListView.Items.Add(item);
+                }
             }
 
             AppointmentListView.ItemsSource = Appointments;
@@ -52,11 +70,6 @@ namespace E3_Barroc_Intens
         private void AddClientButton_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(Sales.AddClient));
-        }
-
-        private void ViewClientsButton_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(Sales.ViewClients));
         }
 
         private void CreateNewAppointment_Click(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
