@@ -20,11 +20,11 @@
             <TextBlock Text="Maintenance Dashboard" FontSize="24" FontWeight="Bold" />
         </StackPanel>
 
-        <StackPanel Grid.Row="2" x:Name="MaintenanceListViewStackPanel">
-            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock>Incedents</TextBlock>
-            </StackPanel>
-            <StackPanel>
+        <ScrollViewer Grid.Row="2">
+            <StackPanel x:Name="MaintenanceListViewStackPanel">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock>Incedents</TextBlock>
+                </StackPanel>
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
@@ -40,31 +40,32 @@
                     <TextBlock Text="Type koffiemachine" Grid.Column="3" TextAlignment="Center"></TextBlock>
                     <TextBlock Text="Foutmelding" Grid.Column="4" TextAlignment="Center"></TextBlock>
                 </Grid>
-            </StackPanel>
-            <ListView x:Name="MaintenanceListView" IsItemClickEnabled="True" ItemClick="MaintenanceListView_ItemClick">
-                <ListView.ItemTemplate>
-                    <DataTemplate x:DataType="localData:IncendentReport">
-                        <StackPanel>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
+                <ListView x:Name="MaintenanceListView" IsItemClickEnabled="True" ItemClick="MaintenanceListView_ItemClick">
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="localData:IncendentReport">
+                            <StackPanel>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
 
-                                <TextBlock Text="{x:Bind Customer.Name}" Grid.Column="0" TextAlignment="Center"></TextBlock>
-                                <TextBlock Text="{x:Bind DateReported}" Grid.Column="1" TextAlignment="Center"></TextBlock>
-                                <TextBlock Text="{x:Bind InitialMessage}" Grid.Column="2" TextAlignment="Center"></TextBlock>
-                                <TextBlock Text="{x:Bind CoffeeMachineType}" Grid.Column="3" TextAlignment="Center"></TextBlock>
-                                <TextBlock Text="{x:Bind FaultCode}" Grid.Column="4" TextAlignment="Center"></TextBlock>
-                            </Grid>
-                        </StackPanel>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </StackPanel>
+                                    <TextBlock Text="{x:Bind Customer.Name}" Grid.Column="0" TextAlignment="Center"></TextBlock>
+                                    <TextBlock Text="{x:Bind DateReported}" Grid.Column="1" TextAlignment="Center"></TextBlock>
+                                    <TextBlock Text="{x:Bind InitialMessage}" Grid.Column="2" TextAlignment="Center"></TextBlock>
+                                    <TextBlock Text="{x:Bind CoffeeMachineType}" Grid.Column="3" TextAlignment="Center"></TextBlock>
+                                    <TextBlock Text="{x:Bind FaultCode}" Grid.Column="4" TextAlignment="Center"></TextBlock>
+                                </Grid>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackPanel>
+        </ScrollViewer>
+
 
         <StackPanel Grid.Row="2" Visibility="Collapsed" x:Name="MaintenanceIncedentReportStackPanel">
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
