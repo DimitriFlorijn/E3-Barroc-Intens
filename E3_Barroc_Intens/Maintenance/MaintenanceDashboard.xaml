@@ -16,8 +16,8 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock>Maintenance Dashboard</TextBlock>
+        <StackPanel Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
+            <TextBlock Text="Maintenance Dashboard" FontSize="24" FontWeight="Bold" />
         </StackPanel>
 
         <StackPanel Grid.Row="2" x:Name="MaintenanceListViewStackPanel">

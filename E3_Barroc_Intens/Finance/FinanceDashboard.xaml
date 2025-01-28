@@ -13,10 +13,12 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center">
-            <TextBlock Padding="0,5,0,0">Finance Dashboard</TextBlock>
+        
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
+            <TextBlock Text="Finance Dashboard" FontSize="24" FontWeight="Bold" />
         </StackPanel>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Button Style="{StaticResource ButtonStyle}" Margin="5,16,5,0" x:Name="AddInvoiceButton" Content="Facatuur aanmaken" Click="AddInvoiceButton_Click"/>
             <Button Style="{StaticResource ButtonStyle}" Margin="5,16,5,0" x:Name="LookInvoiceButton" Content="Facatuur inzien" Click="LookInvoiceButton_Click"/>
         </StackPanel>
