@@ -14,8 +14,8 @@
             <converters:TrueToVisibleConverter x:Key="fromBoolean" />
 
             <Style x:Key="ButtonStyle" TargetType="Button">
-                <Setter Property="Background" Value="{ThemeResource SystemControlBackgroundAltHighBrush}" />
-                <Setter Property="Foreground" Value="{ThemeResource SystemControlForegroundBaseHighBrush}" />
+                <Setter Property="Background" Value="Black" />
+                <Setter Property="Foreground" Value="White" />
                 <Setter Property="BorderBrush" Value="{ThemeResource SystemControlForegroundBaseMediumHighBrush}" />
                 <Setter Property="BorderThickness" Value="1" />
                 <Setter Property="Padding" Value="10,5" />
