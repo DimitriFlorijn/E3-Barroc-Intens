@@ -13,7 +13,6 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <!-- Titel -->
         <StackPanel HorizontalAlignment="Center"
                     VerticalAlignment="Top"
                     Margin="10">
@@ -29,7 +28,6 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <!-- Knoppen -->
             <StackPanel Grid.Row="0">
                 <Button Style="{StaticResource ButtonStyle}"
                         x:Name="AddInvoiceButton"
@@ -42,7 +40,6 @@
                            Margin="0,0,0,20" />
             </StackPanel>
 
-            <!-- Tabel Koppen -->
             <Grid Grid.Row="1" HorizontalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="100" />
