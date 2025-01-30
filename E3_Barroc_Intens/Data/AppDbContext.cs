@@ -4396,11 +4396,10 @@ namespace E3_Barroc_Intens.Data
                     DueDate = new DateTime(2024, 5, 8),
                     TotalAmount = 999.00M,
                     IsPaid = true
-                }
-                /*new Invoice
+                },
+                new Invoice
                 {
                     Id = 5,
-                    CustomerId = 5,
                     ContractId = 5,
                     DateIssued = new DateTime(2024, 5, 9),
                     DueDate = new DateTime(2024, 6, 9),
@@ -4410,7 +4409,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 6,
-                    CustomerId = 6,
                     ContractId = 6,
                     DateIssued = new DateTime(2024, 6, 10),
                     DueDate = new DateTime(2024, 7, 10),
@@ -4420,7 +4418,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 7,
-                    CustomerId = 7,
                     ContractId = 7,
                     DateIssued = new DateTime(2024, 7, 11),
                     DueDate = new DateTime(2024, 8, 11),
@@ -4430,7 +4427,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 8,
-                    CustomerId = 8,
                     ContractId = 8,
                     DateIssued = new DateTime(2024, 8, 12),
                     DueDate = new DateTime(2024, 9, 12),
@@ -4440,7 +4436,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 9,
-                    CustomerId = 9,
                     ContractId = 9,
                     DateIssued = new DateTime(2024, 9, 13),
                     DueDate = new DateTime(2024, 10, 13),
@@ -4450,7 +4445,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 10,
-                    CustomerId = 10,
                     ContractId = 10,
                     DateIssued = new DateTime(2024, 10, 14),
                     DueDate = new DateTime(2024, 11, 14),
@@ -4460,7 +4454,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 11,
-                    CustomerId = 11,
                     ContractId = 11,
                     DateIssued = new DateTime(2024, 11, 15),
                     DueDate = new DateTime(2024, 12, 15),
@@ -4470,7 +4463,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 12,
-                    CustomerId = 12,
                     ContractId = 12,
                     DateIssued = new DateTime(2024, 12, 16),
                     DueDate = new DateTime(2025, 1, 16),
@@ -4480,7 +4472,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 13,
-                    CustomerId = 13,
                     ContractId = 13,
                     DateIssued = new DateTime(2025, 1, 17),
                     DueDate = new DateTime(2025, 2, 17),
@@ -4490,7 +4481,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 14,
-                    CustomerId = 14,
                     ContractId = 14,
                     DateIssued = new DateTime(2025, 2, 18),
                     DueDate = new DateTime(2025, 3, 18),
@@ -4500,7 +4490,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 15,
-                    CustomerId = 15,
                     ContractId = 15,
                     DateIssued = new DateTime(2025, 3, 19),
                     DueDate = new DateTime(2025, 4, 19),
@@ -4510,7 +4499,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 16,
-                    CustomerId = 16,
                     ContractId = 16,
                     DateIssued = new DateTime(2025, 4, 20),
                     DueDate = new DateTime(2025, 5, 20),
@@ -4520,7 +4508,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 17,
-                    CustomerId = 17,
                     ContractId = 17,
                     DateIssued = new DateTime(2025, 5, 21),
                     DueDate = new DateTime(2025, 6, 21),
@@ -4530,7 +4517,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 18,
-                    CustomerId = 18,
                     ContractId = 18,
                     DateIssued = new DateTime(2025, 6, 22),
                     DueDate = new DateTime(2025, 7, 22),
@@ -4540,7 +4526,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 19,
-                    CustomerId = 19,
                     ContractId = 19,
                     DateIssued = new DateTime(2025, 7, 23),
                     DueDate = new DateTime(2025, 8, 23),
@@ -4550,7 +4535,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 20,
-                    CustomerId = 20,
                     ContractId = 20,
                     DateIssued = new DateTime(2025, 8, 24),
                     DueDate = new DateTime(2025, 9, 24),
@@ -4560,7 +4544,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 21,
-                    CustomerId = 21,
                     ContractId = 21,
                     DateIssued = new DateTime(2025, 9, 25),
                     DueDate = new DateTime(2025, 10, 25),
@@ -4570,7 +4553,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 22,
-                    CustomerId = 22,
                     ContractId = 22,
                     DateIssued = new DateTime(2025, 10, 26),
                     DueDate = new DateTime(2025, 11, 26),
@@ -4580,7 +4562,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 23,
-                    CustomerId = 23,
                     ContractId = 23,
                     DateIssued = new DateTime(2025, 11, 27),
                     DueDate = new DateTime(2025, 12, 27),
@@ -4590,7 +4571,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 24,
-                    CustomerId = 24,
                     ContractId = 24,
                     DateIssued = new DateTime(2025, 12, 28),
                     DueDate = new DateTime(2026, 1, 28),
@@ -4600,17 +4580,15 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 25,
-                    CustomerId = 25,
                     ContractId = 25,
                     DateIssued = new DateTime(2026, 1, 29),
-                    DueDate = new DateTime(2026, 2, 29),
+                    DueDate = new DateTime(2026, 2, 28),
                     TotalAmount = 900.00M,
                     IsPaid = false
                 },
                 new Invoice
                 {
                     Id = 26,
-                    CustomerId = 26,
                     ContractId = 26,
                     DateIssued = new DateTime(2026, 2, 1),
                     DueDate = new DateTime(2026, 3, 1),
@@ -4620,7 +4598,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 27,
-                    CustomerId = 27,
                     ContractId = 27,
                     DateIssued = new DateTime(2026, 3, 2),
                     DueDate = new DateTime(2026, 4, 2),
@@ -4630,7 +4607,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 28,
-                    CustomerId = 28,
                     ContractId = 28,
                     DateIssued = new DateTime(2026, 4, 3),
                     DueDate = new DateTime(2026, 5, 3),
@@ -4640,7 +4616,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 29,
-                    CustomerId = 29,
                     ContractId = 29,
                     DateIssued = new DateTime(2026, 5, 4),
                     DueDate = new DateTime(2026, 6, 4),
@@ -4650,7 +4625,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 30,
-                    CustomerId = 30,
                     ContractId = 30,
                     DateIssued = new DateTime(2026, 6, 5),
                     DueDate = new DateTime(2026, 7, 5),
@@ -4660,7 +4634,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 31,
-                    CustomerId = 31,
                     ContractId = 31,
                     DateIssued = new DateTime(2026, 7, 6),
                     DueDate = new DateTime(2026, 8, 6),
@@ -4670,7 +4643,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 32,
-                    CustomerId = 32,
                     ContractId = 32,
                     DateIssued = new DateTime(2026, 8, 7),
                     DueDate = new DateTime(2026, 9, 7),
@@ -4680,7 +4652,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 33,
-                    CustomerId = 33,
                     ContractId = 33,
                     DateIssued = new DateTime(2026, 9, 8),
                     DueDate = new DateTime(2026, 10, 8),
@@ -4690,7 +4661,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 34,
-                    CustomerId = 34,
                     ContractId = 34,
                     DateIssued = new DateTime(2026, 10, 9),
                     DueDate = new DateTime(2026, 11, 9),
@@ -4700,7 +4670,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 35,
-                    CustomerId = 35,
                     ContractId = 35,
                     DateIssued = new DateTime(2026, 11, 10),
                     DueDate = new DateTime(2026, 12, 10),
@@ -4710,7 +4679,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 36,
-                    CustomerId = 36,
                     ContractId = 36,
                     DateIssued = new DateTime(2026, 12, 11),
                     DueDate = new DateTime(2027, 1, 11),
@@ -4720,7 +4688,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 37,
-                    CustomerId = 37,
                     ContractId = 37,
                     DateIssued = new DateTime(2027, 1, 12),
                     DueDate = new DateTime(2027, 2, 12),
@@ -4730,7 +4697,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 38,
-                    CustomerId = 38,
                     ContractId = 38,
                     DateIssued = new DateTime(2027, 2, 13),
                     DueDate = new DateTime(2027, 3, 13),
@@ -4740,7 +4706,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 39,
-                    CustomerId = 39,
                     ContractId = 39,
                     DateIssued = new DateTime(2027, 3, 14),
                     DueDate = new DateTime(2027, 4, 14),
@@ -4750,7 +4715,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 40,
-                    CustomerId = 40,
                     ContractId = 40,
                     DateIssued = new DateTime(2027, 4, 15),
                     DueDate = new DateTime(2027, 5, 15),
@@ -4760,7 +4724,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 41,
-                    CustomerId = 41,
                     ContractId = 41,
                     DateIssued = new DateTime(2027, 5, 16),
                     DueDate = new DateTime(2027, 6, 16),
@@ -4770,7 +4733,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 42,
-                    CustomerId = 42,
                     ContractId = 42,
                     DateIssued = new DateTime(2027, 6, 17),
                     DueDate = new DateTime(2027, 7, 17),
@@ -4780,7 +4742,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 43,
-                    CustomerId = 43,
                     ContractId = 43,
                     DateIssued = new DateTime(2027, 7, 18),
                     DueDate = new DateTime(2027, 8, 18),
@@ -4790,7 +4751,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 44,
-                    CustomerId = 44,
                     ContractId = 44,
                     DateIssued = new DateTime(2027, 8, 19),
                     DueDate = new DateTime(2027, 9, 19),
@@ -4800,7 +4760,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 45,
-                    CustomerId = 45,
                     ContractId = 45,
                     DateIssued = new DateTime(2027, 9, 20),
                     DueDate = new DateTime(2027, 10, 20),
@@ -4810,7 +4769,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 46,
-                    CustomerId = 46,
                     ContractId = 46,
                     DateIssued = new DateTime(2027, 10, 21),
                     DueDate = new DateTime(2027, 11, 21),
@@ -4820,7 +4778,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 47,
-                    CustomerId = 47,
                     ContractId = 47,
                     DateIssued = new DateTime(2027, 11, 22),
                     DueDate = new DateTime(2027, 12, 22),
@@ -4830,7 +4787,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 48,
-                    CustomerId = 48,
                     ContractId = 48,
                     DateIssued = new DateTime(2027, 12, 23),
                     DueDate = new DateTime(2028, 1, 23),
@@ -4840,7 +4796,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 49,
-                    CustomerId = 49,
                     ContractId = 49,
                     DateIssued = new DateTime(2028, 1, 24),
                     DueDate = new DateTime(2028, 2, 24),
@@ -4850,7 +4805,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 50,
-                    CustomerId = 50,
                     ContractId = 50,
                     DateIssued = new DateTime(2028, 2, 25),
                     DueDate = new DateTime(2028, 3, 25),
@@ -4860,7 +4814,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 51,
-                    CustomerId = 51,
                     ContractId = 51,
                     DateIssued = new DateTime(2028, 3, 26),
                     DueDate = new DateTime(2028, 4, 26),
@@ -4870,7 +4823,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 52,
-                    CustomerId = 52,
                     ContractId = 52,
                     DateIssued = new DateTime(2028, 4, 27),
                     DueDate = new DateTime(2028, 5, 27),
@@ -4880,7 +4832,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 53,
-                    CustomerId = 53,
                     ContractId = 53,
                     DateIssued = new DateTime(2028, 5, 28),
                     DueDate = new DateTime(2028, 6, 28),
@@ -4890,7 +4841,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 54,
-                    CustomerId = 54,
                     ContractId = 54,
                     DateIssued = new DateTime(2028, 6, 29),
                     DueDate = new DateTime(2028, 7, 29),
@@ -4900,7 +4850,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 55,
-                    CustomerId = 55,
                     ContractId = 55,
                     DateIssued = new DateTime(2028, 7, 30),
                     DueDate = new DateTime(2028, 8, 30),
@@ -4910,17 +4859,15 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 56,
-                    CustomerId = 56,
                     ContractId = 56,
                     DateIssued = new DateTime(2028, 8, 31),
-                    DueDate = new DateTime(2028, 9, 31),
+                    DueDate = new DateTime(2028, 9, 30),
                     TotalAmount = 4000.00M,
                     IsPaid = true
                 },
                 new Invoice
                 {
                     Id = 57,
-                    CustomerId = 57,
                     ContractId = 57,
                     DateIssued = new DateTime(2028, 9, 1),
                     DueDate = new DateTime(2028, 10, 1),
@@ -4930,7 +4877,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 58,
-                    CustomerId = 58,
                     ContractId = 58,
                     DateIssued = new DateTime(2028, 10, 2),
                     DueDate = new DateTime(2028, 11, 2),
@@ -4940,7 +4886,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 59,
-                    CustomerId = 59,
                     ContractId = 59,
                     DateIssued = new DateTime(2028, 11, 3),
                     DueDate = new DateTime(2028, 12, 3),
@@ -4950,7 +4895,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 60,
-                    CustomerId = 60,
                     ContractId = 60,
                     DateIssued = new DateTime(2028, 12, 4),
                     DueDate = new DateTime(2029, 1, 4),
@@ -4960,7 +4904,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 61,
-                    CustomerId = 61,
                     ContractId = 61,
                     DateIssued = new DateTime(2029, 1, 5),
                     DueDate = new DateTime(2029, 2, 5),
@@ -4970,7 +4913,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 62,
-                    CustomerId = 62,
                     ContractId = 62,
                     DateIssued = new DateTime(2029, 2, 6),
                     DueDate = new DateTime(2029, 3, 6),
@@ -4980,7 +4922,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 63,
-                    CustomerId = 63,
                     ContractId = 63,
                     DateIssued = new DateTime(2029, 3, 7),
                     DueDate = new DateTime(2029, 4, 7),
@@ -4990,7 +4931,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 64,
-                    CustomerId = 64,
                     ContractId = 64,
                     DateIssued = new DateTime(2029, 4, 8),
                     DueDate = new DateTime(2029, 5, 8),
@@ -5000,7 +4940,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 65,
-                    CustomerId = 65,
                     ContractId = 65,
                     DateIssued = new DateTime(2029, 5, 9),
                     DueDate = new DateTime(2029, 6, 9),
@@ -5010,7 +4949,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 66,
-                    CustomerId = 66,
                     ContractId = 66,
                     DateIssued = new DateTime(2029, 6, 10),
                     DueDate = new DateTime(2029, 7, 10),
@@ -5020,7 +4958,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 67,
-                    CustomerId = 67,
                     ContractId = 67,
                     DateIssued = new DateTime(2029, 7, 11),
                     DueDate = new DateTime(2029, 8, 11),
@@ -5030,7 +4967,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 68,
-                    CustomerId = 68,
                     ContractId = 68,
                     DateIssued = new DateTime(2029, 8, 12),
                     DueDate = new DateTime(2029, 9, 12),
@@ -5040,7 +4976,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 69,
-                    CustomerId = 69,
                     ContractId = 69,
                     DateIssued = new DateTime(2029, 9, 13),
                     DueDate = new DateTime(2029, 10, 13),
@@ -5050,7 +4985,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 70,
-                    CustomerId = 70,
                     ContractId = 70,
                     DateIssued = new DateTime(2029, 10, 14),
                     DueDate = new DateTime(2029, 11, 14),
@@ -5060,7 +4994,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 71,
-                    CustomerId = 71,
                     ContractId = 71,
                     DateIssued = new DateTime(2029, 11, 15),
                     DueDate = new DateTime(2029, 12, 15),
@@ -5070,7 +5003,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 72,
-                    CustomerId = 72,
                     ContractId = 72,
                     DateIssued = new DateTime(2029, 12, 16),
                     DueDate = new DateTime(2030, 1, 16),
@@ -5080,7 +5012,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 73,
-                    CustomerId = 73,
                     ContractId = 73,
                     DateIssued = new DateTime(2030, 1, 17),
                     DueDate = new DateTime(2030, 2, 17),
@@ -5090,7 +5021,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 74,
-                    CustomerId = 74,
                     ContractId = 74,
                     DateIssued = new DateTime(2030, 2, 18),
                     DueDate = new DateTime(2030, 3, 18),
@@ -5100,7 +5030,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 75,
-                    CustomerId = 75,
                     ContractId = 75,
                     DateIssued = new DateTime(2030, 3, 19),
                     DueDate = new DateTime(2030, 4, 19),
@@ -5110,7 +5039,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 76,
-                    CustomerId = 76,
                     ContractId = 76,
                     DateIssued = new DateTime(2030, 4, 20),
                     DueDate = new DateTime(2030, 5, 20),
@@ -5120,7 +5048,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 77,
-                    CustomerId = 77,
                     ContractId = 77,
                     DateIssued = new DateTime(2030, 5, 21),
                     DueDate = new DateTime(2030, 6, 21),
@@ -5130,7 +5057,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 78,
-                    CustomerId = 78,
                     ContractId = 78,
                     DateIssued = new DateTime(2030, 6, 22),
                     DueDate = new DateTime(2030, 7, 22),
@@ -5140,7 +5066,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 79,
-                    CustomerId = 79,
                     ContractId = 79,
                     DateIssued = new DateTime(2030, 7, 23),
                     DueDate = new DateTime(2030, 8, 23),
@@ -5150,7 +5075,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 80,
-                    CustomerId = 80,
                     ContractId = 80,
                     DateIssued = new DateTime(2030, 8, 24),
                     DueDate = new DateTime(2030, 9, 24),
@@ -5160,7 +5084,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 81,
-                    CustomerId = 81,
                     ContractId = 81,
                     DateIssued = new DateTime(2030, 9, 25),
                     DueDate = new DateTime(2030, 10, 25),
@@ -5170,7 +5093,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 82,
-                    CustomerId = 82,
                     ContractId = 82,
                     DateIssued = new DateTime(2030, 10, 26),
                     DueDate = new DateTime(2030, 11, 26),
@@ -5180,7 +5102,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 83,
-                    CustomerId = 83,
                     ContractId = 83,
                     DateIssued = new DateTime(2030, 11, 27),
                     DueDate = new DateTime(2030, 12, 27),
@@ -5190,7 +5111,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 84,
-                    CustomerId = 84,
                     ContractId = 84,
                     DateIssued = new DateTime(2030, 12, 28),
                     DueDate = new DateTime(2031, 1, 28),
@@ -5200,17 +5120,15 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 85,
-                    CustomerId = 85,
                     ContractId = 85,
                     DateIssued = new DateTime(2031, 1, 29),
-                    DueDate = new DateTime(2031, 2, 29),
+                    DueDate = new DateTime(2031, 2, 28),
                     TotalAmount = 6900.00M,
                     IsPaid = false
                 },
                 new Invoice
                 {
                     Id = 86,
-                    CustomerId = 86,
                     ContractId = 86,
                     DateIssued = new DateTime(2031, 2, 1),
                     DueDate = new DateTime(2031, 3, 1),
@@ -5220,7 +5138,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 87,
-                    CustomerId = 87,
                     ContractId = 87,
                     DateIssued = new DateTime(2031, 3, 2),
                     DueDate = new DateTime(2031, 4, 2),
@@ -5230,7 +5147,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 88,
-                    CustomerId = 88,
                     ContractId = 88,
                     DateIssued = new DateTime(2031, 4, 3),
                     DueDate = new DateTime(2031, 5, 3),
@@ -5240,7 +5156,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 89,
-                    CustomerId = 89,
                     ContractId = 89,
                     DateIssued = new DateTime(2031, 5, 4),
                     DueDate = new DateTime(2031, 6, 4),
@@ -5250,7 +5165,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 90,
-                    CustomerId = 90,
                     ContractId = 90,
                     DateIssued = new DateTime(2031, 6, 5),
                     DueDate = new DateTime(2031, 7, 5),
@@ -5260,7 +5174,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 91,
-                    CustomerId = 91,
                     ContractId = 91,
                     DateIssued = new DateTime(2031, 7, 6),
                     DueDate = new DateTime(2031, 8, 6),
@@ -5270,7 +5183,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 92,
-                    CustomerId = 92,
                     ContractId = 92,
                     DateIssued = new DateTime(2031, 8, 7),
                     DueDate = new DateTime(2031, 9, 7),
@@ -5280,7 +5192,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 93,
-                    CustomerId = 93,
                     ContractId = 93,
                     DateIssued = new DateTime(2031, 9, 8),
                     DueDate = new DateTime(2031, 10, 8),
@@ -5290,7 +5201,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 94,
-                    CustomerId = 94,
                     ContractId = 94,
                     DateIssued = new DateTime(2031, 10, 9),
                     DueDate = new DateTime(2031, 11, 9),
@@ -5300,7 +5210,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 95,
-                    CustomerId = 95,
                     ContractId = 95,
                     DateIssued = new DateTime(2031, 11, 10),
                     DueDate = new DateTime(2031, 12, 10),
@@ -5310,7 +5219,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 96,
-                    CustomerId = 96,
                     ContractId = 96,
                     DateIssued = new DateTime(2031, 12, 11),
                     DueDate = new DateTime(2032, 1, 11),
@@ -5320,7 +5228,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 97,
-                    CustomerId = 97,
                     ContractId = 97,
                     DateIssued = new DateTime(2032, 1, 12),
                     DueDate = new DateTime(2032, 2, 12),
@@ -5330,7 +5237,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 98,
-                    CustomerId = 98,
                     ContractId = 98,
                     DateIssued = new DateTime(2032, 2, 13),
                     DueDate = new DateTime(2032, 3, 13),
@@ -5340,7 +5246,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 99,
-                    CustomerId = 99,
                     ContractId = 99,
                     DateIssued = new DateTime(2032, 3, 14),
                     DueDate = new DateTime(2032, 4, 14),
@@ -5350,7 +5255,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 100,
-                    CustomerId = 100,
                     ContractId = 100,
                     DateIssued = new DateTime(2032, 4, 15),
                     DueDate = new DateTime(2032, 5, 15),
@@ -5360,7 +5264,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 101,
-                    CustomerId = 101,
                     ContractId = 101,
                     DateIssued = new DateTime(2032, 5, 16),
                     DueDate = new DateTime(2032, 6, 16),
@@ -5370,7 +5273,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 102,
-                    CustomerId = 102,
                     ContractId = 102,
                     DateIssued = new DateTime(2032, 6, 17),
                     DueDate = new DateTime(2032, 7, 17),
@@ -5380,7 +5282,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 103,
-                    CustomerId = 103,
                     ContractId = 103,
                     DateIssued = new DateTime(2032, 7, 18),
                     DueDate = new DateTime(2032, 8, 18),
@@ -5390,7 +5291,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 104,
-                    CustomerId = 104,
                     ContractId = 104,
                     DateIssued = new DateTime(2032, 8, 19),
                     DueDate = new DateTime(2032, 9, 19),
@@ -5400,7 +5300,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 105,
-                    CustomerId = 105,
                     ContractId = 105,
                     DateIssued = new DateTime(2032, 9, 20),
                     DueDate = new DateTime(2032, 10, 20),
@@ -5410,7 +5309,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 106,
-                    CustomerId = 106,
                     ContractId = 106,
                     DateIssued = new DateTime(2032, 10, 21),
                     DueDate = new DateTime(2032, 11, 21),
@@ -5420,7 +5318,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 107,
-                    CustomerId = 107,
                     ContractId = 107,
                     DateIssued = new DateTime(2032, 11, 22),
                     DueDate = new DateTime(2032, 12, 22),
@@ -5430,7 +5327,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 108,
-                    CustomerId = 108,
                     ContractId = 108,
                     DateIssued = new DateTime(2032, 12, 23),
                     DueDate = new DateTime(2033, 1, 23),
@@ -5440,7 +5336,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 109,
-                    CustomerId = 109,
                     ContractId = 109,
                     DateIssued = new DateTime(2033, 1, 24),
                     DueDate = new DateTime(2033, 2, 24),
@@ -5450,7 +5345,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 110,
-                    CustomerId = 110,
                     ContractId = 110,
                     DateIssued = new DateTime(2033, 2, 25),
                     DueDate = new DateTime(2033, 3, 25),
@@ -5460,7 +5354,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 111,
-                    CustomerId = 111,
                     ContractId = 111,
                     DateIssued = new DateTime(2033, 3, 26),
                     DueDate = new DateTime(2033, 4, 26),
@@ -5470,7 +5363,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 112,
-                    CustomerId = 112,
                     ContractId = 112,
                     DateIssued = new DateTime(2033, 4, 27),
                     DueDate = new DateTime(2033, 5, 27),
@@ -5480,7 +5372,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 113,
-                    CustomerId = 113,
                     ContractId = 113,
                     DateIssued = new DateTime(2033, 5, 28),
                     DueDate = new DateTime(2033, 6, 28),
@@ -5490,7 +5381,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 114,
-                    CustomerId = 114,
                     ContractId = 114,
                     DateIssued = new DateTime(2033, 6, 29),
                     DueDate = new DateTime(2033, 7, 29),
@@ -5500,7 +5390,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 115,
-                    CustomerId = 115,
                     ContractId = 115,
                     DateIssued = new DateTime(2033, 7, 30),
                     DueDate = new DateTime(2033, 8, 30),
@@ -5510,17 +5399,15 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 116,
-                    CustomerId = 116,
                     ContractId = 116,
                     DateIssued = new DateTime(2033, 8, 31),
-                    DueDate = new DateTime(2033, 9, 31),
+                    DueDate = new DateTime(2033, 9, 30),
                     TotalAmount = 10000.00M,
                     IsPaid = true
                 },
                 new Invoice
                 {
                     Id = 117,
-                    CustomerId = 117,
                     ContractId = 117,
                     DateIssued = new DateTime(2033, 9, 1),
                     DueDate = new DateTime(2033, 10, 1),
@@ -5530,7 +5417,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 118,
-                    CustomerId = 118,
                     ContractId = 118,
                     DateIssued = new DateTime(2033, 10, 2),
                     DueDate = new DateTime(2033, 11, 2),
@@ -5540,7 +5426,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 119,
-                    CustomerId = 119,
                     ContractId = 119,
                     DateIssued = new DateTime(2033, 11, 3),
                     DueDate = new DateTime(2033, 12, 3),
@@ -5550,7 +5435,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 120,
-                    CustomerId = 120,
                     ContractId = 120,
                     DateIssued = new DateTime(2033, 12, 4),
                     DueDate = new DateTime(2034, 1, 4),
@@ -5560,7 +5444,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 121,
-                    CustomerId = 121,
                     ContractId = 121,
                     DateIssued = new DateTime(2034, 1, 5),
                     DueDate = new DateTime(2034, 2, 5),
@@ -5570,7 +5453,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 122,
-                    CustomerId = 122,
                     ContractId = 122,
                     DateIssued = new DateTime(2034, 2, 6),
                     DueDate = new DateTime(2034, 3, 6),
@@ -5580,7 +5462,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 123,
-                    CustomerId = 123,
                     ContractId = 123,
                     DateIssued = new DateTime(2034, 3, 7),
                     DueDate = new DateTime(2034, 4, 7),
@@ -5590,7 +5471,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 124,
-                    CustomerId = 124,
                     ContractId = 124,
                     DateIssued = new DateTime(2034, 4, 8),
                     DueDate = new DateTime(2034, 5, 8),
@@ -5600,7 +5480,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 125,
-                    CustomerId = 125,
                     ContractId = 125,
                     DateIssued = new DateTime(2034, 5, 9),
                     DueDate = new DateTime(2034, 6, 9),
@@ -5610,7 +5489,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 126,
-                    CustomerId = 126,
                     ContractId = 126,
                     DateIssued = new DateTime(2034, 6, 10),
                     DueDate = new DateTime(2034, 7, 10),
@@ -5620,7 +5498,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 127,
-                    CustomerId = 127,
                     ContractId = 127,
                     DateIssued = new DateTime(2034, 7, 11),
                     DueDate = new DateTime(2034, 8, 11),
@@ -5630,7 +5507,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 128,
-                    CustomerId = 128,
                     ContractId = 128,
                     DateIssued = new DateTime(2034, 8, 12),
                     DueDate = new DateTime(2034, 9, 12),
@@ -5640,7 +5516,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 129,
-                    CustomerId = 129,
                     ContractId = 129,
                     DateIssued = new DateTime(2034, 9, 13),
                     DueDate = new DateTime(2034, 10, 13),
@@ -5650,7 +5525,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 130,
-                    CustomerId = 130,
                     ContractId = 130,
                     DateIssued = new DateTime(2034, 10, 14),
                     DueDate = new DateTime(2034, 11, 14),
@@ -5660,7 +5534,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 131,
-                    CustomerId = 131,
                     ContractId = 131,
                     DateIssued = new DateTime(2034, 11, 15),
                     DueDate = new DateTime(2034, 12, 15),
@@ -5670,7 +5543,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 132,
-                    CustomerId = 132,
                     ContractId = 132,
                     DateIssued = new DateTime(2034, 12, 16),
                     DueDate = new DateTime(2035, 1, 16),
@@ -5680,7 +5552,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 133,
-                    CustomerId = 133,
                     ContractId = 133,
                     DateIssued = new DateTime(2035, 1, 17),
                     DueDate = new DateTime(2035, 2, 17),
@@ -5690,7 +5561,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 134,
-                    CustomerId = 134,
                     ContractId = 134,
                     DateIssued = new DateTime(2035, 2, 18),
                     DueDate = new DateTime(2035, 3, 18),
@@ -5700,7 +5570,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 135,
-                    CustomerId = 135,
                     ContractId = 135,
                     DateIssued = new DateTime(2035, 3, 19),
                     DueDate = new DateTime(2035, 4, 19),
@@ -5710,7 +5579,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 136,
-                    CustomerId = 136,
                     ContractId = 136,
                     DateIssued = new DateTime(2035, 4, 20),
                     DueDate = new DateTime(2035, 5, 20),
@@ -5720,7 +5588,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 137,
-                    CustomerId = 137,
                     ContractId = 137,
                     DateIssued = new DateTime(2035, 5, 21),
                     DueDate = new DateTime(2035, 6, 21),
@@ -5730,7 +5597,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 138,
-                    CustomerId = 138,
                     ContractId = 138,
                     DateIssued = new DateTime(2035, 6, 22),
                     DueDate = new DateTime(2035, 7, 22),
@@ -5740,7 +5606,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 139,
-                    CustomerId = 139,
                     ContractId = 139,
                     DateIssued = new DateTime(2035, 7, 23),
                     DueDate = new DateTime(2035, 8, 23),
@@ -5750,7 +5615,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 140,
-                    CustomerId = 140,
                     ContractId = 140,
                     DateIssued = new DateTime(2035, 8, 24),
                     DueDate = new DateTime(2035, 9, 24),
@@ -5760,7 +5624,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 141,
-                    CustomerId = 141,
                     ContractId = 141,
                     DateIssued = new DateTime(2035, 9, 25),
                     DueDate = new DateTime(2035, 10, 25),
@@ -5770,7 +5633,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 142,
-                    CustomerId = 142,
                     ContractId = 142,
                     DateIssued = new DateTime(2035, 10, 26),
                     DueDate = new DateTime(2035, 11, 26),
@@ -5780,7 +5642,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 143,
-                    CustomerId = 143,
                     ContractId = 143,
                     DateIssued = new DateTime(2035, 11, 27),
                     DueDate = new DateTime(2035, 12, 27),
@@ -5790,7 +5651,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 144,
-                    CustomerId = 144,
                     ContractId = 144,
                     DateIssued = new DateTime(2035, 12, 28),
                     DueDate = new DateTime(2036, 1, 28),
@@ -5800,7 +5660,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 145,
-                    CustomerId = 145,
                     ContractId = 145,
                     DateIssued = new DateTime(2036, 1, 29),
                     DueDate = new DateTime(2036, 2, 29),
@@ -5810,7 +5669,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 146,
-                    CustomerId = 146,
                     ContractId = 146,
                     DateIssued = new DateTime(2036, 2, 1),
                     DueDate = new DateTime(2036, 3, 1),
@@ -5820,7 +5678,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 147,
-                    CustomerId = 147,
                     ContractId = 147,
                     DateIssued = new DateTime(2036, 3, 2),
                     DueDate = new DateTime(2036, 4, 2),
@@ -5830,7 +5687,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 148,
-                    CustomerId = 148,
                     ContractId = 148,
                     DateIssued = new DateTime(2036, 4, 3),
                     DueDate = new DateTime(2036, 5, 3),
@@ -5840,7 +5696,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 149,
-                    CustomerId = 149,
                     ContractId = 149,
                     DateIssued = new DateTime(2036, 5, 4),
                     DueDate = new DateTime(2036, 6, 4),
@@ -5850,7 +5705,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 150,
-                    CustomerId = 150,
                     ContractId = 150,
                     DateIssued = new DateTime(2036, 6, 5),
                     DueDate = new DateTime(2036, 7, 5),
@@ -5860,7 +5714,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 151,
-                    CustomerId = 12,
                     ContractId = 78,
                     DateIssued = new DateTime(2036, 7, 6),
                     DueDate = new DateTime(2036, 8, 6),
@@ -5870,7 +5723,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 152,
-                    CustomerId = 45,
                     ContractId = 31,
                     DateIssued = new DateTime(2036, 8, 7),
                     DueDate = new DateTime(2036, 9, 7),
@@ -5880,7 +5732,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 153,
-                    CustomerId = 23,
                     ContractId = 102,
                     DateIssued = new DateTime(2036, 9, 8),
                     DueDate = new DateTime(2036, 10, 8),
@@ -5890,7 +5741,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 154,
-                    CustomerId = 67,
                     ContractId = 87,
                     DateIssued = new DateTime(2036, 10, 9),
                     DueDate = new DateTime(2036, 11, 9),
@@ -5900,7 +5750,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 155,
-                    CustomerId = 30,
                     ContractId = 40,
                     DateIssued = new DateTime(2036, 11, 10),
                     DueDate = new DateTime(2036, 12, 10),
@@ -5910,7 +5759,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 156,
-                    CustomerId = 56,
                     ContractId = 15,
                     DateIssued = new DateTime(2036, 12, 11),
                     DueDate = new DateTime(2037, 1, 11),
@@ -5920,7 +5768,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 157,
-                    CustomerId = 88,
                     ContractId = 63,
                     DateIssued = new DateTime(2037, 1, 12),
                     DueDate = new DateTime(2037, 2, 12),
@@ -5930,7 +5777,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 158,
-                    CustomerId = 22,
                     ContractId = 49,
                     DateIssued = new DateTime(2037, 2, 13),
                     DueDate = new DateTime(2037, 3, 13),
@@ -5940,7 +5786,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 159,
-                    CustomerId = 34,
                     ContractId = 10,
                     DateIssued = new DateTime(2037, 3, 14),
                     DueDate = new DateTime(2037, 4, 14),
@@ -5950,7 +5795,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 160,
-                    CustomerId = 73,
                     ContractId = 91,
                     DateIssued = new DateTime(2037, 4, 15),
                     DueDate = new DateTime(2037, 5, 15),
@@ -5960,7 +5804,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 161,
-                    CustomerId = 29,
                     ContractId = 66,
                     DateIssued = new DateTime(2037, 5, 16),
                     DueDate = new DateTime(2037, 6, 16),
@@ -5970,7 +5813,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 162,
-                    CustomerId = 48,
                     ContractId = 121,
                     DateIssued = new DateTime(2037, 6, 17),
                     DueDate = new DateTime(2037, 7, 17),
@@ -5980,7 +5822,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 163,
-                    CustomerId = 91,
                     ContractId = 55,
                     DateIssued = new DateTime(2037, 7, 18),
                     DueDate = new DateTime(2037, 8, 18),
@@ -5990,7 +5831,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 164,
-                    CustomerId = 19,
                     ContractId = 134,
                     DateIssued = new DateTime(2037, 8, 19),
                     DueDate = new DateTime(2037, 9, 19),
@@ -6000,7 +5840,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 165,
-                    CustomerId = 95,
                     ContractId = 77,
                     DateIssued = new DateTime(2037, 9, 20),
                     DueDate = new DateTime(2037, 10, 20),
@@ -6010,7 +5849,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 166,
-                    CustomerId = 36,
                     ContractId = 109,
                     DateIssued = new DateTime(2037, 10, 21),
                     DueDate = new DateTime(2037, 11, 21),
@@ -6020,7 +5858,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 167,
-                    CustomerId = 53,
                     ContractId = 99,
                     DateIssued = new DateTime(2037, 11, 22),
                     DueDate = new DateTime(2037, 12, 22),
@@ -6030,7 +5867,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 168,
-                    CustomerId = 100,
                     ContractId = 125,
                     DateIssued = new DateTime(2037, 12, 23),
                     DueDate = new DateTime(2038, 1, 23),
@@ -6040,7 +5876,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 169,
-                    CustomerId = 84,
                     ContractId = 58,
                     DateIssued = new DateTime(2038, 1, 24),
                     DueDate = new DateTime(2038, 2, 24),
@@ -6050,7 +5885,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 170,
-                    CustomerId = 3,
                     ContractId = 85,
                     DateIssued = new DateTime(2038, 2, 25),
                     DueDate = new DateTime(2038, 3, 25),
@@ -6060,7 +5894,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 171,
-                    CustomerId = 66,
                     ContractId = 142,
                     DateIssued = new DateTime(2038, 3, 26),
                     DueDate = new DateTime(2038, 4, 26),
@@ -6070,7 +5903,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 172,
-                    CustomerId = 11,
                     ContractId = 11,
                     DateIssued = new DateTime(2038, 4, 27),
                     DueDate = new DateTime(2038, 5, 27),
@@ -6080,7 +5912,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 173,
-                    CustomerId = 42,
                     ContractId = 74,
                     DateIssued = new DateTime(2038, 5, 28),
                     DueDate = new DateTime(2038, 6, 28),
@@ -6090,7 +5921,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 174,
-                    CustomerId = 62,
                     ContractId = 145,
                     DateIssued = new DateTime(2038, 6, 29),
                     DueDate = new DateTime(2038, 7, 29),
@@ -6100,7 +5930,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 175,
-                    CustomerId = 41,
                     ContractId = 36,
                     DateIssued = new DateTime(2038, 7, 30),
                     DueDate = new DateTime(2038, 8, 30),
@@ -6110,17 +5939,15 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 176,
-                    CustomerId = 60,
                     ContractId = 12,
                     DateIssued = new DateTime(2038, 8, 31),
-                    DueDate = new DateTime(2038, 9, 31),
+                    DueDate = new DateTime(2038, 9, 30),
                     TotalAmount = 16000.00M,
                     IsPaid = false
                 },
                 new Invoice
                 {
                     Id = 177,
-                    CustomerId = 74,
                     ContractId = 129,
                     DateIssued = new DateTime(2038, 9, 1),
                     DueDate = new DateTime(2038, 10, 1),
@@ -6130,7 +5957,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 178,
-                    CustomerId = 99,
                     ContractId = 75,
                     DateIssued = new DateTime(2038, 10, 2),
                     DueDate = new DateTime(2038, 11, 2),
@@ -6140,7 +5966,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 179,
-                    CustomerId = 32,
                     ContractId = 50,
                     DateIssued = new DateTime(2038, 11, 3),
                     DueDate = new DateTime(2038, 12, 3),
@@ -6150,7 +5975,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 180,
-                    CustomerId = 58,
                     ContractId = 103,
                     DateIssued = new DateTime(2038, 12, 4),
                     DueDate = new DateTime(2039, 1, 4),
@@ -6160,7 +5984,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 181,
-                    CustomerId = 18,
                     ContractId = 92,
                     DateIssued = new DateTime(2039, 1, 5),
                     DueDate = new DateTime(2039, 2, 5),
@@ -6170,7 +5993,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 182,
-                    CustomerId = 77,
                     ContractId = 22,
                     DateIssued = new DateTime(2039, 2, 6),
                     DueDate = new DateTime(2039, 3, 6),
@@ -6180,7 +6002,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 183,
-                    CustomerId = 90,
                     ContractId = 118,
                     DateIssued = new DateTime(2039, 3, 7),
                     DueDate = new DateTime(2039, 4, 7),
@@ -6190,7 +6011,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 184,
-                    CustomerId = 33,
                     ContractId = 39,
                     DateIssued = new DateTime(2039, 4, 8),
                     DueDate = new DateTime(2039, 5, 8),
@@ -6200,7 +6020,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 185,
-                    CustomerId = 12,
                     ContractId = 73,
                     DateIssued = new DateTime(2039, 5, 9),
                     DueDate = new DateTime(2039, 6, 9),
@@ -6210,7 +6029,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 186,
-                    CustomerId = 66,
                     ContractId = 15,
                     DateIssued = new DateTime(2039, 6, 10),
                     DueDate = new DateTime(2039, 7, 10),
@@ -6220,7 +6038,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 187,
-                    CustomerId = 44,
                     ContractId = 134,
                     DateIssued = new DateTime(2039, 7, 11),
                     DueDate = new DateTime(2039, 8, 11),
@@ -6230,7 +6047,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 188,
-                    CustomerId = 81,
                     ContractId = 98,
                     DateIssued = new DateTime(2039, 8, 12),
                     DueDate = new DateTime(2039, 9, 12),
@@ -6240,7 +6056,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 189,
-                    CustomerId = 55,
                     ContractId = 66,
                     DateIssued = new DateTime(2039, 9, 13),
                     DueDate = new DateTime(2039, 10, 13),
@@ -6250,7 +6065,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 190,
-                    CustomerId = 39,
                     ContractId = 111,
                     DateIssued = new DateTime(2039, 10, 14),
                     DueDate = new DateTime(2039, 11, 14),
@@ -6260,7 +6074,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 191,
-                    CustomerId = 14,
                     ContractId = 61,
                     DateIssued = new DateTime(2039, 11, 15),
                     DueDate = new DateTime(2039, 12, 15),
@@ -6270,7 +6083,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 192,
-                    CustomerId = 72,
                     ContractId = 24,
                     DateIssued = new DateTime(2039, 12, 16),
                     DueDate = new DateTime(2040, 1, 16),
@@ -6280,7 +6092,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 193,
-                    CustomerId = 49,
                     ContractId = 59,
                     DateIssued = new DateTime(2040, 1, 17),
                     DueDate = new DateTime(2040, 2, 17),
@@ -6290,7 +6101,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 194,
-                    CustomerId = 15,
                     ContractId = 132,
                     DateIssued = new DateTime(2040, 2, 18),
                     DueDate = new DateTime(2040, 3, 18),
@@ -6300,7 +6110,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 195,
-                    CustomerId = 97,
                     ContractId = 48,
                     DateIssued = new DateTime(2040, 3, 19),
                     DueDate = new DateTime(2040, 4, 19),
@@ -6310,7 +6119,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 196,
-                    CustomerId = 10,
                     ContractId = 80,
                     DateIssued = new DateTime(2040, 4, 20),
                     DueDate = new DateTime(2040, 5, 20),
@@ -6320,7 +6128,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 197,
-                    CustomerId = 92,
                     ContractId = 12,
                     DateIssued = new DateTime(2040, 5, 21),
                     DueDate = new DateTime(2040, 6, 21),
@@ -6330,7 +6137,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 198,
-                    CustomerId = 37,
                     ContractId = 56,
                     DateIssued = new DateTime(2040, 6, 22),
                     DueDate = new DateTime(2040, 7, 22),
@@ -6340,7 +6146,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 199,
-                    CustomerId = 68,
                     ContractId = 139,
                     DateIssued = new DateTime(2040, 7, 23),
                     DueDate = new DateTime(2040, 8, 23),
@@ -6350,7 +6155,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 200,
-                    CustomerId = 25,
                     ContractId = 69,
                     DateIssued = new DateTime(2040, 8, 24),
                     DueDate = new DateTime(2040, 9, 24),
@@ -6360,7 +6164,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 201,
-                    CustomerId = 7,
                     ContractId = 134,
                     DateIssued = new DateTime(2040, 9, 25),
                     DueDate = new DateTime(2040, 10, 25),
@@ -6370,7 +6173,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 202,
-                    CustomerId = 82,
                     ContractId = 19,
                     DateIssued = new DateTime(2040, 10, 26),
                     DueDate = new DateTime(2040, 11, 26),
@@ -6380,7 +6182,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 203,
-                    CustomerId = 5,
                     ContractId = 88,
                     DateIssued = new DateTime(2040, 11, 27),
                     DueDate = new DateTime(2040, 12, 27),
@@ -6390,7 +6191,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 204,
-                    CustomerId = 76,
                     ContractId = 29,
                     DateIssued = new DateTime(2040, 12, 28),
                     DueDate = new DateTime(2041, 1, 28),
@@ -6400,7 +6200,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 205,
-                    CustomerId = 15,
                     ContractId = 37,
                     DateIssued = new DateTime(2041, 1, 29),
                     DueDate = new DateTime(2041, 2, 28),
@@ -6410,7 +6209,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 206,
-                    CustomerId = 29,
                     ContractId = 64,
                     DateIssued = new DateTime(2041, 2, 1),
                     DueDate = new DateTime(2041, 3, 1),
@@ -6420,7 +6218,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 207,
-                    CustomerId = 89,
                     ContractId = 43,
                     DateIssued = new DateTime(2041, 3, 2),
                     DueDate = new DateTime(2041, 4, 2),
@@ -6430,7 +6227,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 208,
-                    CustomerId = 23,
                     ContractId = 105,
                     DateIssued = new DateTime(2041, 4, 3),
                     DueDate = new DateTime(2041, 5, 3),
@@ -6440,7 +6236,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 209,
-                    CustomerId = 33,
                     ContractId = 56,
                     DateIssued = new DateTime(2041, 5, 4),
                     DueDate = new DateTime(2041, 6, 4),
@@ -6450,7 +6245,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 210,
-                    CustomerId = 45,
                     ContractId = 22,
                     DateIssued = new DateTime(2041, 6, 5),
                     DueDate = new DateTime(2041, 7, 5),
@@ -6460,7 +6254,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 211,
-                    CustomerId = 67,
                     ContractId = 84,
                     DateIssued = new DateTime(2041, 7, 6),
                     DueDate = new DateTime(2041, 8, 6),
@@ -6470,7 +6263,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 212,
-                    CustomerId = 1,
                     ContractId = 12,
                     DateIssued = new DateTime(2041, 8, 7),
                     DueDate = new DateTime(2041, 9, 7),
@@ -6480,7 +6272,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 213,
-                    CustomerId = 38,
                     ContractId = 61,
                     DateIssued = new DateTime(2041, 9, 8),
                     DueDate = new DateTime(2041, 10, 8),
@@ -6490,7 +6281,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 214,
-                    CustomerId = 99,
                     ContractId = 97,
                     DateIssued = new DateTime(2041, 10, 9),
                     DueDate = new DateTime(2041, 11, 9),
@@ -6500,7 +6290,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 215,
-                    CustomerId = 50,
                     ContractId = 10,
                     DateIssued = new DateTime(2041, 11, 10),
                     DueDate = new DateTime(2041, 12, 10),
@@ -6510,7 +6299,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 216,
-                    CustomerId = 93,
                     ContractId = 41,
                     DateIssued = new DateTime(2041, 12, 11),
                     DueDate = new DateTime(2042, 1, 11),
@@ -6520,7 +6308,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 217,
-                    CustomerId = 60,
                     ContractId = 77,
                     DateIssued = new DateTime(2042, 1, 12),
                     DueDate = new DateTime(2042, 2, 12),
@@ -6530,7 +6317,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 218,
-                    CustomerId = 25,
                     ContractId = 99,
                     DateIssued = new DateTime(2042, 2, 13),
                     DueDate = new DateTime(2042, 3, 13),
@@ -6540,7 +6326,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 219,
-                    CustomerId = 75,
                     ContractId = 51,
                     DateIssued = new DateTime(2042, 3, 14),
                     DueDate = new DateTime(2042, 4, 14),
@@ -6550,7 +6335,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 220,
-                    CustomerId = 22,
                     ContractId = 111,
                     DateIssued = new DateTime(2042, 4, 15),
                     DueDate = new DateTime(2042, 5, 15),
@@ -6560,7 +6344,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 221,
-                    CustomerId = 80,
                     ContractId = 67,
                     DateIssued = new DateTime(2042, 5, 16),
                     DueDate = new DateTime(2042, 6, 16),
@@ -6570,7 +6353,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 222,
-                    CustomerId = 12,
                     ContractId = 45,
                     DateIssued = new DateTime(2042, 6, 17),
                     DueDate = new DateTime(2042, 7, 17),
@@ -6580,7 +6362,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 223,
-                    CustomerId = 54,
                     ContractId = 119,
                     DateIssued = new DateTime(2042, 7, 18),
                     DueDate = new DateTime(2042, 8, 18),
@@ -6590,7 +6371,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 224,
-                    CustomerId = 19,
                     ContractId = 55,
                     DateIssued = new DateTime(2042, 8, 19),
                     DueDate = new DateTime(2042, 9, 19),
@@ -6600,7 +6380,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 225,
-                    CustomerId = 92,
                     ContractId = 30,
                     DateIssued = new DateTime(2042, 9, 20),
                     DueDate = new DateTime(2042, 10, 20),
@@ -6610,7 +6389,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 226,
-                    CustomerId = 39,
                     ContractId = 42,
                     DateIssued = new DateTime(2042, 10, 21),
                     DueDate = new DateTime(2042, 11, 21),
@@ -6620,7 +6398,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 227,
-                    CustomerId = 10,
                     ContractId = 104,
                     DateIssued = new DateTime(2042, 11, 22),
                     DueDate = new DateTime(2042, 12, 22),
@@ -6630,7 +6407,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 228,
-                    CustomerId = 78,
                     ContractId = 59,
                     DateIssued = new DateTime(2042, 12, 23),
                     DueDate = new DateTime(2043, 1, 23),
@@ -6640,7 +6416,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 229,
-                    CustomerId = 30,
                     ContractId = 15,
                     DateIssued = new DateTime(2043, 1, 24),
                     DueDate = new DateTime(2043, 2, 24),
@@ -6650,7 +6425,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 230,
-                    CustomerId = 85,
                     ContractId = 38,
                     DateIssued = new DateTime(2043, 2, 25),
                     DueDate = new DateTime(2043, 3, 25),
@@ -6660,7 +6434,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 231,
-                    CustomerId = 73,
                     ContractId = 99,
                     DateIssued = new DateTime(2043, 3, 26),
                     DueDate = new DateTime(2043, 4, 26),
@@ -6670,7 +6443,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 232,
-                    CustomerId = 2,
                     ContractId = 48,
                     DateIssued = new DateTime(2043, 4, 27),
                     DueDate = new DateTime(2043, 5, 27),
@@ -6680,7 +6452,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 233,
-                    CustomerId = 62,
                     ContractId = 113,
                     DateIssued = new DateTime(2043, 5, 28),
                     DueDate = new DateTime(2043, 6, 28),
@@ -6690,7 +6461,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 234,
-                    CustomerId = 4,
                     ContractId = 71,
                     DateIssued = new DateTime(2043, 6, 29),
                     DueDate = new DateTime(2043, 7, 29),
@@ -6700,7 +6470,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 235,
-                    CustomerId = 27,
                     ContractId = 34,
                     DateIssued = new DateTime(2043, 7, 30),
                     DueDate = new DateTime(2043, 8, 30),
@@ -6710,7 +6479,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 236,
-                    CustomerId = 55,
                     ContractId = 25,
                     DateIssued = new DateTime(2043, 8, 31),
                     DueDate = new DateTime(2043, 9, 30),
@@ -6720,7 +6488,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 237,
-                    CustomerId = 91,
                     ContractId = 52,
                     DateIssued = new DateTime(2043, 9, 1),
                     DueDate = new DateTime(2043, 10, 1),
@@ -6730,7 +6497,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 238,
-                    CustomerId = 18,
                     ContractId = 26,
                     DateIssued = new DateTime(2043, 10, 2),
                     DueDate = new DateTime(2043, 11, 2),
@@ -6740,7 +6506,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 239,
-                    CustomerId = 79,
                     ContractId = 114,
                     DateIssued = new DateTime(2043, 11, 3),
                     DueDate = new DateTime(2043, 12, 3),
@@ -6750,7 +6515,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 240,
-                    CustomerId = 36,
                     ContractId = 66,
                     DateIssued = new DateTime(2043, 12, 4),
                     DueDate = new DateTime(2044, 1, 4),
@@ -6760,7 +6524,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 241,
-                    CustomerId = 43,
                     ContractId = 92,
                     DateIssued = new DateTime(2044, 1, 5),
                     DueDate = new DateTime(2044, 2, 5),
@@ -6770,7 +6533,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 242,
-                    CustomerId = 54,
                     ContractId = 37,
                     DateIssued = new DateTime(2044, 2, 6),
                     DueDate = new DateTime(2044, 3, 6),
@@ -6780,7 +6542,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 243,
-                    CustomerId = 11,
                     ContractId = 71,
                     DateIssued = new DateTime(2044, 3, 7),
                     DueDate = new DateTime(2044, 4, 7),
@@ -6790,7 +6551,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 244,
-                    CustomerId = 68,
                     ContractId = 18,
                     DateIssued = new DateTime(2044, 4, 8),
                     DueDate = new DateTime(2044, 5, 8),
@@ -6800,7 +6560,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 245,
-                    CustomerId = 22,
                     ContractId = 39,
                     DateIssued = new DateTime(2044, 5, 9),
                     DueDate = new DateTime(2044, 6, 9),
@@ -6810,7 +6569,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 246,
-                    CustomerId = 3,
                     ContractId = 108,
                     DateIssued = new DateTime(2044, 6, 10),
                     DueDate = new DateTime(2044, 7, 10),
@@ -6820,7 +6578,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 247,
-                    CustomerId = 85,
                     ContractId = 12,
                     DateIssued = new DateTime(2044, 7, 11),
                     DueDate = new DateTime(2044, 8, 11),
@@ -6830,7 +6587,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 248,
-                    CustomerId = 20,
                     ContractId = 46,
                     DateIssued = new DateTime(2044, 8, 12),
                     DueDate = new DateTime(2044, 9, 12),
@@ -6840,7 +6596,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 249,
-                    CustomerId = 90,
                     ContractId = 93,
                     DateIssued = new DateTime(2044, 9, 13),
                     DueDate = new DateTime(2044, 10, 13),
@@ -6850,7 +6605,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 250,
-                    CustomerId = 38,
                     ContractId = 23,
                     DateIssued = new DateTime(2044, 10, 14),
                     DueDate = new DateTime(2044, 11, 14),
@@ -6860,7 +6614,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 251,
-                    CustomerId = 62,
                     ContractId = 58,
                     DateIssued = new DateTime(2044, 11, 15),
                     DueDate = new DateTime(2044, 12, 15),
@@ -6870,7 +6623,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 252,
-                    CustomerId = 88,
                     ContractId = 85,
                     DateIssued = new DateTime(2044, 12, 16),
                     DueDate = new DateTime(2045, 1, 16),
@@ -6880,7 +6632,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 253,
-                    CustomerId = 77,
                     ContractId = 31,
                     DateIssued = new DateTime(2045, 1, 17),
                     DueDate = new DateTime(2045, 2, 17),
@@ -6890,7 +6641,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 254,
-                    CustomerId = 99,
                     ContractId = 98,
                     DateIssued = new DateTime(2045, 2, 18),
                     DueDate = new DateTime(2045, 3, 18),
@@ -6900,7 +6650,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 255,
-                    CustomerId = 30,
                     ContractId = 72,
                     DateIssued = new DateTime(2045, 3, 19),
                     DueDate = new DateTime(2045, 4, 19),
@@ -6910,7 +6659,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 256,
-                    CustomerId = 5,
                     ContractId = 106,
                     DateIssued = new DateTime(2045, 4, 20),
                     DueDate = new DateTime(2045, 5, 20),
@@ -6920,7 +6668,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 257,
-                    CustomerId = 65,
                     ContractId = 13,
                     DateIssued = new DateTime(2045, 5, 21),
                     DueDate = new DateTime(2045, 6, 21),
@@ -6930,7 +6677,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 258,
-                    CustomerId = 14,
                     ContractId = 88,
                     DateIssued = new DateTime(2045, 6, 22),
                     DueDate = new DateTime(2045, 7, 22),
@@ -6940,7 +6686,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 259,
-                    CustomerId = 76,
                     ContractId = 54,
                     DateIssued = new DateTime(2045, 7, 23),
                     DueDate = new DateTime(2045, 8, 23),
@@ -6950,7 +6695,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 260,
-                    CustomerId = 48,
                     ContractId = 26,
                     DateIssued = new DateTime(2045, 8, 24),
                     DueDate = new DateTime(2045, 9, 24),
@@ -6960,7 +6704,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 261,
-                    CustomerId = 29,
                     ContractId = 100,
                     DateIssued = new DateTime(2045, 9, 25),
                     DueDate = new DateTime(2045, 10, 25),
@@ -6970,7 +6713,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 262,
-                    CustomerId = 91,
                     ContractId = 39,
                     DateIssued = new DateTime(2045, 10, 26),
                     DueDate = new DateTime(2045, 11, 26),
@@ -6980,7 +6722,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 263,
-                    CustomerId = 12,
                     ContractId = 17,
                     DateIssued = new DateTime(2045, 11, 27),
                     DueDate = new DateTime(2045, 12, 27),
@@ -6990,7 +6731,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 264,
-                    CustomerId = 36,
                     ContractId = 66,
                     DateIssued = new DateTime(2045, 12, 28),
                     DueDate = new DateTime(2046, 1, 28),
@@ -7000,7 +6740,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 265,
-                    CustomerId = 15,
                     ContractId = 75,
                     DateIssued = new DateTime(2046, 1, 29),
                     DueDate = new DateTime(2046, 2, 28),
@@ -7010,7 +6749,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 266,
-                    CustomerId = 70,
                     ContractId = 114,
                     DateIssued = new DateTime(2046, 2, 1),
                     DueDate = new DateTime(2046, 3, 1),
@@ -7020,7 +6758,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 267,
-                    CustomerId = 53,
                     ContractId = 83,
                     DateIssued = new DateTime(2046, 3, 2),
                     DueDate = new DateTime(2046, 4, 2),
@@ -7030,7 +6767,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 268,
-                    CustomerId = 80,
                     ContractId = 69,
                     DateIssued = new DateTime(2046, 4, 3),
                     DueDate = new DateTime(2046, 5, 3),
@@ -7040,7 +6776,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 269,
-                    CustomerId = 7,
                     ContractId = 49,
                     DateIssued = new DateTime(2046, 5, 4),
                     DueDate = new DateTime(2046, 6, 4),
@@ -7050,7 +6785,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 270,
-                    CustomerId = 61,
                     ContractId = 44,
                     DateIssued = new DateTime(2046, 6, 5),
                     DueDate = new DateTime(2046, 7, 5),
@@ -7060,7 +6794,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 271,
-                    CustomerId = 35,
                     ContractId = 94,
                     DateIssued = new DateTime(2046, 7, 6),
                     DueDate = new DateTime(2046, 8, 6),
@@ -7070,7 +6803,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 272,
-                    CustomerId = 98,
                     ContractId = 62,
                     DateIssued = new DateTime(2046, 8, 7),
                     DueDate = new DateTime(2046, 9, 7),
@@ -7080,7 +6812,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 273,
-                    CustomerId = 18,
                     ContractId = 104,
                     DateIssued = new DateTime(2046, 9, 8),
                     DueDate = new DateTime(2046, 10, 8),
@@ -7090,7 +6821,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 274,
-                    CustomerId = 39,
                     ContractId = 89,
                     DateIssued = new DateTime(2046, 10, 9),
                     DueDate = new DateTime(2046, 11, 9),
@@ -7100,7 +6830,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 275,
-                    CustomerId = 8,
                     ContractId = 34,
                     DateIssued = new DateTime(2046, 11, 10),
                     DueDate = new DateTime(2046, 12, 10),
@@ -7110,7 +6839,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 276,
-                    CustomerId = 84,
                     ContractId = 50,
                     DateIssued = new DateTime(2046, 12, 11),
                     DueDate = new DateTime(2047, 1, 11),
@@ -7120,7 +6848,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 277,
-                    CustomerId = 49,
                     ContractId = 73,
                     DateIssued = new DateTime(2047, 1, 12),
                     DueDate = new DateTime(2047, 2, 12),
@@ -7130,7 +6857,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 278,
-                    CustomerId = 65,
                     ContractId = 57,
                     DateIssued = new DateTime(2047, 2, 13),
                     DueDate = new DateTime(2047, 3, 13),
@@ -7140,7 +6866,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 279,
-                    CustomerId = 19,
                     ContractId = 99,
                     DateIssued = new DateTime(2047, 3, 14),
                     DueDate = new DateTime(2047, 4, 14),
@@ -7150,7 +6875,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 280,
-                    CustomerId = 90,
                     ContractId = 27,
                     DateIssued = new DateTime(2047, 4, 15),
                     DueDate = new DateTime(2047, 5, 15),
@@ -7160,7 +6884,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 281,
-                    CustomerId = 55,
                     ContractId = 72,
                     DateIssued = new DateTime(2047, 5, 16),
                     DueDate = new DateTime(2047, 6, 16),
@@ -7170,7 +6893,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 282,
-                    CustomerId = 4,
                     ContractId = 110,
                     DateIssued = new DateTime(2047, 6, 17),
                     DueDate = new DateTime(2047, 7, 17),
@@ -7180,7 +6902,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 283,
-                    CustomerId = 27,
                     ContractId = 25,
                     DateIssued = new DateTime(2047, 7, 18),
                     DueDate = new DateTime(2047, 8, 18),
@@ -7190,7 +6911,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 284,
-                    CustomerId = 66,
                     ContractId = 42,
                     DateIssued = new DateTime(2047, 8, 19),
                     DueDate = new DateTime(2047, 9, 19),
@@ -7200,7 +6920,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 285,
-                    CustomerId = 89,
                     ContractId = 12,
                     DateIssued = new DateTime(2047, 9, 20),
                     DueDate = new DateTime(2047, 10, 20),
@@ -7210,7 +6929,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 286,
-                    CustomerId = 14,
                     ContractId = 53,
                     DateIssued = new DateTime(2047, 10, 21),
                     DueDate = new DateTime(2047, 11, 21),
@@ -7220,7 +6938,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 287,
-                    CustomerId = 88,
                     ContractId = 39,
                     DateIssued = new DateTime(2047, 11, 22),
                     DueDate = new DateTime(2047, 12, 22),
@@ -7230,7 +6947,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 288,
-                    CustomerId = 25,
                     ContractId = 88,
                     DateIssued = new DateTime(2047, 12, 23),
                     DueDate = new DateTime(2048, 1, 23),
@@ -7240,7 +6956,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 289,
-                    CustomerId = 47,
                     ContractId = 62,
                     DateIssued = new DateTime(2048, 1, 24),
                     DueDate = new DateTime(2048, 2, 24),
@@ -7250,7 +6965,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 290,
-                    CustomerId = 80,
                     ContractId = 10,
                     DateIssued = new DateTime(2048, 2, 25),
                     DueDate = new DateTime(2048, 3, 25),
@@ -7260,7 +6974,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 291,
-                    CustomerId = 34,
                     ContractId = 28,
                     DateIssued = new DateTime(2048, 3, 26),
                     DueDate = new DateTime(2048, 4, 26),
@@ -7270,7 +6983,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 292,
-                    CustomerId = 99,
                     ContractId = 51,
                     DateIssued = new DateTime(2048, 4, 27),
                     DueDate = new DateTime(2048, 5, 27),
@@ -7280,7 +6992,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 293,
-                    CustomerId = 59,
                     ContractId = 96,
                     DateIssued = new DateTime(2048, 5, 28),
                     DueDate = new DateTime(2048, 6, 28),
@@ -7290,7 +7001,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 294,
-                    CustomerId = 18,
                     ContractId = 29,
                     DateIssued = new DateTime(2048, 6, 29),
                     DueDate = new DateTime(2048, 7, 29),
@@ -7300,18 +7010,24 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 295,
-                    CustomerId = 7,
                     ContractId = 83,
                     DateIssued = new DateTime(2048, 7, 30),
                     DueDate = new DateTime(2048, 8, 30),
                     TotalAmount = 27900.00M,
                     IsPaid = true
                 },
-                new Invoice { Id = 296, CustomerId = 63, ContractId = 70, DateIssued = new DateTime(2048, 8, 31), DueDate = new DateTime(2048, 9, 30), TotalAmount = 28000.00M, IsPaid = false },
+                new Invoice 
+                { 
+                    Id = 296, 
+                    ContractId = 70, 
+                    DateIssued = new DateTime(2048, 8, 31), 
+                    DueDate = new DateTime(2048, 9, 30), 
+                    TotalAmount = 28000.00M, 
+                    IsPaid = false 
+                },
                 new Invoice
                 {
                     Id = 297,
-                    CustomerId = 32,
                     ContractId = 102,
                     DateIssued = new DateTime(2048, 9, 1),
                     DueDate = new DateTime(2048, 10, 1),
@@ -7321,7 +7037,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 298,
-                    CustomerId = 21,
                     ContractId = 41,
                     DateIssued = new DateTime(2048, 10, 2),
                     DueDate = new DateTime(2048, 11, 2),
@@ -7331,7 +7046,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 299,
-                    CustomerId = 40,
                     ContractId = 67,
                     DateIssued = new DateTime(2048, 11, 3),
                     DueDate = new DateTime(2048, 12, 3),
@@ -7341,7 +7055,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 300,
-                    CustomerId = 92,
                     ContractId = 19,
                     DateIssued = new DateTime(2048, 12, 4),
                     DueDate = new DateTime(2049, 1, 4),
@@ -7351,7 +7064,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 301,
-                    CustomerId = 31,
                     ContractId = 5,
                     DateIssued = new DateTime(2049, 1, 5),
                     DueDate = new DateTime(2049, 2, 5),
@@ -7361,7 +7073,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 302,
-                    CustomerId = 12,
                     ContractId = 81,
                     DateIssued = new DateTime(2049, 2, 6),
                     DueDate = new DateTime(2049, 3, 6),
@@ -7371,7 +7082,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 303,
-                    CustomerId = 45,
                     ContractId = 24,
                     DateIssued = new DateTime(2049, 3, 7),
                     DueDate = new DateTime(2049, 4, 7),
@@ -7381,7 +7091,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 304,
-                    CustomerId = 9,
                     ContractId = 62,
                     DateIssued = new DateTime(2049, 4, 8),
                     DueDate = new DateTime(2049, 5, 8),
@@ -7391,7 +7100,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 305,
-                    CustomerId = 78,
                     ContractId = 11,
                     DateIssued = new DateTime(2049, 5, 9),
                     DueDate = new DateTime(2049, 6, 9),
@@ -7401,7 +7109,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 306,
-                    CustomerId = 36,
                     ContractId = 102,
                     DateIssued = new DateTime(2049, 6, 10),
                     DueDate = new DateTime(2049, 7, 10),
@@ -7411,7 +7118,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 307,
-                    CustomerId = 53,
                     ContractId = 39,
                     DateIssued = new DateTime(2049, 7, 11),
                     DueDate = new DateTime(2049, 8, 11),
@@ -7421,7 +7127,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 308,
-                    CustomerId = 23,
                     ContractId = 77,
                     DateIssued = new DateTime(2049, 8, 12),
                     DueDate = new DateTime(2049, 9, 12),
@@ -7431,7 +7136,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 309,
-                    CustomerId = 67,
                     ContractId = 16,
                     DateIssued = new DateTime(2049, 9, 13),
                     DueDate = new DateTime(2049, 10, 13),
@@ -7441,7 +7145,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 310,
-                    CustomerId = 19,
                     ContractId = 95,
                     DateIssued = new DateTime(2049, 10, 14),
                     DueDate = new DateTime(2049, 11, 14),
@@ -7451,7 +7154,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 311,
-                    CustomerId = 88,
                     ContractId = 54,
                     DateIssued = new DateTime(2049, 11, 15),
                     DueDate = new DateTime(2049, 12, 15),
@@ -7461,7 +7163,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 312,
-                    CustomerId = 16,
                     ContractId = 80,
                     DateIssued = new DateTime(2049, 12, 16),
                     DueDate = new DateTime(2050, 1, 16),
@@ -7471,7 +7172,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 313,
-                    CustomerId = 37,
                     ContractId = 34,
                     DateIssued = new DateTime(2050, 1, 17),
                     DueDate = new DateTime(2050, 2, 17),
@@ -7481,7 +7181,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 314,
-                    CustomerId = 70,
                     ContractId = 78,
                     DateIssued = new DateTime(2050, 2, 18),
                     DueDate = new DateTime(2050, 3, 18),
@@ -7491,7 +7190,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 315,
-                    CustomerId = 39,
                     ContractId = 41,
                     DateIssued = new DateTime(2050, 3, 19),
                     DueDate = new DateTime(2050, 4, 19),
@@ -7501,7 +7199,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 316,
-                    CustomerId = 24,
                     ContractId = 107,
                     DateIssued = new DateTime(2050, 4, 20),
                     DueDate = new DateTime(2050, 5, 20),
@@ -7511,7 +7208,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 317,
-                    CustomerId = 60,
                     ContractId = 36,
                     DateIssued = new DateTime(2050, 5, 21),
                     DueDate = new DateTime(2050, 6, 21),
@@ -7521,7 +7217,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 318,
-                    CustomerId = 34,
                     ContractId = 92,
                     DateIssued = new DateTime(2050, 6, 22),
                     DueDate = new DateTime(2050, 7, 22),
@@ -7531,7 +7226,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 319,
-                    CustomerId = 10,
                     ContractId = 65,
                     DateIssued = new DateTime(2050, 7, 23),
                     DueDate = new DateTime(2050, 8, 23),
@@ -7541,7 +7235,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 320,
-                    CustomerId = 51,
                     ContractId = 49,
                     DateIssued = new DateTime(2050, 8, 24),
                     DueDate = new DateTime(2050, 9, 24),
@@ -7551,7 +7244,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 321,
-                    CustomerId = 32,
                     ContractId = 88,
                     DateIssued = new DateTime(2050, 9, 25),
                     DueDate = new DateTime(2050, 10, 25),
@@ -7561,7 +7253,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 322,
-                    CustomerId = 42,
                     ContractId = 21,
                     DateIssued = new DateTime(2050, 10, 26),
                     DueDate = new DateTime(2050, 11, 26),
@@ -7571,7 +7262,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 323,
-                    CustomerId = 7,
                     ContractId = 72,
                     DateIssued = new DateTime(2050, 11, 27),
                     DueDate = new DateTime(2050, 12, 27),
@@ -7581,7 +7271,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 324,
-                    CustomerId = 66,
                     ContractId = 16,
                     DateIssued = new DateTime(2050, 12, 28),
                     DueDate = new DateTime(2051, 1, 28),
@@ -7591,17 +7280,15 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 325,
-                    CustomerId = 44,
                     ContractId = 43,
                     DateIssued = new DateTime(2051, 1, 29),
-                    DueDate = new DateTime(2051, 2, 29),
+                    DueDate = new DateTime(2051, 2, 28),
                     TotalAmount = 30900.00M,
                     IsPaid = true
                 },
                 new Invoice
                 {
                     Id = 326,
-                    CustomerId = 63,
                     ContractId = 84,
                     DateIssued = new DateTime(2051, 2, 1),
                     DueDate = new DateTime(2051, 3, 1),
@@ -7611,7 +7298,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 327,
-                    CustomerId = 26,
                     ContractId = 3,
                     DateIssued = new DateTime(2051, 3, 2),
                     DueDate = new DateTime(2051, 4, 2),
@@ -7621,7 +7307,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 328,
-                    CustomerId = 79,
                     ContractId = 70,
                     DateIssued = new DateTime(2051, 4, 3),
                     DueDate = new DateTime(2051, 5, 3),
@@ -7631,7 +7316,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 329,
-                    CustomerId = 54,
                     ContractId = 9,
                     DateIssued = new DateTime(2051, 5, 4),
                     DueDate = new DateTime(2051, 6, 4),
@@ -7641,7 +7325,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 330,
-                    CustomerId = 14,
                     ContractId = 91,
                     DateIssued = new DateTime(2051, 6, 5),
                     DueDate = new DateTime(2051, 7, 5),
@@ -7651,7 +7334,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 331,
-                    CustomerId = 20,
                     ContractId = 58,
                     DateIssued = new DateTime(2051, 7, 6),
                     DueDate = new DateTime(2051, 8, 6),
@@ -7661,7 +7343,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 332,
-                    CustomerId = 81,
                     ContractId = 31,
                     DateIssued = new DateTime(2051, 8, 7),
                     DueDate = new DateTime(2051, 9, 7),
@@ -7671,7 +7352,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 333,
-                    CustomerId = 49,
                     ContractId = 17,
                     DateIssued = new DateTime(2051, 9, 8),
                     DueDate = new DateTime(2051, 10, 8),
@@ -7681,7 +7361,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 334,
-                    CustomerId = 11,
                     ContractId = 74,
                     DateIssued = new DateTime(2051, 10, 9),
                     DueDate = new DateTime(2051, 11, 9),
@@ -7691,7 +7370,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 335,
-                    CustomerId = 22,
                     ContractId = 6,
                     DateIssued = new DateTime(2051, 11, 10),
                     DueDate = new DateTime(2051, 12, 10),
@@ -7701,7 +7379,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 336,
-                    CustomerId = 38,
                     ContractId = 64,
                     DateIssued = new DateTime(2051, 12, 11),
                     DueDate = new DateTime(2052, 1, 11),
@@ -7711,7 +7388,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 337,
-                    CustomerId = 8,
                     ContractId = 73,
                     DateIssued = new DateTime(2052, 1, 12),
                     DueDate = new DateTime(2052, 2, 12),
@@ -7721,7 +7397,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 338,
-                    CustomerId = 87,
                     ContractId = 55,
                     DateIssued = new DateTime(2052, 2, 13),
                     DueDate = new DateTime(2052, 3, 13),
@@ -7731,7 +7406,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 339,
-                    CustomerId = 75,
                     ContractId = 97,
                     DateIssued = new DateTime(2052, 3, 14),
                     DueDate = new DateTime(2052, 4, 14),
@@ -7741,7 +7415,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 340,
-                    CustomerId = 65,
                     ContractId = 30,
                     DateIssued = new DateTime(2052, 4, 15),
                     DueDate = new DateTime(2052, 5, 15),
@@ -7751,7 +7424,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 341,
-                    CustomerId = 1,
                     ContractId = 15,
                     DateIssued = new DateTime(2052, 5, 16),
                     DueDate = new DateTime(2052, 6, 16),
@@ -7761,7 +7433,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 342,
-                    CustomerId = 30,
                     ContractId = 50,
                     DateIssued = new DateTime(2052, 6, 17),
                     DueDate = new DateTime(2052, 7, 17),
@@ -7771,7 +7442,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 343,
-                    CustomerId = 33,
                     ContractId = 44,
                     DateIssued = new DateTime(2052, 7, 18),
                     DueDate = new DateTime(2052, 8, 18),
@@ -7781,7 +7451,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 344,
-                    CustomerId = 61,
                     ContractId = 66,
                     DateIssued = new DateTime(2052, 8, 19),
                     DueDate = new DateTime(2052, 9, 19),
@@ -7791,7 +7460,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 345,
-                    CustomerId = 48,
                     ContractId = 8,
                     DateIssued = new DateTime(2052, 9, 20),
                     DueDate = new DateTime(2052, 10, 20),
@@ -7801,7 +7469,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 346,
-                    CustomerId = 3,
                     ContractId = 23,
                     DateIssued = new DateTime(2052, 10, 21),
                     DueDate = new DateTime(2052, 11, 21),
@@ -7811,7 +7478,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 347,
-                    CustomerId = 71,
                     ContractId = 60,
                     DateIssued = new DateTime(2052, 11, 22),
                     DueDate = new DateTime(2052, 12, 22),
@@ -7821,7 +7487,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 348,
-                    CustomerId = 64,
                     ContractId = 48,
                     DateIssued = new DateTime(2052, 12, 23),
                     DueDate = new DateTime(2053, 1, 23),
@@ -7831,7 +7496,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 349,
-                    CustomerId = 52,
                     ContractId = 76,
                     DateIssued = new DateTime(2053, 1, 24),
                     DueDate = new DateTime(2053, 2, 24),
@@ -7841,7 +7505,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 350,
-                    CustomerId = 43,
                     ContractId = 99,
                     DateIssued = new DateTime(2053, 2, 25),
                     DueDate = new DateTime(2053, 3, 25),
@@ -7851,7 +7514,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 351,
-                    CustomerId = 15,
                     ContractId = 37,
                     DateIssued = new DateTime(2053, 3, 26),
                     DueDate = new DateTime(2053, 4, 26),
@@ -7861,7 +7523,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 352,
-                    CustomerId = 59,
                     ContractId = 90,
                     DateIssued = new DateTime(2053, 4, 27),
                     DueDate = new DateTime(2053, 5, 27),
@@ -7871,7 +7532,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 353,
-                    CustomerId = 77,
                     ContractId = 86,
                     DateIssued = new DateTime(2053, 5, 28),
                     DueDate = new DateTime(2053, 6, 28),
@@ -7881,7 +7541,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 354,
-                    CustomerId = 29,
                     ContractId = 11,
                     DateIssued = new DateTime(2053, 6, 29),
                     DueDate = new DateTime(2053, 7, 29),
@@ -7891,7 +7550,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 355,
-                    CustomerId = 76,
                     ContractId = 3,
                     DateIssued = new DateTime(2053, 7, 30),
                     DueDate = new DateTime(2053, 8, 30),
@@ -7901,7 +7559,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 356,
-                    CustomerId = 13,
                     ContractId = 5,
                     DateIssued = new DateTime(2053, 8, 31),
                     DueDate = new DateTime(2053, 9, 30),
@@ -7911,7 +7568,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 357,
-                    CustomerId = 72,
                     ContractId = 22,
                     DateIssued = new DateTime(2053, 9, 1),
                     DueDate = new DateTime(2053, 10, 1),
@@ -7921,7 +7577,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 358,
-                    CustomerId = 80,
                     ContractId = 68,
                     DateIssued = new DateTime(2053, 10, 2),
                     DueDate = new DateTime(2053, 11, 2),
@@ -7931,7 +7586,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 359,
-                    CustomerId = 35,
                     ContractId = 80,
                     DateIssued = new DateTime(2053, 11, 3),
                     DueDate = new DateTime(2053, 12, 3),
@@ -7941,7 +7595,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 360,
-                    CustomerId = 86,
                     ContractId = 17,
                     DateIssued = new DateTime(2053, 12, 4),
                     DueDate = new DateTime(2054, 1, 4),
@@ -7951,7 +7604,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 361,
-                    CustomerId = 4,
                     ContractId = 1,
                     DateIssued = new DateTime(2054, 1, 5),
                     DueDate = new DateTime(2054, 2, 5),
@@ -7961,7 +7613,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 362,
-                    CustomerId = 41,
                     ContractId = 2,
                     DateIssued = new DateTime(2054, 2, 6),
                     DueDate = new DateTime(2054, 3, 6),
@@ -7971,7 +7622,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 363,
-                    CustomerId = 14,
                     ContractId = 3,
                     DateIssued = new DateTime(2054, 3, 7),
                     DueDate = new DateTime(2054, 4, 7),
@@ -7981,7 +7631,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 364,
-                    CustomerId = 9,
                     ContractId = 4,
                     DateIssued = new DateTime(2054, 4, 8),
                     DueDate = new DateTime(2054, 5, 8),
@@ -7991,7 +7640,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 365,
-                    CustomerId = 27,
                     ContractId = 5,
                     DateIssued = new DateTime(2054, 5, 9),
                     DueDate = new DateTime(2054, 6, 9),
@@ -8001,7 +7649,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 366,
-                    CustomerId = 25,
                     ContractId = 14,
                     DateIssued = new DateTime(2054, 6, 10),
                     DueDate = new DateTime(2054, 7, 10),
@@ -8011,7 +7658,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 367,
-                    CustomerId = 46,
                     ContractId = 19,
                     DateIssued = new DateTime(2054, 7, 11),
                     DueDate = new DateTime(2054, 8, 11),
@@ -8021,7 +7667,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 368,
-                    CustomerId = 7,
                     ContractId = 7,
                     DateIssued = new DateTime(2054, 8, 12),
                     DueDate = new DateTime(2054, 9, 12),
@@ -8031,7 +7676,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 369,
-                    CustomerId = 17,
                     ContractId = 15,
                     DateIssued = new DateTime(2054, 9, 13),
                     DueDate = new DateTime(2054, 10, 13),
@@ -8041,7 +7685,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 370,
-                    CustomerId = 73,
                     ContractId = 36,
                     DateIssued = new DateTime(2054, 10, 14),
                     DueDate = new DateTime(2054, 11, 14),
@@ -8051,7 +7694,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 371,
-                    CustomerId = 18,
                     ContractId = 12,
                     DateIssued = new DateTime(2054, 11, 15),
                     DueDate = new DateTime(2054, 12, 15),
@@ -8061,7 +7703,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 372,
-                    CustomerId = 5,
                     ContractId = 26,
                     DateIssued = new DateTime(2054, 12, 16),
                     DueDate = new DateTime(2055, 1, 16),
@@ -8071,7 +7712,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 373,
-                    CustomerId = 59,
                     ContractId = 28,
                     DateIssued = new DateTime(2055, 1, 17),
                     DueDate = new DateTime(2055, 2, 17),
@@ -8081,7 +7721,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 374,
-                    CustomerId = 68,
                     ContractId = 10,
                     DateIssued = new DateTime(2055, 2, 18),
                     DueDate = new DateTime(2055, 3, 18),
@@ -8091,7 +7730,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 375,
-                    CustomerId = 11,
                     ContractId = 35,
                     DateIssued = new DateTime(2055, 3, 19),
                     DueDate = new DateTime(2055, 4, 19),
@@ -8101,7 +7739,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 376,
-                    CustomerId = 41,
                     ContractId = 55,
                     DateIssued = new DateTime(2055, 4, 20),
                     DueDate = new DateTime(2055, 5, 20),
@@ -8111,7 +7748,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 377,
-                    CustomerId = 30,
                     ContractId = 8,
                     DateIssued = new DateTime(2055, 5, 21),
                     DueDate = new DateTime(2055, 6, 21),
@@ -8121,7 +7757,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 378,
-                    CustomerId = 20,
                     ContractId = 14,
                     DateIssued = new DateTime(2055, 6, 22),
                     DueDate = new DateTime(2055, 7, 22),
@@ -8131,7 +7766,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 379,
-                    CustomerId = 39,
                     ContractId = 17,
                     DateIssued = new DateTime(2055, 7, 23),
                     DueDate = new DateTime(2055, 8, 23),
@@ -8141,7 +7775,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 380,
-                    CustomerId = 61,
                     ContractId = 19,
                     DateIssued = new DateTime(2055, 8, 24),
                     DueDate = new DateTime(2055, 9, 24),
@@ -8151,7 +7784,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 381,
-                    CustomerId = 88,
                     ContractId = 27,
                     DateIssued = new DateTime(2055, 9, 25),
                     DueDate = new DateTime(2055, 10, 25),
@@ -8161,7 +7793,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 382,
-                    CustomerId = 49,
                     ContractId = 32,
                     DateIssued = new DateTime(2055, 10, 26),
                     DueDate = new DateTime(2055, 11, 26),
@@ -8171,7 +7802,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 383,
-                    CustomerId = 74,
                     ContractId = 42,
                     DateIssued = new DateTime(2055, 11, 27),
                     DueDate = new DateTime(2055, 12, 27),
@@ -8181,7 +7811,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 384,
-                    CustomerId = 66,
                     ContractId = 57,
                     DateIssued = new DateTime(2055, 12, 28),
                     DueDate = new DateTime(2056, 1, 28),
@@ -8191,7 +7820,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 385,
-                    CustomerId = 12,
                     ContractId = 11,
                     DateIssued = new DateTime(2056, 1, 29),
                     DueDate = new DateTime(2056, 2, 29),
@@ -8201,7 +7829,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 386,
-                    CustomerId = 63,
                     ContractId = 3,
                     DateIssued = new DateTime(2056, 2, 1),
                     DueDate = new DateTime(2056, 3, 1),
@@ -8211,7 +7838,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 387,
-                    CustomerId = 83,
                     ContractId = 4,
                     DateIssued = new DateTime(2056, 3, 2),
                     DueDate = new DateTime(2056, 4, 2),
@@ -8221,7 +7847,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 388,
-                    CustomerId = 53,
                     ContractId = 19,
                     DateIssued = new DateTime(2056, 4, 3),
                     DueDate = new DateTime(2056, 5, 3),
@@ -8231,7 +7856,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 389,
-                    CustomerId = 1,
                     ContractId = 22,
                     DateIssued = new DateTime(2056, 5, 4),
                     DueDate = new DateTime(2056, 6, 4),
@@ -8241,7 +7865,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 390,
-                    CustomerId = 36,
                     ContractId = 38,
                     DateIssued = new DateTime(2056, 6, 5),
                     DueDate = new DateTime(2056, 7, 5),
@@ -8251,7 +7874,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 391,
-                    CustomerId = 47,
                     ContractId = 12,
                     DateIssued = new DateTime(2056, 7, 6),
                     DueDate = new DateTime(2056, 8, 6),
@@ -8261,7 +7883,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 392,
-                    CustomerId = 19,
                     ContractId = 6,
                     DateIssued = new DateTime(2056, 8, 7),
                     DueDate = new DateTime(2056, 9, 7),
@@ -8271,7 +7892,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 393,
-                    CustomerId = 18,
                     ContractId = 26,
                     DateIssued = new DateTime(2056, 9, 8),
                     DueDate = new DateTime(2056, 10, 8),
@@ -8281,7 +7901,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 394,
-                    CustomerId = 73,
                     ContractId = 18,
                     DateIssued = new DateTime(2056, 10, 9),
                     DueDate = new DateTime(2056, 11, 9),
@@ -8291,7 +7910,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 395,
-                    CustomerId = 24,
                     ContractId = 1,
                     DateIssued = new DateTime(2056, 11, 10),
                     DueDate = new DateTime(2056, 12, 10),
@@ -8301,7 +7919,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 396,
-                    CustomerId = 29,
                     ContractId = 3,
                     DateIssued = new DateTime(2056, 12, 11),
                     DueDate = new DateTime(2057, 1, 11),
@@ -8311,7 +7928,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 397,
-                    CustomerId = 42,
                     ContractId = 7,
                     DateIssued = new DateTime(2057, 1, 12),
                     DueDate = new DateTime(2057, 2, 12),
@@ -8321,7 +7937,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 398,
-                    CustomerId = 34,
                     ContractId = 9,
                     DateIssued = new DateTime(2057, 2, 13),
                     DueDate = new DateTime(2057, 3, 13),
@@ -8331,7 +7946,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 399,
-                    CustomerId = 76,
                     ContractId = 11,
                     DateIssued = new DateTime(2057, 3, 14),
                     DueDate = new DateTime(2057, 4, 14),
@@ -8341,7 +7955,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 400,
-                    CustomerId = 88,
                     ContractId = 14,
                     DateIssued = new DateTime(2057, 4, 15),
                     DueDate = new DateTime(2057, 5, 15),
@@ -8351,7 +7964,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 401,
-                    CustomerId = 2,
                     ContractId = 5,
                     DateIssued = new DateTime(2057, 5, 16),
                     DueDate = new DateTime(2057, 6, 16),
@@ -8361,7 +7973,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 402,
-                    CustomerId = 27,
                     ContractId = 8,
                     DateIssued = new DateTime(2057, 6, 17),
                     DueDate = new DateTime(2057, 7, 17),
@@ -8371,7 +7982,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 403,
-                    CustomerId = 54,
                     ContractId = 12,
                     DateIssued = new DateTime(2057, 7, 18),
                     DueDate = new DateTime(2057, 8, 18),
@@ -8381,7 +7991,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 404,
-                    CustomerId = 8,
                     ContractId = 6,
                     DateIssued = new DateTime(2057, 8, 19),
                     DueDate = new DateTime(2057, 9, 19),
@@ -8391,7 +8000,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 405,
-                    CustomerId = 13,
                     ContractId = 10,
                     DateIssued = new DateTime(2057, 9, 20),
                     DueDate = new DateTime(2057, 10, 20),
@@ -8401,7 +8009,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 406,
-                    CustomerId = 37,
                     ContractId = 15,
                     DateIssued = new DateTime(2057, 10, 21),
                     DueDate = new DateTime(2057, 11, 21),
@@ -8411,7 +8018,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 407,
-                    CustomerId = 61,
                     ContractId = 7,
                     DateIssued = new DateTime(2057, 11, 22),
                     DueDate = new DateTime(2057, 12, 22),
@@ -8421,7 +8027,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 408,
-                    CustomerId = 9,
                     ContractId = 4,
                     DateIssued = new DateTime(2057, 12, 23),
                     DueDate = new DateTime(2058, 1, 23),
@@ -8431,7 +8036,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 409,
-                    CustomerId = 16,
                     ContractId = 3,
                     DateIssued = new DateTime(2058, 1, 24),
                     DueDate = new DateTime(2058, 2, 24),
@@ -8441,7 +8045,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 410,
-                    CustomerId = 22,
                     ContractId = 2,
                     DateIssued = new DateTime(2058, 2, 25),
                     DueDate = new DateTime(2058, 3, 25),
@@ -8451,7 +8054,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 411,
-                    CustomerId = 70,
                     ContractId = 14,
                     DateIssued = new DateTime(2058, 3, 26),
                     DueDate = new DateTime(2058, 4, 26),
@@ -8461,7 +8063,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 412,
-                    CustomerId = 47,
                     ContractId = 11,
                     DateIssued = new DateTime(2058, 4, 27),
                     DueDate = new DateTime(2058, 5, 27),
@@ -8471,7 +8072,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 413,
-                    CustomerId = 78,
                     ContractId = 5,
                     DateIssued = new DateTime(2058, 5, 28),
                     DueDate = new DateTime(2058, 6, 28),
@@ -8481,7 +8081,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 414,
-                    CustomerId = 56,
                     ContractId = 8,
                     DateIssued = new DateTime(2058, 6, 29),
                     DueDate = new DateTime(2058, 7, 29),
@@ -8491,7 +8090,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 415,
-                    CustomerId = 34,
                     ContractId = 20,
                     DateIssued = new DateTime(2058, 7, 30),
                     DueDate = new DateTime(2058, 8, 30),
@@ -8501,7 +8099,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 416,
-                    CustomerId = 12,
                     ContractId = 22,
                     DateIssued = new DateTime(2058, 8, 31),
                     DueDate = new DateTime(2058, 9, 30),
@@ -8511,7 +8108,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 417,
-                    CustomerId = 48,
                     ContractId = 25,
                     DateIssued = new DateTime(2058, 9, 1),
                     DueDate = new DateTime(2058, 10, 1),
@@ -8521,7 +8117,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 418,
-                    CustomerId = 85,
                     ContractId = 6,
                     DateIssued = new DateTime(2058, 10, 2),
                     DueDate = new DateTime(2058, 11, 2),
@@ -8531,7 +8126,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 419,
-                    CustomerId = 63,
                     ContractId = 30,
                     DateIssued = new DateTime(2058, 11, 3),
                     DueDate = new DateTime(2058, 12, 3),
@@ -8541,7 +8135,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 420,
-                    CustomerId = 40,
                     ContractId = 18,
                     DateIssued = new DateTime(2058, 12, 4),
                     DueDate = new DateTime(2059, 1, 4),
@@ -8551,7 +8144,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 421,
-                    CustomerId = 26,
                     ContractId = 3,
                     DateIssued = new DateTime(2059, 1, 5),
                     DueDate = new DateTime(2059, 2, 5),
@@ -8561,7 +8153,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 422,
-                    CustomerId = 35,
                     ContractId = 8,
                     DateIssued = new DateTime(2059, 2, 6),
                     DueDate = new DateTime(2059, 3, 6),
@@ -8571,7 +8162,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 423,
-                    CustomerId = 71,
                     ContractId = 15,
                     DateIssued = new DateTime(2059, 3, 7),
                     DueDate = new DateTime(2059, 4, 7),
@@ -8581,7 +8171,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 424,
-                    CustomerId = 29,
                     ContractId = 12,
                     DateIssued = new DateTime(2059, 4, 8),
                     DueDate = new DateTime(2059, 5, 8),
@@ -8591,7 +8180,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 425,
-                    CustomerId = 88,
                     ContractId = 20,
                     DateIssued = new DateTime(2059, 5, 9),
                     DueDate = new DateTime(2059, 6, 9),
@@ -8601,7 +8189,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 426,
-                    CustomerId = 14,
                     ContractId = 4,
                     DateIssued = new DateTime(2059, 6, 10),
                     DueDate = new DateTime(2059, 7, 10),
@@ -8611,7 +8198,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 427,
-                    CustomerId = 41,
                     ContractId = 9,
                     DateIssued = new DateTime(2059, 7, 11),
                     DueDate = new DateTime(2059, 8, 11),
@@ -8621,7 +8207,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 428,
-                    CustomerId = 55,
                     ContractId = 18,
                     DateIssued = new DateTime(2059, 8, 12),
                     DueDate = new DateTime(2059, 9, 12),
@@ -8631,7 +8216,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 429,
-                    CustomerId = 67,
                     ContractId = 5,
                     DateIssued = new DateTime(2059, 9, 13),
                     DueDate = new DateTime(2059, 10, 13),
@@ -8641,7 +8225,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 430,
-                    CustomerId = 2,
                     ContractId = 3,
                     DateIssued = new DateTime(2059, 10, 14),
                     DueDate = new DateTime(2059, 11, 14),
@@ -8651,7 +8234,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 431,
-                    CustomerId = 46,
                     ContractId = 6,
                     DateIssued = new DateTime(2059, 11, 15),
                     DueDate = new DateTime(2059, 12, 15),
@@ -8661,7 +8243,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 432,
-                    CustomerId = 31,
                     ContractId = 11,
                     DateIssued = new DateTime(2059, 12, 16),
                     DueDate = new DateTime(2060, 1, 16),
@@ -8671,7 +8252,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 433,
-                    CustomerId = 36,
                     ContractId = 10,
                     DateIssued = new DateTime(2060, 1, 17),
                     DueDate = new DateTime(2060, 2, 17),
@@ -8681,7 +8261,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 434,
-                    CustomerId = 58,
                     ContractId = 15,
                     DateIssued = new DateTime(2060, 2, 18),
                     DueDate = new DateTime(2060, 3, 18),
@@ -8691,7 +8270,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 435,
-                    CustomerId = 12,
                     ContractId = 12,
                     DateIssued = new DateTime(2060, 3, 19),
                     DueDate = new DateTime(2060, 4, 19),
@@ -8701,7 +8279,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 436,
-                    CustomerId = 70,
                     ContractId = 4,
                     DateIssued = new DateTime(2060, 4, 20),
                     DueDate = new DateTime(2060, 5, 20),
@@ -8711,7 +8288,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 437,
-                    CustomerId = 74,
                     ContractId = 9,
                     DateIssued = new DateTime(2060, 5, 21),
                     DueDate = new DateTime(2060, 6, 21),
@@ -8721,7 +8297,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 438,
-                    CustomerId = 69,
                     ContractId = 3,
                     DateIssued = new DateTime(2060, 6, 22),
                     DueDate = new DateTime(2060, 7, 22),
@@ -8731,7 +8306,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 439,
-                    CustomerId = 10,
                     ContractId = 6,
                     DateIssued = new DateTime(2060, 7, 23),
                     DueDate = new DateTime(2060, 8, 23),
@@ -8741,7 +8315,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 440,
-                    CustomerId = 19,
                     ContractId = 14,
                     DateIssued = new DateTime(2060, 8, 24),
                     DueDate = new DateTime(2060, 9, 24),
@@ -8751,7 +8324,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 441,
-                    CustomerId = 15,
                     ContractId = 7,
                     DateIssued = new DateTime(2060, 9, 25),
                     DueDate = new DateTime(2060, 10, 25),
@@ -8761,7 +8333,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 442,
-                    CustomerId = 82,
                     ContractId = 2,
                     DateIssued = new DateTime(2060, 10, 26),
                     DueDate = new DateTime(2060, 11, 26),
@@ -8771,7 +8342,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 443,
-                    CustomerId = 30,
                     ContractId = 1,
                     DateIssued = new DateTime(2060, 11, 27),
                     DueDate = new DateTime(2060, 12, 27),
@@ -8781,7 +8351,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 444,
-                    CustomerId = 64,
                     ContractId = 3,
                     DateIssued = new DateTime(2060, 12, 28),
                     DueDate = new DateTime(2061, 1, 28),
@@ -8791,7 +8360,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 445,
-                    CustomerId = 87,
                     ContractId = 5,
                     DateIssued = new DateTime(2061, 1, 29),
                     DueDate = new DateTime(2061, 2, 28),
@@ -8801,7 +8369,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 446,
-                    CustomerId = 4,
                     ContractId = 10,
                     DateIssued = new DateTime(2061, 2, 1),
                     DueDate = new DateTime(2061, 3, 1),
@@ -8811,7 +8378,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 447,
-                    CustomerId = 39,
                     ContractId = 12,
                     DateIssued = new DateTime(2061, 3, 2),
                     DueDate = new DateTime(2061, 4, 2),
@@ -8821,7 +8387,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 448,
-                    CustomerId = 51,
                     ContractId = 18,
                     DateIssued = new DateTime(2061, 4, 3),
                     DueDate = new DateTime(2061, 5, 3),
@@ -8831,7 +8396,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 449,
-                    CustomerId = 18,
                     ContractId = 20,
                     DateIssued = new DateTime(2061, 5, 4),
                     DueDate = new DateTime(2061, 6, 4),
@@ -8841,7 +8405,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 450,
-                    CustomerId = 72,
                     ContractId = 14,
                     DateIssued = new DateTime(2061, 6, 5),
                     DueDate = new DateTime(2061, 7, 5),
@@ -8851,7 +8414,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 451,
-                    CustomerId = 44,
                     ContractId = 8,
                     DateIssued = new DateTime(2061, 7, 6),
                     DueDate = new DateTime(2061, 8, 6),
@@ -8861,7 +8423,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 452,
-                    CustomerId = 7,
                     ContractId = 16,
                     DateIssued = new DateTime(2061, 8, 7),
                     DueDate = new DateTime(2061, 9, 7),
@@ -8871,7 +8432,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 453,
-                    CustomerId = 60,
                     ContractId = 11,
                     DateIssued = new DateTime(2061, 9, 8),
                     DueDate = new DateTime(2061, 10, 8),
@@ -8881,7 +8441,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 454,
-                    CustomerId = 1,
                     ContractId = 17,
                     DateIssued = new DateTime(2061, 10, 9),
                     DueDate = new DateTime(2061, 11, 9),
@@ -8891,7 +8450,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 455,
-                    CustomerId = 26,
                     ContractId = 3,
                     DateIssued = new DateTime(2061, 11, 10),
                     DueDate = new DateTime(2061, 12, 10),
@@ -8901,7 +8459,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 456,
-                    CustomerId = 57,
                     ContractId = 15,
                     DateIssued = new DateTime(2061, 12, 11),
                     DueDate = new DateTime(2062, 1, 11),
@@ -8911,7 +8468,6 @@ namespace E3_Barroc_Intens.Data
                 new Invoice
                 {
                     Id = 457,
-                    CustomerId = 75,
                     ContractId = 9,
                     DateIssued = new DateTime(2062, 1, 12),
                     DueDate = new DateTime(2062, 2, 12),
@@ -9304,7 +8860,7 @@ namespace E3_Barroc_Intens.Data
                     DueDate = new DateTime(2065, 9, 24),
                     TotalAmount = 48480.00M,
                     IsPaid = false
-                } */
+                }
             );
 
             modelBuilder.Entity<IncendentReport>().HasData(
