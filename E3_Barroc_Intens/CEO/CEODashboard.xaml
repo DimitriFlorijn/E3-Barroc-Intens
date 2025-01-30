@@ -15,8 +15,8 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center">
-            <TextBlock Padding="0,5,0,0">CEO Dashboard</TextBlock>
+        <StackPanel HorizontalAlignment="Center">
+            <TextBlock Padding="0,5,0,0" FontSize="24" FontWeight="Bold">CEO Dashboard</TextBlock>
             <TextBlock Padding="5,5,0,0">vanaf hier kunt u naar alle afdeling</TextBlock>
         </StackPanel>
     </Grid>
