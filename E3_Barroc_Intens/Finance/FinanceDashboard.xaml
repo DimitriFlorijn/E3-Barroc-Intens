@@ -13,15 +13,84 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
-            <TextBlock Text="Finance Dashboard" FontSize="24" FontWeight="Bold" />
+
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    Margin="10">
+            <TextBlock Text="Finance Dashboard"
+                       FontSize="24"
+                       FontWeight="Bold" />
         </StackPanel>
-        
-        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button Style="{StaticResource ButtonStyle}" Margin="5,16,5,0" x:Name="AddInvoiceButton" Content="Facatuur aanmaken" Click="AddInvoiceButton_Click"/>
-            <Button Style="{StaticResource ButtonStyle}" Margin="5,16,5,0" x:Name="LookInvoiceButton" Content="Facatuur inzien" Click="LookInvoiceButton_Click"/>
-        </StackPanel>
-        
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0">
+                <Button Style="{StaticResource ButtonStyle}"
+                        x:Name="AddInvoiceButton"
+                        Content="Factuur aanmaken"
+                        Click="AddInvoiceButton_Click"
+                        HorizontalAlignment="Center" />
+                <TextBlock HorizontalAlignment="Center"
+                           Text="Facturen"
+                           FontSize="24"
+                           Margin="0,0,0,20" />
+            </StackPanel>
+
+            <ScrollViewer Grid.Row="1"
+                          VerticalScrollBarVisibility="Auto">
+                <ListView x:Name="InvoicesList">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Border BorderThickness="1"
+                                    BorderBrush="Gray"
+                                    CornerRadius="5"
+                                    Padding="10"
+                                    Margin="5">
+                                <StackPanel>
+                                    <TextBlock Text="Factuur ID:"
+                                               FontWeight="Bold" />
+                                    <TextBlock Text="{Binding Id}"
+                                               FontSize="14" />
+
+                                    <TextBlock Text="Customer Name:"
+                                               FontWeight="Bold" />
+                                    <TextBlock Text="{Binding Contract.Customer.Name}"
+                                               FontSize="14" />
+
+                                    <TextBlock Text="Contract ID:"
+                                               FontWeight="Bold" />
+                                    <TextBlock Text="{Binding ContractId}"
+                                               FontSize="14" />
+
+                                    <TextBlock Text="Date Issued:"
+                                               FontWeight="Bold" />
+                                    <TextBlock Text="{Binding DateIssued}"
+                                               FontSize="14" />
+
+                                    <TextBlock Text="Due Date:"
+                                               FontWeight="Bold" />
+                                    <TextBlock Text="{Binding DueDate}"
+                                               FontSize="14" />
+
+                                    <TextBlock Text="Total Amount:"
+                                               FontWeight="Bold" />
+                                    <TextBlock Text="{Binding TotalAmount}"
+                                               FontSize="14" />
+
+                                    <TextBlock Text="Is Paid:"
+                                               FontWeight="Bold" />
+                                    <TextBlock Text="{Binding IsPaid}"
+                                               FontSize="14" />
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollViewer>
+        </Grid>
     </Grid>
 </Page>

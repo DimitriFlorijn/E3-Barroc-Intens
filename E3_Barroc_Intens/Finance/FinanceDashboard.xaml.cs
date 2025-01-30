@@ -1,3 +1,5 @@
+using E3_Barroc_Intens.Data;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
@@ -20,18 +22,25 @@ namespace E3_Barroc_Intens
         public FinanceDashboard()
         {
             this.InitializeComponent();
+            LoadInvoices();
         }
+
         private void AddInvoiceButton_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(Finance.AddInvoice));
         }
-        private void FinanceDashboardButton_Click(object sender, RoutedEventArgs e)
+
+        private void LoadInvoices()
         {
-            Frame.Navigate(typeof(FinanceDashboard));
-        }
-        private void LookInvoiceButton_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(Finance.LookInvoice));
+            using (var db = new AppDbContext())
+            {
+                var invoices = db.Invoices
+                    .Include(i => i.Contract)
+                    .ThenInclude(c => c.Customer)
+                    .ToList();
+
+                InvoicesList.ItemsSource = invoices;
+            }
         }
     }
 }
