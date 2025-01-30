@@ -397,47 +397,228 @@ namespace E3_Barroc_Intens.Data
 
 
             modelBuilder.Entity<Product>().HasData(
-                new Product
-                {
-                    Id = 1,
-                    Name = "Barroc Intens Italian Light",
-                    Description = "S234FREKT",
-                    Type = "Koffieautomaat",
-                    Price = 499.00M,
-                    InstallationCost = 289.00M,
-                    BrandId = 1,
-                },
-                new Product
-                {
-                    Id = 2,
-                    Name = "Barroc Intens Italian",
-                    Description = "S234KNDPF",
-                    Type = "Koffieautomaat",
-                    Price = 599.00M,
-                    InstallationCost = 289.00M,
-                    BrandId = 1,
-                },
-                new Product
-                {
-                    Id = 3,
-                    Name = "Barroc Intens Italian Deluxe",
-                    Description = "S234NNBMV",
-                    Type = "Koffieautomaat",
-                    Price = 799.00M,
-                    InstallationCost = 375.00M,
-                    BrandId = 1,
-                },
-                new Product
-                {
-                    Id = 4,
-                    Name = "Barroc Intens Italian Deluxe Special",
-                    Description = "S234MMPLA",
-                    Type = "Koffieautomaat",
-                    Price = 999.00M,
-                    InstallationCost = 375.00M,
-                    BrandId = 1,
-                }
-            );
+            new Product
+            {
+                Id = 1,
+                Name = "Barroc Intens Italian Light",
+                Description = "S234FREKT",
+                Type = "Koffieautomaat",
+                Price = 499.00M,
+                InstallationCost = 289.00M,
+                BrandId = 1,
+            },
+            new Product
+            {
+                Id = 2,
+                Name = "Barroc Intens Italian",
+                Description = "S234KNDPF",
+                Type = "Koffieautomaat",
+                Price = 599.00M,
+                InstallationCost = 289.00M,
+                BrandId = 1,
+            },
+            new Product
+            {
+                Id = 3,
+                Name = "Barroc Intens Italian Deluxe",
+                Description = "S234NNBMV",
+                Type = "Koffieautomaat",
+                Price = 799.00M,
+                InstallationCost = 375.00M,
+                BrandId = 1,
+            },
+            new Product
+            {
+                Id = 4,
+                Name = "Barroc Intens Italian Deluxe Special",
+                Description = "S234MMPLA",
+                Type = "Koffieautomaat",
+                Price = 999.00M,
+                InstallationCost = 375.00M,
+                BrandId = 1,
+            },
+            new Product
+            {
+                Id = 5,
+                Name = "Keurig BrewMaster",
+                Description = "K1231KJDE",
+                Type = "Koffiemachine",
+                Price = 349.00M,
+                InstallationCost = 150.00M,
+                BrandId = 2,
+            },
+            new Product
+            {
+                Id = 6,
+                Name = "Keurig Pro Deluxe",
+                Description = "K4567DFGH",
+                Type = "Koffiemachine",
+                Price = 449.00M,
+                InstallationCost = 150.00M,
+                BrandId = 2,
+            },
+            new Product
+            {
+                Id = 7,
+                Name = "Mighty Fresh Espresso Pro",
+                Description = "M987GHTR",
+                Type = "Espressomachine",
+                Price = 599.00M,
+                InstallationCost = 249.00M,
+                BrandId = 3,
+            },
+            new Product
+            {
+                Id = 8,
+                Name = "Mighty Fresh Cappuccino Master",
+                Description = "M654KHTW",
+                Type = "Espressomachine",
+                Price = 699.00M,
+                InstallationCost = 249.00M,
+                BrandId = 3,
+            },
+            new Product
+            {
+                Id = 9,
+                Name = "EcoPure Green Brew",
+                Description = "E234TGHJ",
+                Type = "Koffieautomaat",
+                Price = 399.00M,
+                InstallationCost = 189.00M,
+                BrandId = 4,
+            },
+            new Product
+            {
+                Id = 10,
+                Name = "EcoPure Pure Espresso",
+                Description = "E453DFGH",
+                Type = "Espressomachine",
+                Price = 499.00M,
+                InstallationCost = 189.00M,
+                BrandId = 4,
+            },
+            new Product
+            {
+                Id = 11,
+                Name = "Classic Choice BrewMaster",
+                Description = "C765YHJN",
+                Type = "Koffiemachine",
+                Price = 259.00M,
+                InstallationCost = 100.00M,
+                BrandId = 5,
+            },
+            new Product
+            {
+                Id = 12,
+                Name = "Classic Choice Espresso Deluxe",
+                Description = "C432BVCX",
+                Type = "Espressomachine",
+                Price = 349.00M,
+                InstallationCost = 100.00M,
+                BrandId = 5,
+            },
+            new Product
+            {
+                Id = 13,
+                Name = "Gusto Supreme Coffee Premium",
+                Description = "G8766BVC",
+                Type = "Koffieautomaat",
+                Price = 699.00M,
+                InstallationCost = 220.00M,
+                BrandId = 6,
+            },
+            new Product
+            {
+                Id = 14,
+                Name = "Gusto Supreme Espresso Maker",
+                Description = "G9876ZXCV",
+                Type = "Espressomachine",
+                Price = 799.00M,
+                InstallationCost = 220.00M,
+                BrandId = 6,
+            },
+            new Product
+            {
+                Id = 15,
+                Name = "Pure Essence Fresh Brew",
+                Description = "P876HJLM",
+                Type = "Koffiemachine",
+                Price = 299.00M,
+                InstallationCost = 150.00M,
+                BrandId = 7,
+            },
+            new Product
+            {
+                Id = 16,
+                Name = "Pure Essence Espresso Supreme",
+                Description = "P456VBGF",
+                Type = "Espressomachine",
+                Price = 399.00M,
+                InstallationCost = 150.00M,
+                BrandId = 7,
+            },
+            new Product
+            {
+                Id = 17,
+                Name = "Royal Harvest Coffee Maker",
+                Description = "R234GHJK",
+                Type = "Koffiemachine",
+                Price = 899.00M,
+                InstallationCost = 299.00M,
+                BrandId = 8,
+            },
+            new Product
+            {
+                Id = 18,
+                Name = "Royal Harvest Espresso Master",
+                Description = "R321VBGF",
+                Type = "Espressomachine",
+                Price = 999.00M,
+                InstallationCost = 299.00M,
+                BrandId = 8,
+            },
+            new Product
+            {
+                Id = 19,
+                Name = "Silver Peak Espresso Plus",
+                Description = "S234GDFT",
+                Type = "Espressomachine",
+                Price = 749.00M,
+                InstallationCost = 249.00M,
+                BrandId = 9,
+            },
+            new Product
+            {
+                Id = 20,
+                Name = "Silver Peak Coffee Deluxe",
+                Description = "S765HJKL",
+                Type = "Koffiemachine",
+                Price = 799.00M,
+                InstallationCost = 249.00M,
+                BrandId = 9,
+            },
+            new Product
+            {
+                Id = 21,
+                Name = "Sunshine Blend BrewMaster",
+                Description = "B234SDFG",
+                Type = "Koffiemachine",
+                Price = 249.00M,
+                InstallationCost = 120.00M,
+                BrandId = 10,
+            },
+            new Product
+            {
+                Id = 22,
+                Name = "Sunshine Blend Espresso Maker",
+                Description = "B456GHJK",
+                Type = "Espressomachine",
+                Price = 349.00M,
+                InstallationCost = 120.00M,
+                BrandId = 10,
+            }
+        );
+
 
             modelBuilder.Entity<Bean>().HasData(
                 new Bean
