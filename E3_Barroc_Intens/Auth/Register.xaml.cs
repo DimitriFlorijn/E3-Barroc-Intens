@@ -29,14 +29,14 @@ namespace E3_Barroc_Intens
         {
             if (string.IsNullOrWhiteSpace(email))
                 return false;
-            // email validatie met de minimum
+            // email validatie met de minimum, (gemaakt met een regex)
             string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
             return Regex.IsMatch(email, emailPattern);
         }
 
         private bool IsValidPassword(string password)
         {
-            // Wachtwoordcriteria: minstens 8 tekens, één hoofdletter, één kleine letter, één cijfer.
+            // Wachtwoordcriteria: minstens 8 tekens, één hoofdletter, één kleine letter, één cijfer. (gemaakt met een regex)
             string passwordPattern = @"^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$";
             return Regex.IsMatch(password, passwordPattern);
         }

@@ -37,7 +37,7 @@ namespace E3_Barroc_Intens.Data
             );
 
         }
-        // zie  data / app db config example 
+        // zie  data / app db config.example 
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //{
         //    optionsBuilder.UseMySql(

@@ -23,7 +23,7 @@
         <ScrollViewer Grid.Row="2">
             <StackPanel x:Name="MaintenanceListViewStackPanel">
                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <TextBlock>Incedents</TextBlock>
+                    <TextBlock FontSize="20">Incidents</TextBlock>
                 </StackPanel>
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -34,11 +34,23 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
 
-                    <TextBlock Text="Klantnaam" Grid.Column="0" TextAlignment="Center"></TextBlock>
-                    <TextBlock Text="Datum gemeld" Grid.Column="1" TextAlignment="Center"></TextBlock>
-                    <TextBlock Text="Bericht" Grid.Column="2" TextAlignment="Center"></TextBlock>
-                    <TextBlock Text="Type koffiemachine" Grid.Column="3" TextAlignment="Center"></TextBlock>
-                    <TextBlock Text="Foutmelding" Grid.Column="4" TextAlignment="Center"></TextBlock>
+                    <TextBlock Text="Klantnaam" Grid.Column="0" TextAlignment="Center" FontWeight="Bold"></TextBlock>
+                    <TextBlock Text="Datum gemeld"
+                               Grid.Column="1"
+                               TextAlignment="Center"
+                               FontWeight="Bold" />
+                    <TextBlock Text="Bericht"
+                               Grid.Column="2"
+                               TextAlignment="Center"
+                               FontWeight="Bold" />
+                    <TextBlock Text="Type koffiemachine"
+                               Grid.Column="3"
+                               TextAlignment="Center"
+                               FontWeight="Bold" />
+                    <TextBlock Text="Foutmelding"
+                               Grid.Column="4"
+                               TextAlignment="Center"
+                               FontWeight="Bold" />
                 </Grid>
                 <ListView x:Name="MaintenanceListView" IsItemClickEnabled="True" ItemClick="MaintenanceListView_ItemClick">
                     <ListView.ItemTemplate>
@@ -104,7 +116,6 @@
                     <TextBlock x:Name="IncendenReportFaultCodeTextBlock" Grid.Column="5" Grid.Row="1"></TextBlock>
 
                     <Button Style="{StaticResource ButtonStyle}" x:Name="IncedentReportButton" Click="IncedentReportButton_Click" Grid.Row="2" Grid.ColumnSpan="6" HorizontalAlignment="Stretch">Terug naar lijst van Incedenten</Button>
-                    <!---<Button x:Name="IncedentUpdateReportButton" Click="IncedentUpdateReportButton_Click" Grid.Row="3" Grid.ColumnSpan="6" HorizontalAlignment="Stretch">Update geselecteerde Incedent</Button>-->
                     <Button Style="{StaticResource ButtonStyle}" x:Name="MakeAppointmentButton" Click="MakeAppointmentButton_Click" Grid.Row="3" Grid.ColumnSpan="6" HorizontalAlignment="Stretch">Maak afspraak</Button>
                     
                 </Grid>
