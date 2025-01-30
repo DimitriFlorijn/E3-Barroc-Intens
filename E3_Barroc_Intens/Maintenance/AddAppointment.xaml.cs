@@ -288,7 +288,7 @@ namespace E3_Barroc_Intens.Maintenance
                     var appointmentItem = AllCalendarItems.Where(item => item.UserId == appointment.UserId && item.CostumerId == appointment.CostumerId && item.AppointmentDate == appointment.AppointmentDate).FirstOrDefault();
                     if (appointmentItem != null && AllCalendarItems.Remove(appointmentItem))
                     {
-                        //throw new Exception("het is verwijderd");
+                        ContentDialogView("appointment verwijderd", "de appointment is verwijderd");
                     }
                     appointment.Description = $"{appointment.Description}\n\nWorkVoucher: {WorkVoucherTextBox.Text}";
                     db.SaveChanges();
