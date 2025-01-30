@@ -33,8 +33,6 @@
             <Button Style="{StaticResource ButtonStyle}"
                 x:Name="MakeAppointmentButton"
                 Padding="15"
-                Foreground="Black"
-                Background="Gold"
                 Grid.Column="2"
                 Click="MakeAppointmentButton_Click">
                 Make an Appointment
@@ -55,8 +53,6 @@
                     <Setter Property="Template">
                         <Setter.Value>
                             <ControlTemplate>
-                                <!-- Omdat we niet vanuit C# bij de ListView kunnen (omdat het in een datatemplate zit)
-                                Benaderen we de data via de DataContext, met behulp van {Binding} die daar naar verwijst -->
                                 <ListView ItemsSource="{Binding}"
                                       IsItemClickEnabled="True"
                                       ItemClick="DayItemListView_ItemClick">
