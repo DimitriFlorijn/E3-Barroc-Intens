@@ -10,7 +10,6 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid Margin="20">
-        <!-- Define rows for each row of the form -->
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -23,13 +22,11 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <!-- Title row with Back button and Client Details label -->
         <StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center">
             <Button Style="{StaticResource ButtonStyle}" x:Name="BackButton" Content="Terug" Click="BackButton_Click" Padding="10" Margin="0,0,10,0"/>
             <TextBlock Text="Client Details" FontSize="24" VerticalAlignment="Center" Padding="10"/>
         </StackPanel>
 
-        <!-- Name row with label and input field -->
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
@@ -39,7 +36,6 @@
             <TextBox x:Name="NameTextBox" Grid.Column="1" HorizontalAlignment="Stretch" Padding="10"/>
         </Grid>
 
-        <!-- Location row with label and input field -->
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
@@ -49,7 +45,6 @@
             <TextBox x:Name="LocationTextBox" Grid.Column="1" HorizontalAlignment="Stretch" Padding="10"/>
         </Grid>
 
-        <!-- Email row with label and input field -->
         <Grid Grid.Row="3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
@@ -59,7 +54,6 @@
             <TextBox x:Name="EmailTextBox" Grid.Column="1" HorizontalAlignment="Stretch" Padding="10"/>
         </Grid>
 
-        <!-- Number row with label and input field -->
         <Grid Grid.Row="4">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
@@ -69,7 +63,6 @@
             <TextBox x:Name="NumberTextBox" Grid.Column="1" HorizontalAlignment="Stretch" Padding="10"/>
         </Grid>
 
-        <!-- Notes row with label and input field -->
         <Grid Grid.Row="5">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
@@ -79,7 +72,6 @@
             <TextBox x:Name="NotesTextBox" Grid.Column="1" HorizontalAlignment="Stretch" Padding="10"/>
         </Grid>
 
-        <!-- BkrRegistered row with label and checkbox -->
         <Grid Grid.Row="6">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
@@ -89,7 +81,6 @@
             <CheckBox x:Name="BkrRegisteredTextBox" Grid.Column="1" VerticalAlignment="Center" Padding="10"/>
         </Grid>
 
-        <!-- Update Button aligned to the center in its own row -->
         <Button Style="{StaticResource ButtonStyle}" x:Name="UpdateButton" Grid.Row="7" Content="Wijzigingen opslaan" Click="UpdateButton_Click" HorizontalAlignment="Center" Padding="10" Margin="0,10,0,0"/>
     </Grid>
 </Page>
