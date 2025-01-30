@@ -343,12 +343,58 @@ namespace E3_Barroc_Intens.Data
             );
 
             modelBuilder.Entity<Brand>().HasData(
-                new Brand
-                {
-                    Id = 1,
-                    Name = "Barroc Intens"
-                }
-            );
+            new Brand
+            {
+                Id = 1,
+                Name = "Barroc Intens"
+            },
+            new Brand
+            {
+                Id = 2,
+                Name = "Keurig Select"
+            },
+            new Brand
+            {
+                Id = 3,
+                Name = "Mighty Fresh"
+            },
+            new Brand
+            {
+                Id = 4,
+                Name = "EcoPure"
+            },
+            new Brand
+            {
+                Id = 5,
+                Name = "Classic Choice"
+            },
+            new Brand
+            {
+                Id = 6,
+                Name = "Gusto Supreme"
+            },
+            new Brand
+            {
+                Id = 7,
+                Name = "Pure Essence"
+            },
+            new Brand
+            {
+                Id = 8,
+                Name = "Royal Harvest"
+            },
+            new Brand
+            {
+                Id = 9,
+                Name = "Silver Peak"
+            },
+            new Brand
+            {
+                Id = 10,
+                Name = "Sunshine Blend"
+            }
+        );
+
 
             modelBuilder.Entity<Product>().HasData(
                 new Product
