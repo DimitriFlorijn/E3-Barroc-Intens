@@ -15,15 +15,22 @@
         </Grid.RowDefinitions>
 
         <StackPanel Orientation="Horizontal" Background="{StaticResource PrimaryColor}" Padding="10">
-            <Image Source="ms-appx:///Assets/logo_klein.png" Width="75" Height="75" Margin="0,0,10,0" VerticalAlignment="Center" />
-            <StackPanel Orientation="Horizontal" Visibility="{Binding IsCeo, Converter={StaticResource fromBoolean}}">
-                <Button Style="{StaticResource ButtonStyle}" Content="CEO" Margin="5" Click="NavigateToCEO_Click"/>
-                <Button Style="{StaticResource ButtonStyle}" Content="Finance" Margin="5" Click="NavigateToFinance_Click"/>
-                <Button Style="{StaticResource ButtonStyle}" Content="Inkoop" Margin="5" Click="NavigateToInkoop_Click"/>
-                <Button Style="{StaticResource ButtonStyle}" Content="Sales" Margin="5" Click="NavigateToSales_Click"/>
-                <Button Style="{StaticResource ButtonStyle}" Content="Maintenance" Margin="5" Click="NavigateToMaintenance_Click"/>
-            </StackPanel>
-            <Button Style="{StaticResource ButtonStyle}" x:Name="LoginButton" Click="Login_Button_Click" Content="Inloggen" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="1300"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="ms-appx:///Assets/logo_klein.png" Width="75" Height="75" Margin="0,0,10,0" VerticalAlignment="Center" Grid.Column="0"/>
+                <StackPanel Orientation="Horizontal" Visibility="{Binding IsCeo, Converter={StaticResource fromBoolean}}" Style="{StaticResource StackPanelMainWindowStyle}" Grid.Column="1">
+                    <Button Style="{StaticResource ButtonStyle}" Content="CEO" Margin="5" Click="NavigateToCEO_Click"/>
+                    <Button Style="{StaticResource ButtonStyle}" Content="Finance" Margin="5" Click="NavigateToFinance_Click"/>
+                    <Button Style="{StaticResource ButtonStyle}" Content="Inkoop" Margin="5" Click="NavigateToInkoop_Click"/>
+                    <Button Style="{StaticResource ButtonStyle}" Content="Sales" Margin="5" Click="NavigateToSales_Click"/>
+                    <Button Style="{StaticResource ButtonStyle}" Content="Maintenance" Margin="5" Click="NavigateToMaintenance_Click"/>
+                </StackPanel>
+                <Button Style="{StaticResource ButtonStyle}" x:Name="LoginButton" Click="Login_Button_Click" Content="Inloggen" Grid.Column="2"/>
+            </Grid>
         </StackPanel>
 
         <Frame x:Name="contentFrame" Grid.Row="1">

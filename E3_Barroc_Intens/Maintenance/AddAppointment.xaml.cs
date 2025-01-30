@@ -54,7 +54,8 @@ namespace E3_Barroc_Intens.Maintenance
                 else if (CreateAppointmentDiscriptionTextBox.Text[i].ToString() != " ")
                 {
                     isLetterInDescription = true;
-                        firstLetterNumber = i;
+                    firstLetterNumber = i;
+                    lastLetterNumber = i;
                 }
             }
 
@@ -112,7 +113,6 @@ namespace E3_Barroc_Intens.Maintenance
                 }
             }
 
-            //var description = CreateAppointmentDiscriptionTextBox.Text;
             var date = CreateAppointmentFromDateCalendarDatePicker.Date.Value.Date;
             var selectedUser = CreateAppointmentSelectUserComboBox.SelectedItem as RoleUser;
             var customer = CreateAppointmentSelectCustomerComboBox.SelectedItem as Customer;

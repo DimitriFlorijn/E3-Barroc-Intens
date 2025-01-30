@@ -47,6 +47,7 @@ namespace E3_Barroc_Intens
 
             Instance = this;
             Instance.Title = "Barroc Intens";
+            Instance.AppWindow.SetPresenter(Microsoft.UI.Windowing.AppWindowPresenterKind.FullScreen);
 
             using (var db = new AppDbContext())
             {
