@@ -10,56 +10,112 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-
+    <Grid Grid.Row="1">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="500" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
-            <TextBlock Text="Sales Dashboard" FontSize="24" FontWeight="Bold" />
-        </StackPanel>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
 
-        <StackPanel Grid.Column="0" Grid.Row="1">
-            <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Button Style="{StaticResource ButtonStyle}" x:Name="AddClientButton" Content="Add Client" Click="AddClientButton_Click"/>
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Spacing="20"
+                        Grid.Row="0">
+                <Button Style="{StaticResource ButtonStyle}"
+                        x:Name="AddClientButton"
+                        Content="Add Client"
+                        Click="AddClientButton_Click"
+                        HorizontalAlignment="Center" />
+                <TextBlock HorizontalAlignment="Center"
+                           Text="Clients"
+                           FontSize="24" />
             </StackPanel>
 
-            <ListView x:Name="ClientListView" ItemsSource="{Binding Customer}" Grid.Row="1">
+            <ListView x:Name="ClientListView" Grid.Row="1">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel>
                             <TextBlock Text="{Binding Name}" />
                             <TextBlock Text="{Binding Location}" />
                             <TextBlock Text="{Binding Email}" />
-                            <TextBlock Text="{Binding Number}"/>
-                            <TextBlock Text="{Binding BkrRegistered}"/>
+                            <TextBlock Text="{Binding Number}" />
+                            <TextBlock Text="{Binding BkrRegistered}" />
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-        </StackPanel>
+        </Grid>
 
-        <StackPanel Grid.Row="1" Grid.Column="1">
-            <Button HorizontalAlignment="Center" Style="{StaticResource ButtonStyle}" Content="Create New Appointment" Click="CreateNewAppointment_Click"  Margin="0,0,0,20" />
-            <TextBlock HorizontalAlignment="Center" Text="Appointments" FontSize="24" Margin="0,0,0,20" />
-            <ListView x:Name="AppointmentListView" Grid.Row="1" ItemClick="AppointmentListView_ItemClick" IsItemClickEnabled="True">
+        <Grid Grid.Column="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Spacing="20"
+                        Grid.Row="0">
+                <Button Style="{StaticResource ButtonStyle}"
+                        x:Name="CreateNewAppointment"
+                        Content="Add Client"
+                        Click="CreateNewAppointment_Click"
+                        HorizontalAlignment="Center" />
+                <TextBlock HorizontalAlignment="Center"
+                           Text="Appointments"
+                           FontSize="24" />
+            </StackPanel>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Client Name"
+                           FontWeight="Bold"
+                           Grid.Column="0" />
+                <TextBlock Text="Date"
+                           FontWeight="Bold"
+                           Grid.Column="1" />
+                <TextBlock Text="Notes"
+                           FontWeight="Bold"
+                           Grid.Column="2" />
+            </Grid>
+
+            <ListView Grid.Row="2"
+                      x:Name="AppointmentListView"
+                      ItemClick="AppointmentListView_ItemClick"
+                      IsItemClickEnabled="True">
                 <ListView.ItemTemplate>
                     <DataTemplate x:DataType="localdata:Appointment">
-                        <StackPanel>
-                            <TextBlock Text="{x:Bind Client.Name}" FontSize="16" />
-                            <TextBlock Text="{x:Bind DateTime, Mode=OneTime}" FontSize="14" />
-                            <TextBlock Text="{x:Bind Notes}" FontSize="12" />
-                        </StackPanel>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="3*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{x:Bind Client.Name}"
+                                       Grid.Column="0" />
+                            <TextBlock Text="{x:Bind DateTime, Mode=OneTime}"
+                                       Grid.Column="1" />
+                            <TextBlock Text="{x:Bind Notes}"
+                                       Grid.Column="2" />
+                        </Grid>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-        </StackPanel>
+        </Grid>
     </Grid>
 </Page>
  
