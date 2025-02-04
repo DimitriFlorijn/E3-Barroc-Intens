@@ -79,6 +79,12 @@ namespace E3_Barroc_Intens.Maintenance
                 return;
             }
 
+            if (CreateAppointmentTimePicker.SelectedTime.HasValue == false)
+            {
+                ContentDialogView("tijd niet geslecteerd", "er is geen tijd geselecteerd. selecteer een tijd om een appoinment aan te kunnen maken");
+                return;
+            }
+
             if (CreateAppointmentSelectUserComboBox.SelectedItem == null)
             {
                 ContentDialogView("geen medewerker geselecteerd", "er is geen medewerker geselecteerd. selecteer een medewerker om een appointment aan te kunnen maken");
@@ -114,6 +120,7 @@ namespace E3_Barroc_Intens.Maintenance
             }
 
             var date = CreateAppointmentFromDateCalendarDatePicker.Date.Value.Date;
+            var time = CreateAppointmentTimePicker.SelectedTime.Value;
             var selectedUser = CreateAppointmentSelectUserComboBox.SelectedItem as RoleUser;
             var customer = CreateAppointmentSelectCustomerComboBox.SelectedItem as Customer;
 
@@ -127,7 +134,7 @@ namespace E3_Barroc_Intens.Maintenance
                     UserId = user.Id,
                     CostumerId = customer.Id,
                     Description = description,
-                    AppointmentDate = date,
+                    AppointmentDate = date.Add(time),
                 };
 
                 db.Maintenances.Add(appointment);
@@ -154,7 +161,7 @@ namespace E3_Barroc_Intens.Maintenance
                                 UserId = user.Id,
                                 CostumerId = customer.Id,
                                 Description = description,
-                                AppointmentDate = date,
+                                AppointmentDate = date.Add(time),
                             };
 
                             db.Maintenances.Add(repeatAppointment);

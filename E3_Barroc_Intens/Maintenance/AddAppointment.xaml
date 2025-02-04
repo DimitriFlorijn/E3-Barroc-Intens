@@ -91,6 +91,7 @@
                     <StackPanel Orientation="Vertical">
                         <TextBox x:Name="CreateAppointmentDiscriptionTextBox" Header="Discription"/>
                         <CalendarDatePicker x:Name="CreateAppointmentFromDateCalendarDatePicker" Header="Select Date:"></CalendarDatePicker>
+                        <TimePicker x:Name="CreateAppointmentTimePicker" Header="Select Time:"></TimePicker>
                         <CheckBox x:Name="CreateAppointmentRoutineCheckBox" Checked="CreateAppointmentRoutineCheckBox_Checked" Unchecked="CreateAppointmentRoutineCheckBox_Unchecked">Routine Appointment?:</CheckBox>
                         <StackPanel x:Name="CreateAppointmentRoutineStackPanel" Visibility="Collapsed">
                             <RadioButtons Header="Choose Repeat Time:">
