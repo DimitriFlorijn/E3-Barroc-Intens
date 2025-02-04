@@ -14,12 +14,13 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="500" />
+            <ColumnDefinition Width="200" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
@@ -39,16 +40,49 @@
                            FontSize="24" />
             </StackPanel>
 
-            <ListView x:Name="ClientListView" Grid.Row="1">
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Name"
+                           FontWeight="Bold"
+                           Grid.Column="0" />
+                <TextBlock Text="Location"
+                           FontWeight="Bold"
+                           Grid.Column="1" />
+                <TextBlock Text="Email"
+                           FontWeight="Bold"
+                           Grid.Column="2" />
+                <TextBlock Text="Number"
+                           FontWeight="Bold"
+                           Grid.Column="3" />
+                <TextBlock Text="BKR Registerd"
+                           FontWeight="Bold"
+                           Grid.Column="4" />
+            </Grid>
+            
+            <ListView x:Name="ClientListView" Grid.Row="2" ItemClick="ClientListView_ItemClick" IsItemClickEnabled="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel>
-                            <TextBlock Text="{Binding Name}" />
-                            <TextBlock Text="{Binding Location}" />
-                            <TextBlock Text="{Binding Email}" />
-                            <TextBlock Text="{Binding Number}" />
-                            <TextBlock Text="{Binding BkrRegistered}" />
-                        </StackPanel>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="3*" />
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="2*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="{Binding Name}" />
+                            <TextBlock Grid.Column="1" Text="{Binding Location}" />
+                            <TextBlock Grid.Column="2" Text="{Binding Email}" />
+                            <TextBlock Grid.Column="3" Text="{Binding Number}" />
+                            <TextBlock Grid.Column="4" Text="{Binding BkrRegistered}" />
+                        </Grid>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
@@ -68,7 +102,7 @@
                         Grid.Row="0">
                 <Button Style="{StaticResource ButtonStyle}"
                         x:Name="CreateNewAppointment"
-                        Content="Add Client"
+                        Content="Create New Appointment"
                         Click="CreateNewAppointment_Click"
                         HorizontalAlignment="Center" />
                 <TextBlock HorizontalAlignment="Center"
@@ -82,6 +116,7 @@
                     <ColumnDefinition Width="2*" />
                     <ColumnDefinition Width="3*" />
                 </Grid.ColumnDefinitions>
+                
                 <TextBlock Text="Client Name"
                            FontWeight="Bold"
                            Grid.Column="0" />

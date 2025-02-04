@@ -22,6 +22,7 @@ namespace E3_Barroc_Intens
     public sealed partial class SalesDashboard : Page
     {
         public ObservableCollection<Data.Appointment> Appointments { get; set; } = new ObservableCollection<Data.Appointment>();
+        public ObservableCollection<Data.Customer> Customers { get; set; } = new ObservableCollection<Data.Customer>();
 
         public SalesDashboard()
         {
@@ -45,26 +46,26 @@ namespace E3_Barroc_Intens
                     Appointments.Add(appointment);
                 }
 
-                var clients = db.Customers.ToList();
+                var clients = db.Customers
+                                .Select(c => new Data.Customer
+                                {
+                                    Id = c.Id,
+                                    Name = c.Name,
+                                    Location = c.Location,
+                                    Email = c.Email,
+                                    Number = c.Number,
+                                    BkrRegistered = c.BkrRegistered
+                                })
+                                .ToList();
 
                 foreach (var client in clients)
                 {
-                    var item = new ListViewItem
-                    {
-                        Content = client.Name,
-                        Tag = client.Id
-                    };
-
-                    item.Tapped += (sender, e) =>
-                    {
-                        Frame.Navigate(typeof(ClientDetails), client.Id);
-                    };
-
-                    ClientListView.Items.Add(item);
+                    Customers.Add(client);
                 }
             }
 
             AppointmentListView.ItemsSource = Appointments;
+            ClientListView.ItemsSource = Customers;
         }
 
         private void AddClientButton_Click(object sender, RoutedEventArgs e)
@@ -82,6 +83,14 @@ namespace E3_Barroc_Intens
             if (e.ClickedItem is Data.Appointment selectedAppointment)
             {
                 Frame.Navigate(typeof(EditAppointmentPage), selectedAppointment.Id);
+            }
+        }
+
+        private void ClientListView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (e.ClickedItem is Data.Customer selecterClient)
+            {
+                Frame.Navigate(typeof(ClientDetails), selecterClient.Id);
             }
         }
     }
