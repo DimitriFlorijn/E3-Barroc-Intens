@@ -81,7 +81,7 @@
 
         <StackPanel Grid.Row="2" Visibility="Collapsed" x:Name="MaintenanceIncedentReportStackPanel">
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock>Incedent Report</TextBlock>
+                <TextBlock>Incident Report</TextBlock>
             </StackPanel>
             <StackPanel>
                 <Grid>
@@ -115,7 +115,7 @@
                     <TextBlock x:Name="IncedentReportCoffeeMachineTypeTextBlock" Grid.Column="4" Grid.Row="1"></TextBlock>
                     <TextBlock x:Name="IncendenReportFaultCodeTextBlock" Grid.Column="5" Grid.Row="1"></TextBlock>
 
-                    <Button Style="{StaticResource ButtonStyle}" x:Name="IncedentReportButton" Click="IncedentReportButton_Click" Grid.Row="2" Grid.ColumnSpan="6" HorizontalAlignment="Stretch">Terug naar lijst van Incedenten</Button>
+                    <Button Style="{StaticResource ButtonStyle}" x:Name="IncedentReportButton" Click="IncedentReportButton_Click" Grid.Row="2" Grid.ColumnSpan="6" HorizontalAlignment="Stretch">Terug naar lijst van Incidenten</Button>
                     <Button Style="{StaticResource ButtonStyle}" x:Name="MakeAppointmentButton" Click="MakeAppointmentButton_Click" Grid.Row="3" Grid.ColumnSpan="6" HorizontalAlignment="Stretch">Maak afspraak</Button>
                     
                 </Grid>

@@ -37,17 +37,6 @@ namespace E3_Barroc_Intens.Data
             );
 
         }
-        // zie  data / app db config.example 
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    optionsBuilder.UseMySql(
-        //            "server=localhost;" +
-        //            "port=3306;" +
-        //            "user=root;" +
-        //            "password=;" +
-        //            "database=E3-Barroc-Intens-Database",
-        //        new MySqlServerVersion(new Version(8, 0, 30)));
-        //}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
